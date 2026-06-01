@@ -1,0 +1,60 @@
+{
+  "name": "HSE Oil & Gas Corporate Theme",
+  "dataColors": [
+    "#1B4F72",
+    "#C1121F",
+    "#E85D04",
+    "#F48C06",
+    "#2D6A4F",
+    "#4A4E69",
+    "#457B9D",
+    "#6D6875"
+  ],
+  "background": "#F8F9FA",
+  "foreground": "#1B4F72",
+  "tableAccent": "#1B4F72",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{ "value": "Segoe UI" }],
+        "fontSize": [{ "value": 11 }],
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } } }]
+      }
+    },
+    "card": {
+      "*": {
+        "calloutValue": [{
+          "fontSize": [{ "value": 28 }],
+          "fontBold": [{ "value": true }],
+          "color": [{ "solid": { "color": "#1B4F72" } }]
+        }],
+        "label": [{
+          "fontSize": [{ "value": 11 }],
+          "color": [{ "solid": { "color": "#4A4E69" } }]
+        }]
+      }
+    },
+    "columnChart": {
+      "*": {
+        "dataPoint": [{
+          "defaultColor": [{ "solid": { "color": "#1B4F72" } }]
+        }]
+      }
+    },
+    "barChart": {
+      "*": {
+        "dataPoint": [{
+          "defaultColor": [{ "solid": { "color": "#1B4F72" } }]
+        }]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "dataPoint": [{
+          "defaultColor": [{ "solid": { "color": "#C1121F" } }]
+        }],
+        "lineWidth": [{ "value": 2 }]
+      }
+    }
+  }
+}
