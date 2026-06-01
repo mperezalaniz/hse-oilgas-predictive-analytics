@@ -1,0 +1,851 @@
+empleado_id,departamento,cargo,edad,antiguedad_anios,turno,ubicacion,capacitacion_hs_año,condicion_cronica,riesgo_score,categoria_riesgo
+1000,Perforación,Mecánico Industrial,42,9,Diurno,Neuquén - Vaca Muerta,29,Estrés crónico,0.3709,Medio
+1001,Perforación,Técnico Senior,52,0,Rotativo 14x14,Salta - NOA,43,Hipoacusia,0.525,Medio
+1002,Perforación,Operador Grúa,51,0,Nocturno,Mendoza - Cuyo,55,Ninguna,0.602,Alto
+1003,Perforación,Supervisor,31,9,Nocturno,Salta - NOA,0,Estrés crónico,0.7811,Alto
+1004,Perforación,Operador Grúa,33,0,Rotativo 7x7,Chubut - San Jorge,60,Ninguna,0.5117,Medio
+1005,Perforación,Maquinista,32,0,Diurno,Salta - NOA,59,Hipertensión,0.4341,Medio
+1006,Perforación,Electricista,39,5,Diurno,Chubut - San Jorge,2,Ninguna,0.6222,Alto
+1007,Perforación,Soldador,39,2,Rotativo 14x14,Salta - NOA,36,Lumbalgia,0.8207,Alto
+1008,Perforación,Operador Grúa,59,23,Nocturno,Neuquén - Vaca Muerta,48,Ninguna,0.4439,Medio
+1009,Perforación,Supervisor,23,0,Rotativo 14x14,Chubut - San Jorge,20,Ninguna,0.9042,Alto
+1010,Perforación,Maquinista,30,8,Rotativo 14x14,Neuquén - Vaca Muerta,27,Hipertensión,0.5791,Medio
+1011,Perforación,Supervisor,46,2,Rotativo 14x14,Neuquén - Vaca Muerta,57,Lumbalgia,0.679,Alto
+1012,Perforación,Operador Grúa,51,4,Rotativo 14x14,Neuquén - Vaca Muerta,37,Ninguna,0.6804,Alto
+1013,Perforación,Ingeniero de Pozo,37,5,Rotativo 7x7,Neuquén - Vaca Muerta,46,Lumbalgia,0.543,Medio
+1014,Perforación,Operador Grúa,30,8,Diurno,Neuquén - Vaca Muerta,24,Ninguna,0.4423,Medio
+1015,Perforación,Operador Grúa,34,0,Nocturno,Neuquén - Vaca Muerta,43,Ninguna,0.6385,Alto
+1016,Perforación,Maquinista,40,0,Rotativo 14x14,Neuquén - Vaca Muerta,35,Ninguna,0.7951,Alto
+1017,Perforación,Maquinista,32,1,Rotativo 14x14,Neuquén - Vaca Muerta,24,Diabetes tipo 2,0.956,Alto
+1018,Perforación,Operador de Campo,37,2,Rotativo 7x7,Neuquén - Vaca Muerta,6,Ninguna,0.9915,Alto
+1019,Perforación,Técnico Senior,37,7,Rotativo 14x14,Neuquén - Vaca Muerta,28,Ninguna,0.6593,Alto
+1020,Perforación,Electricista,36,1,Nocturno,Mendoza - Cuyo,21,Ninguna,0.9208,Alto
+1021,Perforación,Ingeniero de Pozo,29,0,Nocturno,Neuquén - Vaca Muerta,23,Lumbalgia,0.9692,Alto
+1022,Perforación,Maquinista,31,9,Nocturno,Salta - NOA,27,Ninguna,0.5395,Medio
+1023,Perforación,Técnico HSE,34,7,Rotativo 7x7,Mendoza - Cuyo,40,Hipoacusia,0.4879,Medio
+1024,Perforación,Soldador,38,14,Nocturno,Neuquén - Vaca Muerta,39,Estrés crónico,0.6397,Alto
+1025,Perforación,Operador de Campo,40,7,Diurno,Chubut - San Jorge,37,Ninguna,0.5369,Medio
+1026,Perforación,Técnico Senior,40,0,Rotativo 14x14,Neuquén - Vaca Muerta,21,Ninguna,1.0,Alto
+1027,Perforación,Maquinista,37,1,Rotativo 14x14,Chubut - San Jorge,26,Ninguna,0.8063,Alto
+1028,Perforación,Electricista,35,2,Rotativo 7x7,Neuquén - Vaca Muerta,20,Ninguna,0.8897,Alto
+1029,Perforación,Operador de Campo,49,7,Diurno,Chubut - San Jorge,11,Ninguna,0.5387,Medio
+1030,Perforación,Mecánico Industrial,28,6,Rotativo 7x7,Chubut - San Jorge,39,Ninguna,0.746,Alto
+1031,Perforación,Ingeniero de Pozo,57,27,Nocturno,Neuquén - Vaca Muerta,55,Ninguna,0.7047,Alto
+1032,Perforación,Técnico HSE,39,17,Rotativo 7x7,Neuquén - Vaca Muerta,13,Hipertensión,0.4473,Medio
+1033,Perforación,Técnico HSE,26,2,Rotativo 14x14,Mendoza - Cuyo,20,Ninguna,0.8372,Alto
+1034,Perforación,Operador Grúa,46,11,Rotativo 14x14,Neuquén - Vaca Muerta,22,Hipertensión,0.428,Medio
+1035,Perforación,Técnico Senior,32,10,Diurno,Mendoza - Cuyo,30,Ninguna,0.3533,Medio
+1036,Perforación,Electricista,22,0,Nocturno,Neuquén - Vaca Muerta,37,Ninguna,0.6987,Alto
+1037,Perforación,Mecánico Industrial,46,2,Rotativo 14x14,Chubut - San Jorge,24,Ninguna,0.605,Alto
+1038,Perforación,Técnico Senior,31,0,Rotativo 14x14,Neuquén - Vaca Muerta,38,Ninguna,0.8238,Alto
+1039,Perforación,Mecánico Industrial,30,0,Diurno,Neuquén - Vaca Muerta,30,Ninguna,0.6812,Alto
+1040,Perforación,Electricista,36,1,Rotativo 14x14,Mendoza - Cuyo,44,Diabetes tipo 2,0.5732,Medio
+1041,Perforación,Soldador,41,6,Diurno,Mendoza - Cuyo,56,Ninguna,0.3628,Medio
+1042,Perforación,Ingeniero de Pozo,31,0,Diurno,Neuquén - Vaca Muerta,28,Lumbalgia,0.717,Alto
+1043,Perforación,Técnico HSE,33,7,Rotativo 14x14,Mendoza - Cuyo,0,Ninguna,0.5403,Medio
+1044,Perforación,Mecánico Industrial,38,13,Rotativo 14x14,Mendoza - Cuyo,67,Diabetes tipo 2,0.5384,Medio
+1045,Perforación,Técnico Senior,41,11,Rotativo 14x14,Neuquén - Vaca Muerta,45,Estrés crónico,0.6198,Alto
+1046,Perforación,Técnico Senior,48,7,Diurno,Mendoza - Cuyo,38,Hipertensión,0.4727,Medio
+1047,Perforación,Supervisor,51,2,Nocturno,Neuquén - Vaca Muerta,17,Hipertensión,1.0,Alto
+1048,Perforación,Operador Grúa,41,11,Rotativo 14x14,Neuquén - Vaca Muerta,40,Ninguna,0.5613,Medio
+1049,Perforación,Maquinista,32,2,Rotativo 7x7,Mendoza - Cuyo,37,Hipertensión,0.5462,Medio
+1050,Perforación,Operador de Campo,30,3,Rotativo 14x14,Chubut - San Jorge,43,Estrés crónico,0.5687,Medio
+1051,Perforación,Supervisor,40,18,Rotativo 14x14,Neuquén - Vaca Muerta,30,Hipertensión,0.3881,Medio
+1052,Perforación,Operador Grúa,25,3,Diurno,Salta - NOA,36,Hipoacusia,0.7129,Alto
+1053,Perforación,Operador Grúa,54,24,Rotativo 14x14,Mendoza - Cuyo,38,Ninguna,0.423,Medio
+1054,Perforación,Técnico HSE,34,12,Diurno,Mendoza - Cuyo,35,Ninguna,0.3792,Medio
+1055,Perforación,Ingeniero de Pozo,40,6,Nocturno,Neuquén - Vaca Muerta,29,Ninguna,0.8529,Alto
+1056,Perforación,Supervisor,45,0,Nocturno,Neuquén - Vaca Muerta,29,Lumbalgia,0.8667,Alto
+1057,Perforación,Supervisor,43,9,Rotativo 14x14,Salta - NOA,40,Ninguna,0.5242,Medio
+1058,Perforación,Mecánico Industrial,34,12,Diurno,Salta - NOA,38,Ninguna,0.5547,Medio
+1059,Perforación,Operador de Campo,33,1,Rotativo 14x14,Neuquén - Vaca Muerta,35,Ninguna,0.752,Alto
+1060,Perforación,Maquinista,37,6,Diurno,Mendoza - Cuyo,46,Ninguna,0.4552,Medio
+1061,Perforación,Electricista,30,2,Diurno,Neuquén - Vaca Muerta,11,Hipertensión,0.6184,Alto
+1062,Perforación,Electricista,32,0,Rotativo 7x7,Chubut - San Jorge,25,Ninguna,0.7738,Alto
+1063,Perforación,Operador de Campo,48,26,Nocturno,Chubut - San Jorge,24,Estrés crónico,0.5855,Medio
+1064,Perforación,Operador de Campo,31,0,Diurno,Neuquén - Vaca Muerta,33,Ninguna,0.6704,Alto
+1065,Perforación,Mecánico Industrial,40,6,Rotativo 7x7,Chubut - San Jorge,34,Ninguna,0.5131,Medio
+1066,Perforación,Técnico Senior,25,3,Nocturno,Neuquén - Vaca Muerta,40,Ninguna,0.8062,Alto
+1067,Perforación,Electricista,39,13,Rotativo 7x7,Neuquén - Vaca Muerta,55,Ninguna,0.522,Medio
+1068,Perforación,Técnico Senior,22,0,Rotativo 7x7,Salta - NOA,22,Hipoacusia,0.7888,Alto
+1069,Perforación,Supervisor,52,5,Rotativo 7x7,Neuquén - Vaca Muerta,51,Lumbalgia,0.6186,Alto
+1070,Perforación,Mecánico Industrial,52,13,Rotativo 14x14,Neuquén - Vaca Muerta,11,Lumbalgia,0.8047,Alto
+1071,Perforación,Supervisor,24,1,Rotativo 14x14,Neuquén - Vaca Muerta,50,Ninguna,0.6673,Alto
+1072,Perforación,Operador Grúa,29,7,Rotativo 7x7,Neuquén - Vaca Muerta,40,Ninguna,0.6269,Alto
+1073,Perforación,Mecánico Industrial,33,1,Rotativo 14x14,Mendoza - Cuyo,20,Estrés crónico,0.6962,Alto
+1074,Perforación,Técnico HSE,34,2,Rotativo 14x14,Mendoza - Cuyo,19,Estrés crónico,0.5623,Medio
+1075,Perforación,Ingeniero de Pozo,45,9,Diurno,Neuquén - Vaca Muerta,22,Hipertensión,0.5206,Medio
+1076,Perforación,Maquinista,32,9,Diurno,Mendoza - Cuyo,0,Lumbalgia,0.7124,Alto
+1077,Perforación,Soldador,27,0,Nocturno,Neuquén - Vaca Muerta,7,Ninguna,0.8378,Alto
+1078,Perforación,Ingeniero de Pozo,31,9,Rotativo 14x14,Neuquén - Vaca Muerta,26,Ninguna,0.6714,Alto
+1079,Perforación,Maquinista,52,5,Rotativo 14x14,Neuquén - Vaca Muerta,40,Ninguna,0.5982,Medio
+1080,Perforación,Electricista,46,3,Rotativo 14x14,Neuquén - Vaca Muerta,60,Ninguna,0.4392,Medio
+1081,Perforación,Maquinista,32,1,Rotativo 7x7,Neuquén - Vaca Muerta,24,Ninguna,0.7246,Alto
+1082,Perforación,Electricista,41,14,Rotativo 7x7,Neuquén - Vaca Muerta,30,Estrés crónico,0.5745,Medio
+1083,Perforación,Mecánico Industrial,40,4,Diurno,Neuquén - Vaca Muerta,58,Ninguna,0.4493,Medio
+1084,Perforación,Electricista,33,6,Rotativo 14x14,Neuquén - Vaca Muerta,27,Ninguna,0.6502,Alto
+1085,Perforación,Soldador,36,1,Rotativo 14x14,Neuquén - Vaca Muerta,25,Ninguna,0.8229,Alto
+1086,Perforación,Supervisor,37,6,Nocturno,Salta - NOA,16,Diabetes tipo 2,0.943,Alto
+1087,Perforación,Supervisor,41,19,Diurno,Chubut - San Jorge,22,Estrés crónico,0.4686,Medio
+1088,Perforación,Supervisor,41,1,Diurno,Chubut - San Jorge,25,Ninguna,0.6786,Alto
+1089,Perforación,Maquinista,45,3,Rotativo 14x14,Chubut - San Jorge,27,Hipertensión,0.871,Alto
+1090,Perforación,Operador de Campo,22,0,Rotativo 7x7,Neuquén - Vaca Muerta,54,Estrés crónico,0.6202,Alto
+1091,Perforación,Soldador,30,8,Rotativo 14x14,Mendoza - Cuyo,36,Estrés crónico,0.4761,Medio
+1092,Perforación,Electricista,53,5,Rotativo 14x14,Chubut - San Jorge,31,Ninguna,0.8589,Alto
+1093,Perforación,Técnico HSE,43,4,Nocturno,Chubut - San Jorge,18,Estrés crónico,0.6236,Alto
+1094,Perforación,Mecánico Industrial,35,11,Rotativo 14x14,Neuquén - Vaca Muerta,17,Ninguna,0.7172,Alto
+1095,Perforación,Mecánico Industrial,49,8,Rotativo 7x7,Salta - NOA,61,Ninguna,0.464,Medio
+1096,Perforación,Técnico HSE,22,0,Rotativo 14x14,Mendoza - Cuyo,22,Ninguna,0.8204,Alto
+1097,Perforación,Maquinista,54,17,Rotativo 14x14,Chubut - San Jorge,40,Ninguna,0.5078,Medio
+1098,Perforación,Ingeniero de Pozo,35,1,Diurno,Salta - NOA,24,Ninguna,0.7587,Alto
+1099,Perforación,Operador Grúa,22,0,Diurno,Chubut - San Jorge,54,Ninguna,0.5583,Medio
+1100,Perforación,Soldador,47,17,Nocturno,Chubut - San Jorge,28,Ninguna,0.5854,Medio
+1101,Perforación,Soldador,27,1,Diurno,Neuquén - Vaca Muerta,29,Lumbalgia,0.535,Medio
+1102,Perforación,Operador de Campo,29,1,Diurno,Salta - NOA,21,Ninguna,0.4984,Medio
+1103,Perforación,Soldador,61,0,Rotativo 14x14,Chubut - San Jorge,32,Ninguna,0.8186,Alto
+1104,Perforación,Supervisor,25,3,Diurno,Chubut - San Jorge,53,Ninguna,0.4835,Medio
+1105,Perforación,Ingeniero de Pozo,22,0,Diurno,Chubut - San Jorge,13,Ninguna,0.8534,Alto
+1106,Perforación,Soldador,45,3,Rotativo 7x7,Chubut - San Jorge,12,Ninguna,0.8927,Alto
+1107,Perforación,Maquinista,23,1,Diurno,Chubut - San Jorge,37,Hipertensión,0.4641,Medio
+1108,Perforación,Maquinista,34,1,Rotativo 7x7,Salta - NOA,28,Ninguna,0.8839,Alto
+1109,Perforación,Técnico HSE,22,0,Diurno,Neuquén - Vaca Muerta,18,Ninguna,0.4691,Medio
+1110,Perforación,Mecánico Industrial,22,0,Nocturno,Neuquén - Vaca Muerta,58,Ninguna,0.6403,Alto
+1111,Perforación,Operador Grúa,44,3,Rotativo 14x14,Neuquén - Vaca Muerta,10,Lumbalgia,0.9792,Alto
+1112,Perforación,Operador de Campo,46,11,Rotativo 14x14,Mendoza - Cuyo,31,Hipertensión,0.6618,Alto
+1113,Perforación,Ingeniero de Pozo,25,3,Diurno,Salta - NOA,24,Hipertensión,0.6639,Alto
+1114,Perforación,Operador Grúa,39,11,Nocturno,Mendoza - Cuyo,51,Estrés crónico,0.6161,Alto
+1115,Perforación,Operador Grúa,40,6,Rotativo 14x14,Mendoza - Cuyo,46,Ninguna,0.7042,Alto
+1116,Perforación,Electricista,34,3,Rotativo 14x14,Neuquén - Vaca Muerta,53,Ninguna,0.6339,Alto
+1117,Perforación,Operador de Campo,24,2,Rotativo 14x14,Mendoza - Cuyo,20,Ninguna,0.9477,Alto
+1118,Perforación,Supervisor,22,0,Rotativo 14x14,Neuquén - Vaca Muerta,30,Ninguna,0.7328,Alto
+1119,Perforación,Operador Grúa,48,0,Nocturno,Neuquén - Vaca Muerta,21,Ninguna,1.0,Alto
+1120,Perforación,Supervisor,30,0,Nocturno,Mendoza - Cuyo,30,Ninguna,0.7573,Alto
+1121,Perforación,Maquinista,37,1,Rotativo 14x14,Mendoza - Cuyo,41,Lumbalgia,0.7778,Alto
+1122,Perforación,Técnico HSE,38,16,Diurno,Mendoza - Cuyo,32,Ninguna,0.3076,Medio
+1123,Perforación,Soldador,22,0,Nocturno,Salta - NOA,27,Diabetes tipo 2,1.0,Alto
+1124,Perforación,Técnico Senior,48,13,Rotativo 14x14,Mendoza - Cuyo,30,Ninguna,0.6191,Alto
+1125,Perforación,Maquinista,30,8,Rotativo 14x14,Neuquén - Vaca Muerta,73,Lumbalgia,0.4809,Medio
+1126,Perforación,Operador de Campo,56,9,Rotativo 7x7,Mendoza - Cuyo,39,Ninguna,0.5347,Medio
+1127,Perforación,Supervisor,38,16,Diurno,Neuquén - Vaca Muerta,47,Ninguna,0.2821,Bajo
+1128,Perforación,Operador Grúa,37,6,Rotativo 14x14,Neuquén - Vaca Muerta,23,Lumbalgia,0.6411,Alto
+1129,Perforación,Técnico Senior,34,3,Nocturno,Neuquén - Vaca Muerta,27,Ninguna,0.5732,Medio
+1130,Perforación,Maquinista,37,3,Diurno,Salta - NOA,35,Ninguna,0.6582,Alto
+1131,Perforación,Maquinista,40,15,Rotativo 14x14,Mendoza - Cuyo,32,Hipoacusia,0.4065,Medio
+1132,Perforación,Técnico HSE,48,5,Diurno,Neuquén - Vaca Muerta,56,Diabetes tipo 2,0.352,Medio
+1133,Perforación,Soldador,42,6,Rotativo 7x7,Salta - NOA,39,Ninguna,0.7607,Alto
+1134,Perforación,Maquinista,50,8,Rotativo 7x7,Neuquén - Vaca Muerta,23,Lumbalgia,0.7105,Alto
+1135,Perforación,Operador Grúa,36,3,Diurno,Chubut - San Jorge,48,Ninguna,0.371,Medio
+1136,Perforación,Electricista,39,2,Nocturno,Chubut - San Jorge,35,Ninguna,0.7679,Alto
+1137,Perforación,Operador de Campo,44,0,Diurno,Chubut - San Jorge,16,Estrés crónico,0.6688,Alto
+1138,Perforación,Operador de Campo,54,5,Rotativo 7x7,Chubut - San Jorge,44,Estrés crónico,0.7224,Alto
+1139,Perforación,Operador Grúa,41,12,Rotativo 7x7,Neuquén - Vaca Muerta,42,Ninguna,0.5565,Medio
+1140,Perforación,Mecánico Industrial,47,0,Rotativo 14x14,Neuquén - Vaca Muerta,30,Estrés crónico,0.9007,Alto
+1141,Perforación,Operador de Campo,35,2,Rotativo 14x14,Neuquén - Vaca Muerta,32,Ninguna,0.6452,Alto
+1142,Perforación,Soldador,36,2,Rotativo 14x14,Salta - NOA,34,Hipertensión,0.6231,Alto
+1143,Perforación,Operador de Campo,39,0,Rotativo 14x14,Chubut - San Jorge,38,Ninguna,0.6887,Alto
+1144,Perforación,Soldador,56,6,Diurno,Chubut - San Jorge,20,Lumbalgia,0.6132,Alto
+1145,Perforación,Supervisor,36,14,Rotativo 14x14,Neuquén - Vaca Muerta,13,Hipertensión,0.6845,Alto
+1146,Perforación,Operador de Campo,48,2,Rotativo 7x7,Neuquén - Vaca Muerta,51,Estrés crónico,0.7047,Alto
+1147,Perforación,Técnico HSE,34,2,Rotativo 7x7,Neuquén - Vaca Muerta,55,Ninguna,0.4771,Medio
+1148,Perforación,Maquinista,26,4,Diurno,Neuquén - Vaca Muerta,53,Ninguna,0.3674,Medio
+1149,Perforación,Mecánico Industrial,52,0,Rotativo 7x7,Salta - NOA,0,Ninguna,0.7423,Alto
+1150,Perforación,Operador Grúa,25,3,Diurno,Mendoza - Cuyo,41,Ninguna,0.4819,Medio
+1151,Perforación,Mecánico Industrial,40,1,Diurno,Neuquén - Vaca Muerta,31,Hipertensión,0.5891,Medio
+1152,Perforación,Electricista,47,13,Rotativo 7x7,Chubut - San Jorge,15,Ninguna,0.671,Alto
+1153,Perforación,Electricista,39,0,Rotativo 14x14,Chubut - San Jorge,18,Ninguna,0.8144,Alto
+1154,Perforación,Operador de Campo,39,0,Rotativo 7x7,Neuquén - Vaca Muerta,1,Hipoacusia,0.7359,Alto
+1155,Perforación,Técnico HSE,43,12,Diurno,Neuquén - Vaca Muerta,17,Hipertensión,0.5417,Medio
+1156,Perforación,Maquinista,38,8,Rotativo 7x7,Mendoza - Cuyo,22,Hipertensión,0.7243,Alto
+1157,Perforación,Electricista,57,5,Rotativo 7x7,Neuquén - Vaca Muerta,28,Ninguna,0.8214,Alto
+1158,Perforación,Soldador,34,0,Rotativo 14x14,Neuquén - Vaca Muerta,35,Ninguna,0.7623,Alto
+1159,Perforación,Mecánico Industrial,53,14,Rotativo 14x14,Neuquén - Vaca Muerta,28,Hipertensión,0.6191,Alto
+1160,Perforación,Supervisor,38,1,Diurno,Neuquén - Vaca Muerta,33,Estrés crónico,0.4844,Medio
+1161,Perforación,Ingeniero de Pozo,48,6,Rotativo 14x14,Mendoza - Cuyo,27,Ninguna,0.693,Alto
+1162,Perforación,Técnico Senior,37,6,Rotativo 14x14,Mendoza - Cuyo,26,Ninguna,0.8568,Alto
+1163,Perforación,Mecánico Industrial,26,4,Rotativo 14x14,Neuquén - Vaca Muerta,8,Estrés crónico,0.8619,Alto
+1164,Perforación,Soldador,33,11,Rotativo 14x14,Neuquén - Vaca Muerta,21,Ninguna,0.5804,Medio
+1165,Perforación,Ingeniero de Pozo,52,6,Rotativo 14x14,Neuquén - Vaca Muerta,7,Diabetes tipo 2,0.7578,Alto
+1166,Perforación,Maquinista,45,2,Rotativo 14x14,Neuquén - Vaca Muerta,13,Ninguna,0.6532,Alto
+1167,Perforación,Técnico HSE,36,2,Rotativo 14x14,Neuquén - Vaca Muerta,46,Ninguna,0.6193,Alto
+1168,Perforación,Mecánico Industrial,26,4,Rotativo 14x14,Chubut - San Jorge,9,Ninguna,0.8527,Alto
+1169,Perforación,Ingeniero de Pozo,39,5,Nocturno,Neuquén - Vaca Muerta,48,Diabetes tipo 2,0.6773,Alto
+1170,Perforación,Operador de Campo,44,2,Rotativo 14x14,Mendoza - Cuyo,30,Ninguna,0.6616,Alto
+1171,Perforación,Soldador,24,2,Rotativo 14x14,Neuquén - Vaca Muerta,39,Ninguna,0.4794,Medio
+1172,Perforación,Técnico Senior,29,7,Diurno,Chubut - San Jorge,41,Ninguna,0.3907,Medio
+1173,Perforación,Técnico HSE,37,1,Rotativo 7x7,Mendoza - Cuyo,31,Diabetes tipo 2,0.4925,Medio
+1174,Perforación,Mecánico Industrial,47,1,Rotativo 14x14,Mendoza - Cuyo,49,Ninguna,0.5986,Medio
+1175,Perforación,Operador Grúa,23,1,Rotativo 7x7,Chubut - San Jorge,45,Lumbalgia,0.6542,Alto
+1176,Perforación,Electricista,35,2,Rotativo 14x14,Salta - NOA,46,Ninguna,0.7835,Alto
+1177,Perforación,Soldador,35,2,Diurno,Neuquén - Vaca Muerta,46,Ninguna,0.4896,Medio
+1178,Perforación,Operador de Campo,30,4,Rotativo 14x14,Neuquén - Vaca Muerta,55,Ninguna,0.4085,Medio
+1179,Perforación,Operador Grúa,42,9,Nocturno,Chubut - San Jorge,16,Ninguna,0.7417,Alto
+1180,Producción,Ingeniero de Pozo,25,3,Rotativo 14x14,Salta - NOA,7,Hipertensión,0.7499,Alto
+1181,Producción,Supervisor,44,1,Diurno,Oficina Central BA,36,Ninguna,0.4246,Medio
+1182,Producción,Supervisor,22,0,Rotativo 14x14,Neuquén - Vaca Muerta,30,Ninguna,0.6689,Alto
+1183,Producción,Soldador,28,6,Rotativo 14x14,Chubut - San Jorge,32,Ninguna,0.3931,Medio
+1184,Producción,Maquinista,50,5,Rotativo 14x14,Neuquén - Vaca Muerta,30,Hipertensión,0.4015,Medio
+1185,Producción,Técnico HSE,60,11,Diurno,Mendoza - Cuyo,38,Lumbalgia,0.5582,Medio
+1186,Producción,Maquinista,23,1,Rotativo 7x7,Mendoza - Cuyo,37,Ninguna,0.5863,Medio
+1187,Producción,Operador de Campo,30,6,Rotativo 14x14,Salta - NOA,64,Ninguna,0.3457,Medio
+1188,Producción,Técnico HSE,38,6,Nocturno,Chubut - San Jorge,29,Ninguna,0.4331,Medio
+1189,Producción,Técnico HSE,44,7,Rotativo 14x14,Chubut - San Jorge,8,Hipoacusia,0.641,Alto
+1190,Producción,Ingeniero de Pozo,43,2,Diurno,Salta - NOA,56,Ninguna,0.3268,Medio
+1191,Producción,Operador de Campo,32,0,Rotativo 7x7,Chubut - San Jorge,13,Hipertensión,0.4627,Medio
+1192,Producción,Técnico HSE,43,7,Nocturno,Chubut - San Jorge,8,Hipertensión,0.8381,Alto
+1193,Producción,Maquinista,53,4,Rotativo 14x14,Neuquén - Vaca Muerta,38,Hipertensión,0.7418,Alto
+1194,Producción,Operador Grúa,31,3,Rotativo 7x7,Neuquén - Vaca Muerta,39,Hipoacusia,0.4444,Medio
+1195,Producción,Supervisor,22,0,Diurno,Oficina Central BA,24,Ninguna,0.6412,Alto
+1196,Producción,Técnico Senior,38,6,Rotativo 14x14,Salta - NOA,50,Ninguna,0.4893,Medio
+1197,Producción,Operador Grúa,35,2,Diurno,Oficina Central BA,25,Ninguna,0.5029,Medio
+1198,Producción,Soldador,28,6,Diurno,Salta - NOA,0,Ninguna,0.5332,Medio
+1199,Producción,Electricista,38,3,Rotativo 7x7,Mendoza - Cuyo,0,Estrés crónico,0.7692,Alto
+1200,Producción,Operador Grúa,43,2,Nocturno,Neuquén - Vaca Muerta,40,Ninguna,0.4764,Medio
+1201,Producción,Técnico Senior,38,16,Diurno,Salta - NOA,40,Ninguna,0.4072,Medio
+1202,Producción,Supervisor,50,1,Rotativo 7x7,Salta - NOA,40,Ninguna,0.6182,Alto
+1203,Producción,Ingeniero de Pozo,46,1,Rotativo 14x14,Neuquén - Vaca Muerta,0,Ninguna,0.7508,Alto
+1204,Producción,Supervisor,51,1,Rotativo 14x14,Neuquén - Vaca Muerta,50,Ninguna,0.4612,Medio
+1205,Producción,Soldador,43,2,Diurno,Neuquén - Vaca Muerta,52,Ninguna,0.3184,Medio
+1206,Producción,Ingeniero de Pozo,40,0,Rotativo 14x14,Neuquén - Vaca Muerta,22,Ninguna,0.5201,Medio
+1207,Producción,Técnico Senior,42,13,Diurno,Salta - NOA,16,Ninguna,0.383,Medio
+1208,Producción,Mecánico Industrial,27,5,Nocturno,Oficina Central BA,4,Ninguna,0.5864,Medio
+1209,Producción,Soldador,50,6,Diurno,Mendoza - Cuyo,26,Ninguna,0.3958,Medio
+1210,Producción,Mecánico Industrial,29,5,Rotativo 7x7,Neuquén - Vaca Muerta,31,Ninguna,0.5037,Medio
+1211,Producción,Operador Grúa,48,4,Rotativo 14x14,Salta - NOA,19,Diabetes tipo 2,0.5665,Medio
+1212,Producción,Operador de Campo,42,11,Rotativo 7x7,Neuquén - Vaca Muerta,34,Ninguna,0.5359,Medio
+1213,Producción,Maquinista,50,15,Diurno,Salta - NOA,50,Estrés crónico,0.3176,Medio
+1214,Producción,Soldador,32,0,Rotativo 14x14,Neuquén - Vaca Muerta,30,Ninguna,0.4394,Medio
+1215,Producción,Supervisor,25,3,Rotativo 14x14,Neuquén - Vaca Muerta,17,Ninguna,0.4816,Medio
+1216,Producción,Electricista,48,2,Diurno,Mendoza - Cuyo,42,Lumbalgia,0.5697,Medio
+1217,Producción,Operador Grúa,30,0,Rotativo 14x14,Neuquén - Vaca Muerta,18,Lumbalgia,0.8114,Alto
+1218,Producción,Técnico Senior,51,9,Diurno,Neuquén - Vaca Muerta,58,Ninguna,0.4626,Medio
+1219,Producción,Operador Grúa,28,4,Diurno,Neuquén - Vaca Muerta,2,Hipertensión,0.664,Alto
+1220,Producción,Técnico HSE,35,13,Rotativo 7x7,Salta - NOA,31,Estrés crónico,0.5038,Medio
+1221,Producción,Maquinista,45,4,Rotativo 14x14,Chubut - San Jorge,19,Ninguna,0.4684,Medio
+1222,Producción,Técnico Senior,48,2,Diurno,Chubut - San Jorge,20,Diabetes tipo 2,0.3954,Medio
+1223,Producción,Electricista,27,2,Rotativo 14x14,Chubut - San Jorge,31,Ninguna,0.5674,Medio
+1224,Producción,Operador Grúa,54,14,Rotativo 14x14,Neuquén - Vaca Muerta,41,Ninguna,0.4417,Medio
+1225,Producción,Maquinista,45,23,Diurno,Salta - NOA,18,Ninguna,0.4044,Medio
+1226,Producción,Técnico Senior,44,6,Nocturno,Salta - NOA,40,Ninguna,0.5692,Medio
+1227,Producción,Operador Grúa,30,8,Rotativo 14x14,Salta - NOA,41,Ninguna,0.5602,Medio
+1228,Producción,Ingeniero de Pozo,28,3,Rotativo 14x14,Salta - NOA,32,Ninguna,0.5802,Medio
+1229,Producción,Electricista,53,0,Diurno,Neuquén - Vaca Muerta,20,Ninguna,0.5452,Medio
+1230,Producción,Mecánico Industrial,38,8,Rotativo 14x14,Chubut - San Jorge,48,Hipertensión,0.4605,Medio
+1231,Producción,Supervisor,47,2,Rotativo 14x14,Neuquén - Vaca Muerta,40,Ninguna,0.4047,Medio
+1232,Producción,Supervisor,44,10,Rotativo 14x14,Neuquén - Vaca Muerta,46,Ninguna,0.3845,Medio
+1233,Producción,Operador Grúa,37,6,Rotativo 7x7,Chubut - San Jorge,30,Hipertensión,0.4753,Medio
+1234,Producción,Soldador,34,3,Rotativo 14x14,Chubut - San Jorge,35,Ninguna,0.4376,Medio
+1235,Producción,Mecánico Industrial,39,2,Diurno,Salta - NOA,5,Ninguna,0.4535,Medio
+1236,Producción,Mecánico Industrial,25,3,Rotativo 14x14,Chubut - San Jorge,0,Estrés crónico,0.4775,Medio
+1237,Producción,Operador Grúa,38,0,Diurno,Chubut - San Jorge,34,Lumbalgia,0.3761,Medio
+1238,Producción,Técnico HSE,41,0,Nocturno,Neuquén - Vaca Muerta,33,Estrés crónico,0.5545,Medio
+1239,Producción,Técnico HSE,30,8,Rotativo 7x7,Neuquén - Vaca Muerta,18,Estrés crónico,0.4047,Medio
+1240,Producción,Mecánico Industrial,39,5,Rotativo 14x14,Mendoza - Cuyo,24,Estrés crónico,0.5007,Medio
+1241,Producción,Técnico HSE,38,16,Rotativo 7x7,Salta - NOA,39,Ninguna,0.4039,Medio
+1242,Producción,Supervisor,30,2,Rotativo 7x7,Chubut - San Jorge,41,Ninguna,0.4631,Medio
+1243,Producción,Soldador,34,2,Rotativo 14x14,Mendoza - Cuyo,23,Ninguna,0.7618,Alto
+1244,Producción,Operador de Campo,47,10,Rotativo 14x14,Neuquén - Vaca Muerta,0,Ninguna,0.5592,Medio
+1245,Producción,Supervisor,41,4,Rotativo 14x14,Mendoza - Cuyo,45,Ninguna,0.3659,Medio
+1246,Producción,Operador de Campo,36,0,Diurno,Neuquén - Vaca Muerta,52,Ninguna,0.3429,Medio
+1247,Producción,Mecánico Industrial,39,1,Rotativo 14x14,Neuquén - Vaca Muerta,56,Diabetes tipo 2,0.4191,Medio
+1248,Producción,Técnico Senior,52,5,Diurno,Mendoza - Cuyo,37,Ninguna,0.5855,Medio
+1249,Producción,Operador Grúa,29,7,Nocturno,Neuquén - Vaca Muerta,31,Ninguna,0.5489,Medio
+1250,Producción,Maquinista,49,2,Rotativo 14x14,Mendoza - Cuyo,21,Ninguna,0.7918,Alto
+1251,Producción,Soldador,42,11,Rotativo 14x14,Mendoza - Cuyo,19,Ninguna,0.6084,Alto
+1252,Producción,Maquinista,60,0,Rotativo 7x7,Chubut - San Jorge,34,Ninguna,0.5366,Medio
+1253,Producción,Soldador,31,9,Rotativo 7x7,Mendoza - Cuyo,35,Hipertensión,0.5823,Medio
+1254,Producción,Soldador,28,6,Diurno,Chubut - San Jorge,38,Ninguna,0.3125,Medio
+1255,Producción,Supervisor,33,3,Diurno,Salta - NOA,40,Ninguna,0.5197,Medio
+1256,Producción,Operador Grúa,28,4,Nocturno,Mendoza - Cuyo,49,Ninguna,0.651,Alto
+1257,Producción,Operador de Campo,42,12,Diurno,Neuquén - Vaca Muerta,19,Ninguna,0.3625,Medio
+1258,Producción,Electricista,44,6,Rotativo 14x14,Salta - NOA,50,Ninguna,0.5541,Medio
+1259,Producción,Soldador,35,0,Diurno,Chubut - San Jorge,21,Ninguna,0.6723,Alto
+1260,Producción,Electricista,35,13,Nocturno,Neuquén - Vaca Muerta,23,Ninguna,0.5938,Medio
+1261,Producción,Operador Grúa,41,1,Rotativo 14x14,Chubut - San Jorge,35,Estrés crónico,0.4818,Medio
+1262,Producción,Maquinista,44,0,Nocturno,Neuquén - Vaca Muerta,60,Ninguna,0.5092,Medio
+1263,Producción,Operador de Campo,49,4,Diurno,Chubut - San Jorge,26,Ninguna,0.6155,Alto
+1264,Producción,Técnico HSE,34,12,Rotativo 14x14,Salta - NOA,43,Hipertensión,0.5353,Medio
+1265,Producción,Supervisor,56,5,Rotativo 7x7,Neuquén - Vaca Muerta,46,Ninguna,0.6043,Alto
+1266,Producción,Maquinista,35,0,Nocturno,Salta - NOA,26,Ninguna,0.5072,Medio
+1267,Producción,Maquinista,43,0,Rotativo 7x7,Neuquén - Vaca Muerta,54,Hipoacusia,0.4403,Medio
+1268,Producción,Supervisor,43,12,Nocturno,Salta - NOA,65,Hipertensión,0.4194,Medio
+1269,Producción,Mecánico Industrial,30,4,Diurno,Oficina Central BA,21,Estrés crónico,0.5261,Medio
+1270,Producción,Maquinista,39,5,Nocturno,Mendoza - Cuyo,47,Hipertensión,0.6277,Alto
+1271,Producción,Supervisor,36,6,Rotativo 14x14,Salta - NOA,46,Hipertensión,0.5111,Medio
+1272,Producción,Supervisor,34,10,Rotativo 14x14,Oficina Central BA,24,Lumbalgia,0.5196,Medio
+1273,Producción,Operador Grúa,58,0,Diurno,Neuquén - Vaca Muerta,33,Estrés crónico,0.6149,Alto
+1274,Producción,Operador de Campo,36,4,Rotativo 14x14,Mendoza - Cuyo,8,Ninguna,0.5953,Medio
+1275,Producción,Operador de Campo,46,13,Diurno,Neuquén - Vaca Muerta,67,Ninguna,0.2216,Bajo
+1276,Producción,Electricista,40,5,Rotativo 7x7,Mendoza - Cuyo,52,Hipertensión,0.3342,Medio
+1277,Producción,Operador Grúa,35,4,Diurno,Chubut - San Jorge,20,Ninguna,0.3491,Medio
+1278,Producción,Mecánico Industrial,51,14,Nocturno,Chubut - San Jorge,21,Hipertensión,0.4829,Medio
+1279,Producción,Ingeniero de Pozo,45,0,Rotativo 14x14,Neuquén - Vaca Muerta,40,Ninguna,0.518,Medio
+1280,Producción,Ingeniero de Pozo,30,3,Rotativo 7x7,Mendoza - Cuyo,27,Lumbalgia,0.4841,Medio
+1281,Producción,Supervisor,54,7,Rotativo 14x14,Neuquén - Vaca Muerta,16,Estrés crónico,0.6761,Alto
+1282,Producción,Mecánico Industrial,46,9,Rotativo 7x7,Neuquén - Vaca Muerta,36,Ninguna,0.4645,Medio
+1283,Producción,Operador de Campo,37,2,Diurno,Mendoza - Cuyo,28,Lumbalgia,0.5967,Medio
+1284,Producción,Electricista,36,11,Rotativo 7x7,Chubut - San Jorge,9,Hipertensión,0.476,Medio
+1285,Producción,Técnico Senior,29,7,Nocturno,Mendoza - Cuyo,15,Lumbalgia,0.6525,Alto
+1286,Producción,Técnico Senior,37,5,Diurno,Mendoza - Cuyo,26,Estrés crónico,0.3568,Medio
+1287,Producción,Técnico Senior,29,0,Rotativo 14x14,Neuquén - Vaca Muerta,25,Ninguna,0.4525,Medio
+1288,Producción,Técnico Senior,47,6,Rotativo 7x7,Chubut - San Jorge,14,Ninguna,0.5824,Medio
+1289,Producción,Electricista,27,0,Rotativo 7x7,Mendoza - Cuyo,33,Ninguna,0.522,Medio
+1290,Producción,Técnico HSE,37,0,Diurno,Oficina Central BA,14,Estrés crónico,0.4792,Medio
+1291,Producción,Ingeniero de Pozo,48,26,Diurno,Oficina Central BA,37,Hipoacusia,0.4025,Medio
+1292,Producción,Mecánico Industrial,61,1,Rotativo 7x7,Mendoza - Cuyo,4,Ninguna,0.7001,Alto
+1293,Producción,Soldador,26,4,Rotativo 14x14,Neuquén - Vaca Muerta,19,Hipoacusia,0.6083,Alto
+1294,Producción,Operador de Campo,40,1,Rotativo 14x14,Neuquén - Vaca Muerta,26,Lumbalgia,0.5314,Medio
+1295,Producción,Mecánico Industrial,53,1,Rotativo 14x14,Mendoza - Cuyo,27,Diabetes tipo 2,0.5529,Medio
+1296,Producción,Electricista,40,5,Diurno,Salta - NOA,39,Lumbalgia,0.3256,Medio
+1297,Producción,Operador de Campo,43,20,Rotativo 7x7,Mendoza - Cuyo,26,Lumbalgia,0.3072,Medio
+1298,Producción,Operador de Campo,22,0,Rotativo 14x14,Mendoza - Cuyo,30,Estrés crónico,0.6291,Alto
+1299,Producción,Técnico Senior,50,15,Rotativo 14x14,Chubut - San Jorge,19,Lumbalgia,0.5,Medio
+1300,Producción,Operador de Campo,39,0,Rotativo 14x14,Neuquén - Vaca Muerta,31,Ninguna,0.4965,Medio
+1301,Producción,Electricista,45,18,Rotativo 14x14,Chubut - San Jorge,43,Ninguna,0.2986,Bajo
+1302,Producción,Maquinista,48,2,Rotativo 14x14,Salta - NOA,24,Ninguna,0.7953,Alto
+1303,Producción,Maquinista,48,0,Rotativo 7x7,Salta - NOA,10,Estrés crónico,0.785,Alto
+1304,Producción,Técnico Senior,32,3,Diurno,Mendoza - Cuyo,36,Ninguna,0.4221,Medio
+1305,Producción,Técnico Senior,30,8,Diurno,Neuquén - Vaca Muerta,27,Hipertensión,0.5147,Medio
+1306,Producción,Técnico HSE,36,1,Rotativo 14x14,Neuquén - Vaca Muerta,7,Ninguna,0.5525,Medio
+1307,Producción,Mecánico Industrial,45,2,Rotativo 7x7,Mendoza - Cuyo,29,Ninguna,0.4553,Medio
+1308,Producción,Operador de Campo,34,9,Rotativo 14x14,Salta - NOA,11,Estrés crónico,0.5244,Medio
+1309,Producción,Técnico Senior,56,5,Rotativo 14x14,Salta - NOA,44,Ninguna,0.673,Alto
+1310,Producción,Técnico Senior,27,5,Rotativo 14x14,Neuquén - Vaca Muerta,32,Estrés crónico,0.6468,Alto
+1311,Producción,Operador Grúa,29,3,Diurno,Mendoza - Cuyo,46,Ninguna,0.3057,Medio
+1312,Producción,Operador Grúa,35,12,Nocturno,Oficina Central BA,34,Diabetes tipo 2,0.3703,Medio
+1313,Producción,Técnico Senior,36,5,Nocturno,Salta - NOA,34,Ninguna,0.7224,Alto
+1314,Producción,Mecánico Industrial,35,13,Diurno,Neuquén - Vaca Muerta,43,Diabetes tipo 2,0.35,Medio
+1315,Producción,Mecánico Industrial,42,1,Rotativo 14x14,Chubut - San Jorge,45,Lumbalgia,0.6764,Alto
+1316,Producción,Mecánico Industrial,38,2,Rotativo 14x14,Chubut - San Jorge,34,Ninguna,0.7208,Alto
+1317,Producción,Supervisor,22,0,Rotativo 14x14,Neuquén - Vaca Muerta,31,Ninguna,0.5418,Medio
+1318,Producción,Operador Grúa,49,13,Rotativo 14x14,Mendoza - Cuyo,27,Ninguna,0.58,Medio
+1319,Producción,Maquinista,46,2,Rotativo 7x7,Neuquén - Vaca Muerta,56,Hipoacusia,0.5345,Medio
+1320,Producción,Operador de Campo,39,4,Rotativo 7x7,Neuquén - Vaca Muerta,26,Ninguna,0.4915,Medio
+1321,Producción,Mecánico Industrial,38,2,Rotativo 14x14,Neuquén - Vaca Muerta,16,Estrés crónico,0.7663,Alto
+1322,Producción,Supervisor,39,0,Rotativo 14x14,Mendoza - Cuyo,33,Ninguna,0.6143,Alto
+1323,Producción,Electricista,42,5,Rotativo 14x14,Mendoza - Cuyo,31,Ninguna,0.4554,Medio
+1324,Producción,Operador Grúa,31,3,Diurno,Neuquén - Vaca Muerta,34,Ninguna,0.3215,Medio
+1325,Producción,Mecánico Industrial,38,2,Rotativo 14x14,Oficina Central BA,55,Ninguna,0.5853,Medio
+1326,Producción,Maquinista,39,10,Diurno,Neuquén - Vaca Muerta,35,Hipertensión,0.4745,Medio
+1327,Producción,Soldador,39,4,Rotativo 14x14,Chubut - San Jorge,41,Ninguna,0.6588,Alto
+1328,Producción,Electricista,57,7,Nocturno,Neuquén - Vaca Muerta,38,Ninguna,0.5262,Medio
+1329,Producción,Mecánico Industrial,49,6,Rotativo 14x14,Oficina Central BA,40,Hipertensión,0.4146,Medio
+1330,Producción,Operador Grúa,49,5,Rotativo 14x14,Chubut - San Jorge,18,Ninguna,0.7603,Alto
+1331,Producción,Técnico HSE,22,0,Rotativo 14x14,Neuquén - Vaca Muerta,21,Lumbalgia,0.5387,Medio
+1332,Producción,Supervisor,57,3,Diurno,Mendoza - Cuyo,3,Ninguna,0.5231,Medio
+1333,Producción,Electricista,42,1,Diurno,Chubut - San Jorge,37,Ninguna,0.4628,Medio
+1334,Producción,Mecánico Industrial,38,1,Rotativo 14x14,Chubut - San Jorge,41,Hipertensión,0.4034,Medio
+1335,Producción,Técnico HSE,41,9,Rotativo 14x14,Chubut - San Jorge,32,Hipertensión,0.4067,Medio
+1336,Producción,Electricista,29,5,Rotativo 7x7,Chubut - San Jorge,39,Lumbalgia,0.5805,Medio
+1337,Producción,Mecánico Industrial,46,11,Diurno,Neuquén - Vaca Muerta,0,Lumbalgia,0.5551,Medio
+1338,Producción,Supervisor,36,0,Rotativo 7x7,Neuquén - Vaca Muerta,18,Ninguna,0.7531,Alto
+1339,Producción,Supervisor,62,4,Nocturno,Salta - NOA,10,Diabetes tipo 2,1.0,Alto
+1340,Producción,Ingeniero de Pozo,22,0,Nocturno,Chubut - San Jorge,47,Estrés crónico,0.5687,Medio
+1341,Producción,Operador de Campo,42,1,Diurno,Salta - NOA,41,Diabetes tipo 2,0.3929,Medio
+1342,Producción,Supervisor,24,2,Nocturno,Salta - NOA,61,Ninguna,0.4108,Medio
+1343,Producción,Ingeniero de Pozo,50,12,Rotativo 14x14,Neuquén - Vaca Muerta,23,Ninguna,0.5308,Medio
+1344,Producción,Operador Grúa,45,1,Nocturno,Neuquén - Vaca Muerta,25,Ninguna,0.8243,Alto
+1345,Producción,Técnico Senior,32,10,Rotativo 7x7,Mendoza - Cuyo,50,Ninguna,0.348,Medio
+1346,Producción,Técnico HSE,44,0,Diurno,Neuquén - Vaca Muerta,0,Ninguna,0.4095,Medio
+1347,Producción,Ingeniero de Pozo,32,9,Rotativo 14x14,Salta - NOA,17,Ninguna,0.498,Medio
+1348,Producción,Operador Grúa,48,11,Nocturno,Oficina Central BA,17,Hipoacusia,0.6914,Alto
+1349,Producción,Operador de Campo,32,6,Nocturno,Mendoza - Cuyo,53,Ninguna,0.5836,Medio
+1350,Producción,Técnico HSE,39,2,Rotativo 14x14,Mendoza - Cuyo,5,Hipertensión,0.827,Alto
+1351,Producción,Operador Grúa,39,10,Diurno,Oficina Central BA,16,Ninguna,0.4138,Medio
+1352,Producción,Operador Grúa,35,0,Nocturno,Salta - NOA,35,Ninguna,0.5279,Medio
+1353,Producción,Soldador,41,9,Rotativo 14x14,Neuquén - Vaca Muerta,43,Ninguna,0.4433,Medio
+1354,Producción,Ingeniero de Pozo,45,0,Diurno,Salta - NOA,28,Estrés crónico,0.5335,Medio
+1355,Producción,Electricista,39,4,Rotativo 14x14,Oficina Central BA,18,Ninguna,0.4259,Medio
+1356,Producción,Supervisor,44,1,Rotativo 7x7,Neuquén - Vaca Muerta,38,Lumbalgia,0.65,Alto
+1357,Producción,Electricista,47,2,Rotativo 14x14,Salta - NOA,54,Hipertensión,0.4272,Medio
+1358,Producción,Técnico Senior,48,16,Diurno,Neuquén - Vaca Muerta,35,Ninguna,0.2843,Bajo
+1359,Producción,Electricista,26,3,Nocturno,Chubut - San Jorge,25,Ninguna,0.6071,Alto
+1360,Producción,Supervisor,31,3,Rotativo 14x14,Neuquén - Vaca Muerta,45,Ninguna,0.4174,Medio
+1361,Producción,Electricista,32,10,Rotativo 14x14,Oficina Central BA,37,Diabetes tipo 2,0.4062,Medio
+1362,Producción,Técnico HSE,41,0,Diurno,Mendoza - Cuyo,31,Hipertensión,0.5601,Medio
+1363,Producción,Supervisor,22,0,Diurno,Mendoza - Cuyo,18,Ninguna,0.4545,Medio
+1364,Producción,Soldador,39,6,Diurno,Oficina Central BA,33,Ninguna,0.3158,Medio
+1365,Producción,Técnico Senior,34,0,Nocturno,Neuquén - Vaca Muerta,60,Ninguna,0.701,Alto
+1366,Producción,Operador Grúa,48,6,Rotativo 14x14,Neuquén - Vaca Muerta,47,Ninguna,0.3433,Medio
+1367,Producción,Electricista,36,6,Rotativo 7x7,Neuquén - Vaca Muerta,16,Hipertensión,0.6282,Alto
+1368,Producción,Ingeniero de Pozo,33,6,Rotativo 7x7,Mendoza - Cuyo,29,Ninguna,0.6342,Alto
+1369,Producción,Electricista,44,9,Rotativo 7x7,Neuquén - Vaca Muerta,53,Ninguna,0.2834,Bajo
+1370,Producción,Ingeniero de Pozo,40,17,Rotativo 14x14,Chubut - San Jorge,26,Ninguna,0.299,Bajo
+1371,Producción,Ingeniero de Pozo,52,1,Diurno,Chubut - San Jorge,51,Ninguna,0.5573,Medio
+1372,Producción,Operador de Campo,29,1,Rotativo 14x14,Neuquén - Vaca Muerta,3,Estrés crónico,0.8538,Alto
+1373,Producción,Maquinista,42,18,Diurno,Chubut - San Jorge,39,Lumbalgia,0.3745,Medio
+1374,Producción,Operador Grúa,31,3,Diurno,Salta - NOA,32,Estrés crónico,0.4122,Medio
+1375,Producción,Electricista,46,7,Rotativo 14x14,Mendoza - Cuyo,28,Diabetes tipo 2,0.5693,Medio
+1376,Producción,Ingeniero de Pozo,33,0,Rotativo 14x14,Mendoza - Cuyo,5,Ninguna,0.6662,Alto
+1377,Producción,Electricista,31,8,Rotativo 14x14,Neuquén - Vaca Muerta,18,Ninguna,0.4233,Medio
+1378,Producción,Ingeniero de Pozo,45,11,Rotativo 14x14,Salta - NOA,37,Diabetes tipo 2,0.3118,Medio
+1379,Producción,Técnico HSE,54,2,Rotativo 7x7,Salta - NOA,2,Estrés crónico,0.6365,Alto
+1380,Producción,Técnico HSE,36,3,Nocturno,Neuquén - Vaca Muerta,36,Estrés crónico,0.5379,Medio
+1381,Producción,Soldador,40,11,Rotativo 7x7,Salta - NOA,0,Ninguna,0.5978,Medio
+1382,Producción,Ingeniero de Pozo,28,6,Diurno,Neuquén - Vaca Muerta,37,Ninguna,0.3324,Medio
+1383,Producción,Electricista,46,5,Rotativo 14x14,Neuquén - Vaca Muerta,45,Lumbalgia,0.4674,Medio
+1384,Producción,Técnico HSE,48,0,Rotativo 14x14,Neuquén - Vaca Muerta,59,Ninguna,0.3767,Medio
+1385,Producción,Maquinista,31,9,Rotativo 7x7,Mendoza - Cuyo,21,Estrés crónico,0.5641,Medio
+1386,Producción,Técnico Senior,30,8,Nocturno,Mendoza - Cuyo,57,Ninguna,0.4915,Medio
+1387,Producción,Soldador,39,4,Diurno,Chubut - San Jorge,36,Ninguna,0.3604,Medio
+1388,Producción,Mecánico Industrial,36,4,Rotativo 14x14,Chubut - San Jorge,34,Hipertensión,0.6454,Alto
+1389,Producción,Técnico HSE,46,1,Nocturno,Neuquén - Vaca Muerta,28,Ninguna,0.7596,Alto
+1390,Producción,Supervisor,41,12,Diurno,Neuquén - Vaca Muerta,37,Ninguna,0.3661,Medio
+1391,Producción,Mecánico Industrial,34,4,Rotativo 14x14,Chubut - San Jorge,50,Ninguna,0.3406,Medio
+1392,Producción,Ingeniero de Pozo,25,3,Rotativo 14x14,Neuquén - Vaca Muerta,30,Lumbalgia,0.5146,Medio
+1393,Producción,Electricista,22,0,Rotativo 14x14,Chubut - San Jorge,41,Ninguna,0.6219,Alto
+1394,Producción,Técnico Senior,33,3,Rotativo 14x14,Mendoza - Cuyo,30,Lumbalgia,0.391,Medio
+1395,Producción,Maquinista,40,0,Rotativo 14x14,Mendoza - Cuyo,54,Ninguna,0.5145,Medio
+1396,Producción,Supervisor,48,0,Rotativo 14x14,Chubut - San Jorge,43,Ninguna,0.4579,Medio
+1397,Producción,Soldador,40,16,Rotativo 14x14,Mendoza - Cuyo,38,Estrés crónico,0.4596,Medio
+1398,Producción,Electricista,52,2,Nocturno,Chubut - San Jorge,35,Ninguna,0.5559,Medio
+1399,Producción,Técnico HSE,46,5,Rotativo 14x14,Mendoza - Cuyo,44,Hipertensión,0.5917,Medio
+1400,Mantenimiento,Supervisor,32,8,Rotativo 7x7,Mendoza - Cuyo,44,Ninguna,0.4382,Medio
+1401,Mantenimiento,Ingeniero de Pozo,43,1,Rotativo 7x7,Neuquén - Vaca Muerta,17,Estrés crónico,0.7816,Alto
+1402,Mantenimiento,Técnico HSE,41,10,Rotativo 14x14,Neuquén - Vaca Muerta,31,Ninguna,0.5059,Medio
+1403,Mantenimiento,Maquinista,35,5,Rotativo 7x7,Chubut - San Jorge,39,Ninguna,0.5185,Medio
+1404,Mantenimiento,Electricista,53,4,Diurno,Chubut - San Jorge,33,Hipertensión,0.6642,Alto
+1405,Mantenimiento,Supervisor,43,0,Rotativo 14x14,Neuquén - Vaca Muerta,47,Diabetes tipo 2,0.5316,Medio
+1406,Mantenimiento,Mecánico Industrial,36,0,Diurno,Neuquén - Vaca Muerta,31,Hipertensión,0.6364,Alto
+1407,Mantenimiento,Mecánico Industrial,41,5,Rotativo 7x7,Mendoza - Cuyo,48,Hipoacusia,0.5361,Medio
+1408,Mantenimiento,Operador Grúa,34,8,Diurno,Mendoza - Cuyo,55,Diabetes tipo 2,0.4975,Medio
+1409,Mantenimiento,Supervisor,41,1,Rotativo 14x14,Neuquén - Vaca Muerta,0,Ninguna,0.93,Alto
+1410,Mantenimiento,Técnico Senior,38,16,Nocturno,Chubut - San Jorge,42,Diabetes tipo 2,0.3717,Medio
+1411,Mantenimiento,Operador Grúa,33,7,Rotativo 14x14,Neuquén - Vaca Muerta,34,Hipertensión,0.4419,Medio
+1412,Mantenimiento,Electricista,27,5,Rotativo 14x14,Neuquén - Vaca Muerta,37,Ninguna,0.7262,Alto
+1413,Mantenimiento,Ingeniero de Pozo,36,4,Rotativo 7x7,Mendoza - Cuyo,12,Ninguna,0.642,Alto
+1414,Mantenimiento,Ingeniero de Pozo,40,2,Diurno,Chubut - San Jorge,14,Ninguna,0.4393,Medio
+1415,Mantenimiento,Operador de Campo,34,1,Rotativo 14x14,Chubut - San Jorge,34,Hipertensión,0.7802,Alto
+1416,Mantenimiento,Mecánico Industrial,41,15,Rotativo 7x7,Chubut - San Jorge,26,Ninguna,0.3529,Medio
+1417,Mantenimiento,Operador Grúa,44,6,Rotativo 14x14,Chubut - San Jorge,16,Ninguna,0.4657,Medio
+1418,Mantenimiento,Supervisor,41,19,Rotativo 14x14,Chubut - San Jorge,36,Ninguna,0.4252,Medio
+1419,Mantenimiento,Ingeniero de Pozo,31,9,Rotativo 14x14,Mendoza - Cuyo,31,Ninguna,0.6978,Alto
+1420,Mantenimiento,Maquinista,34,6,Diurno,Neuquén - Vaca Muerta,24,Hipertensión,0.4597,Medio
+1421,Mantenimiento,Maquinista,34,2,Diurno,Neuquén - Vaca Muerta,36,Ninguna,0.5069,Medio
+1422,Mantenimiento,Electricista,50,1,Rotativo 14x14,Neuquén - Vaca Muerta,36,Ninguna,0.5977,Medio
+1423,Mantenimiento,Técnico HSE,39,4,Rotativo 7x7,Neuquén - Vaca Muerta,30,Ninguna,0.556,Medio
+1424,Mantenimiento,Maquinista,42,7,Rotativo 14x14,Neuquén - Vaca Muerta,56,Ninguna,0.3511,Medio
+1425,Mantenimiento,Técnico HSE,51,19,Diurno,Neuquén - Vaca Muerta,37,Ninguna,0.4628,Medio
+1426,Mantenimiento,Supervisor,49,3,Rotativo 14x14,Neuquén - Vaca Muerta,31,Ninguna,0.735,Alto
+1427,Mantenimiento,Operador de Campo,46,15,Diurno,Mendoza - Cuyo,32,Ninguna,0.4064,Medio
+1428,Mantenimiento,Operador Grúa,26,4,Rotativo 14x14,Neuquén - Vaca Muerta,41,Estrés crónico,0.4444,Medio
+1429,Mantenimiento,Electricista,40,4,Rotativo 7x7,Neuquén - Vaca Muerta,28,Diabetes tipo 2,0.743,Alto
+1430,Mantenimiento,Supervisor,28,3,Rotativo 7x7,Chubut - San Jorge,35,Lumbalgia,0.5232,Medio
+1431,Mantenimiento,Operador Grúa,22,0,Nocturno,Mendoza - Cuyo,44,Ninguna,0.6935,Alto
+1432,Mantenimiento,Operador de Campo,44,6,Rotativo 14x14,Chubut - San Jorge,52,Ninguna,0.4019,Medio
+1433,Mantenimiento,Técnico Senior,31,4,Rotativo 7x7,Salta - NOA,28,Diabetes tipo 2,0.6304,Alto
+1434,Mantenimiento,Operador Grúa,41,0,Rotativo 14x14,Mendoza - Cuyo,52,Ninguna,0.6674,Alto
+1435,Mantenimiento,Técnico Senior,41,3,Diurno,Neuquén - Vaca Muerta,34,Ninguna,0.4172,Medio
+1436,Mantenimiento,Técnico HSE,59,16,Rotativo 14x14,Neuquén - Vaca Muerta,35,Ninguna,0.5864,Medio
+1437,Mantenimiento,Operador de Campo,31,2,Rotativo 14x14,Salta - NOA,42,Diabetes tipo 2,0.4812,Medio
+1438,Mantenimiento,Supervisor,45,1,Rotativo 14x14,Neuquén - Vaca Muerta,55,Ninguna,0.6449,Alto
+1439,Mantenimiento,Electricista,44,18,Nocturno,Neuquén - Vaca Muerta,59,Ninguna,0.4979,Medio
+1440,Mantenimiento,Maquinista,35,3,Diurno,Salta - NOA,24,Diabetes tipo 2,0.5918,Medio
+1441,Mantenimiento,Electricista,44,7,Nocturno,Mendoza - Cuyo,10,Ninguna,0.7598,Alto
+1442,Mantenimiento,Ingeniero de Pozo,44,2,Rotativo 14x14,Mendoza - Cuyo,28,Ninguna,0.5848,Medio
+1443,Mantenimiento,Maquinista,32,1,Rotativo 14x14,Neuquén - Vaca Muerta,45,Estrés crónico,0.5367,Medio
+1444,Mantenimiento,Operador Grúa,43,0,Diurno,Chubut - San Jorge,29,Ninguna,0.48,Medio
+1445,Mantenimiento,Maquinista,45,1,Rotativo 14x14,Mendoza - Cuyo,30,Lumbalgia,0.7477,Alto
+1446,Mantenimiento,Técnico HSE,45,11,Rotativo 7x7,Chubut - San Jorge,34,Estrés crónico,0.473,Medio
+1447,Mantenimiento,Técnico Senior,45,13,Rotativo 7x7,Salta - NOA,17,Hipertensión,0.4496,Medio
+1448,Mantenimiento,Técnico HSE,30,1,Rotativo 14x14,Chubut - San Jorge,22,Ninguna,0.812,Alto
+1449,Mantenimiento,Técnico HSE,28,6,Nocturno,Mendoza - Cuyo,31,Ninguna,0.6266,Alto
+1450,Mantenimiento,Soldador,39,16,Rotativo 14x14,Salta - NOA,16,Ninguna,0.5991,Medio
+1451,Mantenimiento,Operador Grúa,44,3,Rotativo 7x7,Neuquén - Vaca Muerta,36,Lumbalgia,0.4911,Medio
+1452,Mantenimiento,Mecánico Industrial,31,6,Diurno,Mendoza - Cuyo,28,Ninguna,0.5624,Medio
+1453,Mantenimiento,Técnico HSE,41,0,Rotativo 14x14,Chubut - San Jorge,63,Ninguna,0.5539,Medio
+1454,Mantenimiento,Técnico HSE,50,0,Rotativo 14x14,Neuquén - Vaca Muerta,26,Ninguna,0.5327,Medio
+1455,Mantenimiento,Operador de Campo,34,1,Nocturno,Mendoza - Cuyo,60,Estrés crónico,0.5511,Medio
+1456,Mantenimiento,Maquinista,37,3,Diurno,Neuquén - Vaca Muerta,51,Ninguna,0.4708,Medio
+1457,Mantenimiento,Supervisor,34,12,Diurno,Neuquén - Vaca Muerta,47,Estrés crónico,0.4478,Medio
+1458,Mantenimiento,Supervisor,30,2,Diurno,Mendoza - Cuyo,0,Ninguna,0.4655,Medio
+1459,Mantenimiento,Electricista,43,2,Diurno,Mendoza - Cuyo,34,Ninguna,0.6643,Alto
+1460,Mantenimiento,Soldador,34,3,Rotativo 14x14,Chubut - San Jorge,34,Hipertensión,0.4421,Medio
+1461,Mantenimiento,Técnico HSE,26,4,Rotativo 7x7,Chubut - San Jorge,42,Ninguna,0.5797,Medio
+1462,Mantenimiento,Electricista,33,3,Rotativo 14x14,Mendoza - Cuyo,27,Ninguna,0.4706,Medio
+1463,Mantenimiento,Ingeniero de Pozo,34,12,Rotativo 14x14,Neuquén - Vaca Muerta,26,Ninguna,0.6331,Alto
+1464,Mantenimiento,Operador Grúa,38,9,Nocturno,Chubut - San Jorge,8,Ninguna,0.5043,Medio
+1465,Mantenimiento,Técnico HSE,24,2,Nocturno,Neuquén - Vaca Muerta,17,Ninguna,0.9007,Alto
+1466,Mantenimiento,Electricista,46,7,Rotativo 7x7,Neuquén - Vaca Muerta,29,Lumbalgia,0.4265,Medio
+1467,Mantenimiento,Técnico HSE,22,0,Rotativo 14x14,Neuquén - Vaca Muerta,32,Ninguna,0.6839,Alto
+1468,Mantenimiento,Mecánico Industrial,37,9,Rotativo 7x7,Chubut - San Jorge,38,Ninguna,0.4788,Medio
+1469,Mantenimiento,Técnico HSE,51,4,Diurno,Mendoza - Cuyo,9,Hipertensión,0.6821,Alto
+1470,Mantenimiento,Ingeniero de Pozo,41,1,Rotativo 14x14,Neuquén - Vaca Muerta,14,Ninguna,0.566,Medio
+1471,Mantenimiento,Operador Grúa,51,15,Rotativo 14x14,Neuquén - Vaca Muerta,24,Ninguna,0.6196,Alto
+1472,Mantenimiento,Mecánico Industrial,33,0,Rotativo 7x7,Salta - NOA,17,Ninguna,0.5344,Medio
+1473,Mantenimiento,Operador de Campo,32,0,Diurno,Chubut - San Jorge,30,Diabetes tipo 2,0.6291,Alto
+1474,Mantenimiento,Técnico HSE,31,1,Rotativo 14x14,Neuquén - Vaca Muerta,47,Ninguna,0.751,Alto
+1475,Mantenimiento,Soldador,46,2,Diurno,Mendoza - Cuyo,16,Ninguna,0.4759,Medio
+1476,Mantenimiento,Operador de Campo,27,1,Diurno,Chubut - San Jorge,27,Ninguna,0.6933,Alto
+1477,Mantenimiento,Soldador,22,0,Diurno,Chubut - San Jorge,22,Ninguna,0.4228,Medio
+1478,Mantenimiento,Ingeniero de Pozo,22,0,Diurno,Mendoza - Cuyo,21,Lumbalgia,0.6884,Alto
+1479,Mantenimiento,Ingeniero de Pozo,36,2,Rotativo 14x14,Neuquén - Vaca Muerta,29,Estrés crónico,0.514,Medio
+1480,Mantenimiento,Electricista,22,0,Nocturno,Chubut - San Jorge,45,Ninguna,0.8415,Alto
+1481,Mantenimiento,Operador Grúa,33,1,Diurno,Mendoza - Cuyo,10,Ninguna,0.4619,Medio
+1482,Mantenimiento,Ingeniero de Pozo,42,0,Nocturno,Neuquén - Vaca Muerta,63,Ninguna,0.7787,Alto
+1483,Mantenimiento,Supervisor,43,6,Rotativo 7x7,Chubut - San Jorge,48,Ninguna,0.4802,Medio
+1484,Mantenimiento,Soldador,51,4,Rotativo 7x7,Mendoza - Cuyo,48,Ninguna,0.6802,Alto
+1485,Mantenimiento,Técnico Senior,29,7,Rotativo 14x14,Mendoza - Cuyo,21,Ninguna,0.4422,Medio
+1486,Mantenimiento,Maquinista,44,2,Rotativo 14x14,Neuquén - Vaca Muerta,31,Ninguna,0.4657,Medio
+1487,Mantenimiento,Operador Grúa,47,0,Rotativo 7x7,Neuquén - Vaca Muerta,36,Ninguna,0.667,Alto
+1488,Mantenimiento,Soldador,48,12,Rotativo 14x14,Neuquén - Vaca Muerta,39,Ninguna,0.5131,Medio
+1489,Mantenimiento,Mecánico Industrial,47,23,Rotativo 14x14,Mendoza - Cuyo,13,Ninguna,0.5259,Medio
+1490,Mantenimiento,Técnico HSE,39,2,Rotativo 14x14,Neuquén - Vaca Muerta,20,Ninguna,0.7607,Alto
+1491,Mantenimiento,Operador Grúa,55,16,Nocturno,Chubut - San Jorge,35,Ninguna,0.6228,Alto
+1492,Mantenimiento,Mecánico Industrial,45,0,Rotativo 14x14,Mendoza - Cuyo,19,Ninguna,0.7455,Alto
+1493,Mantenimiento,Soldador,29,7,Diurno,Chubut - San Jorge,49,Ninguna,0.5295,Medio
+1494,Mantenimiento,Soldador,22,0,Rotativo 14x14,Chubut - San Jorge,31,Ninguna,0.5081,Medio
+1495,Mantenimiento,Electricista,29,2,Diurno,Chubut - San Jorge,52,Estrés crónico,0.571,Medio
+1496,Mantenimiento,Electricista,39,11,Rotativo 14x14,Salta - NOA,45,Ninguna,0.3939,Medio
+1497,Mantenimiento,Soldador,27,0,Rotativo 7x7,Neuquén - Vaca Muerta,31,Estrés crónico,0.6437,Alto
+1498,Mantenimiento,Operador de Campo,32,2,Rotativo 14x14,Chubut - San Jorge,47,Hipertensión,0.6046,Alto
+1499,Mantenimiento,Ingeniero de Pozo,50,7,Rotativo 14x14,Chubut - San Jorge,20,Ninguna,0.7942,Alto
+1500,Mantenimiento,Operador Grúa,44,1,Nocturno,Neuquén - Vaca Muerta,53,Estrés crónico,0.6765,Alto
+1501,Mantenimiento,Supervisor,35,13,Rotativo 14x14,Mendoza - Cuyo,28,Ninguna,0.5087,Medio
+1502,Mantenimiento,Técnico HSE,48,1,Nocturno,Salta - NOA,66,Ninguna,0.6105,Alto
+1503,Mantenimiento,Operador de Campo,52,7,Rotativo 7x7,Mendoza - Cuyo,7,Estrés crónico,0.5356,Medio
+1504,Mantenimiento,Mecánico Industrial,31,9,Diurno,Neuquén - Vaca Muerta,49,Lumbalgia,0.2954,Bajo
+1505,Mantenimiento,Operador de Campo,28,6,Rotativo 14x14,Neuquén - Vaca Muerta,50,Ninguna,0.4747,Medio
+1506,Mantenimiento,Operador Grúa,32,6,Nocturno,Neuquén - Vaca Muerta,47,Ninguna,0.5338,Medio
+1507,Mantenimiento,Ingeniero de Pozo,42,20,Rotativo 14x14,Neuquén - Vaca Muerta,17,Ninguna,0.6145,Alto
+1508,Mantenimiento,Ingeniero de Pozo,52,4,Nocturno,Neuquén - Vaca Muerta,15,Lumbalgia,0.7831,Alto
+1509,Mantenimiento,Operador Grúa,35,1,Rotativo 14x14,Mendoza - Cuyo,26,Ninguna,0.6257,Alto
+1510,Mantenimiento,Operador de Campo,35,1,Rotativo 14x14,Mendoza - Cuyo,17,Ninguna,0.5798,Medio
+1511,Mantenimiento,Maquinista,31,0,Rotativo 7x7,Mendoza - Cuyo,28,Ninguna,0.4806,Medio
+1512,Mantenimiento,Supervisor,36,2,Diurno,Neuquén - Vaca Muerta,44,Ninguna,0.5147,Medio
+1513,Mantenimiento,Técnico Senior,48,0,Rotativo 14x14,Chubut - San Jorge,36,Ninguna,0.7821,Alto
+1514,Mantenimiento,Electricista,43,0,Rotativo 14x14,Neuquén - Vaca Muerta,19,Ninguna,0.9158,Alto
+1515,Mantenimiento,Electricista,42,2,Diurno,Chubut - San Jorge,51,Ninguna,0.4036,Medio
+1516,Mantenimiento,Electricista,55,3,Diurno,Neuquén - Vaca Muerta,19,Lumbalgia,0.6204,Alto
+1517,Mantenimiento,Ingeniero de Pozo,35,1,Nocturno,Chubut - San Jorge,11,Estrés crónico,0.8393,Alto
+1518,Mantenimiento,Soldador,49,6,Diurno,Chubut - San Jorge,40,Ninguna,0.3875,Medio
+1519,Mantenimiento,Electricista,37,0,Diurno,Mendoza - Cuyo,26,Ninguna,0.655,Alto
+1520,Mantenimiento,Supervisor,44,0,Diurno,Neuquén - Vaca Muerta,14,Ninguna,0.5634,Medio
+1521,Mantenimiento,Maquinista,40,4,Nocturno,Neuquén - Vaca Muerta,0,Ninguna,0.7949,Alto
+1522,Mantenimiento,Supervisor,38,5,Rotativo 7x7,Mendoza - Cuyo,25,Ninguna,0.7511,Alto
+1523,Mantenimiento,Operador de Campo,39,7,Nocturno,Mendoza - Cuyo,11,Ninguna,0.6936,Alto
+1524,Mantenimiento,Ingeniero de Pozo,43,7,Nocturno,Salta - NOA,43,Diabetes tipo 2,0.6579,Alto
+1525,Mantenimiento,Técnico Senior,34,5,Rotativo 14x14,Neuquén - Vaca Muerta,16,Ninguna,0.4736,Medio
+1526,Mantenimiento,Operador de Campo,33,7,Diurno,Salta - NOA,53,Diabetes tipo 2,0.2978,Bajo
+1527,Mantenimiento,Mecánico Industrial,42,0,Diurno,Neuquén - Vaca Muerta,32,Hipertensión,0.6435,Alto
+1528,Mantenimiento,Técnico Senior,25,3,Rotativo 14x14,Mendoza - Cuyo,71,Ninguna,0.5705,Medio
+1529,Mantenimiento,Maquinista,39,9,Nocturno,Neuquén - Vaca Muerta,32,Ninguna,0.7779,Alto
+1530,Mantenimiento,Operador de Campo,32,9,Rotativo 7x7,Chubut - San Jorge,48,Ninguna,0.5683,Medio
+1531,Mantenimiento,Electricista,30,3,Rotativo 14x14,Mendoza - Cuyo,38,Ninguna,0.7708,Alto
+1532,Mantenimiento,Soldador,29,0,Rotativo 7x7,Chubut - San Jorge,56,Hipoacusia,0.6696,Alto
+1533,Mantenimiento,Soldador,32,7,Rotativo 14x14,Salta - NOA,14,Ninguna,0.5676,Medio
+1534,Mantenimiento,Técnico Senior,28,2,Diurno,Chubut - San Jorge,40,Ninguna,0.4257,Medio
+1535,Mantenimiento,Mecánico Industrial,38,2,Rotativo 14x14,Chubut - San Jorge,30,Hipertensión,0.7262,Alto
+1536,Mantenimiento,Mecánico Industrial,27,2,Diurno,Mendoza - Cuyo,31,Ninguna,0.4269,Medio
+1537,Mantenimiento,Electricista,45,1,Diurno,Mendoza - Cuyo,29,Ninguna,0.6889,Alto
+1538,Mantenimiento,Operador de Campo,29,6,Nocturno,Neuquén - Vaca Muerta,31,Hipertensión,0.556,Medio
+1539,Mantenimiento,Técnico Senior,37,0,Rotativo 7x7,Mendoza - Cuyo,5,Ninguna,0.8644,Alto
+1540,Mantenimiento,Supervisor,40,5,Diurno,Neuquén - Vaca Muerta,34,Ninguna,0.5702,Medio
+1541,Mantenimiento,Electricista,56,6,Rotativo 14x14,Neuquén - Vaca Muerta,11,Ninguna,0.5688,Medio
+1542,Mantenimiento,Ingeniero de Pozo,24,2,Nocturno,Mendoza - Cuyo,33,Estrés crónico,0.6559,Alto
+1543,Mantenimiento,Supervisor,27,2,Rotativo 14x14,Chubut - San Jorge,16,Lumbalgia,0.7561,Alto
+1544,Mantenimiento,Técnico HSE,38,0,Diurno,Neuquén - Vaca Muerta,33,Ninguna,0.5878,Medio
+1545,Mantenimiento,Operador Grúa,22,0,Rotativo 14x14,Neuquén - Vaca Muerta,16,Ninguna,0.6791,Alto
+1546,Mantenimiento,Técnico HSE,38,16,Rotativo 14x14,Chubut - San Jorge,33,Diabetes tipo 2,0.5083,Medio
+1547,Mantenimiento,Técnico HSE,29,7,Rotativo 14x14,Neuquén - Vaca Muerta,27,Ninguna,0.5818,Medio
+1548,Mantenimiento,Supervisor,55,9,Nocturno,Neuquén - Vaca Muerta,17,Diabetes tipo 2,0.7678,Alto
+1549,Mantenimiento,Soldador,42,11,Rotativo 14x14,Neuquén - Vaca Muerta,38,Hipertensión,0.5394,Medio
+1550,Mantenimiento,Técnico Senior,35,11,Nocturno,Chubut - San Jorge,38,Ninguna,0.6793,Alto
+1551,Mantenimiento,Soldador,32,8,Rotativo 7x7,Neuquén - Vaca Muerta,38,Hipertensión,0.3724,Medio
+1552,Mantenimiento,Supervisor,31,2,Diurno,Neuquén - Vaca Muerta,20,Ninguna,0.5432,Medio
+1553,Mantenimiento,Supervisor,28,6,Rotativo 7x7,Neuquén - Vaca Muerta,43,Ninguna,0.6274,Alto
+1554,Mantenimiento,Ingeniero de Pozo,47,7,Rotativo 14x14,Mendoza - Cuyo,45,Estrés crónico,0.4735,Medio
+1555,Mantenimiento,Ingeniero de Pozo,42,7,Rotativo 14x14,Neuquén - Vaca Muerta,46,Lumbalgia,0.5095,Medio
+1556,Mantenimiento,Operador de Campo,36,4,Nocturno,Neuquén - Vaca Muerta,42,Ninguna,0.6806,Alto
+1557,Mantenimiento,Técnico Senior,33,3,Rotativo 14x14,Neuquén - Vaca Muerta,28,Diabetes tipo 2,0.5355,Medio
+1558,Mantenimiento,Ingeniero de Pozo,46,3,Rotativo 14x14,Salta - NOA,21,Ninguna,0.6138,Alto
+1559,Mantenimiento,Soldador,40,4,Rotativo 14x14,Mendoza - Cuyo,0,Hipoacusia,0.5619,Medio
+1560,Transporte,Maquinista,36,7,Rotativo 14x14,Mendoza - Cuyo,30,Lumbalgia,0.4566,Medio
+1561,Transporte,Soldador,30,2,Rotativo 14x14,Mendoza - Cuyo,38,Ninguna,0.4581,Medio
+1562,Transporte,Supervisor,37,15,Diurno,Neuquén - Vaca Muerta,32,Ninguna,0.3076,Medio
+1563,Transporte,Electricista,42,1,Rotativo 14x14,Salta - NOA,42,Ninguna,0.5793,Medio
+1564,Transporte,Operador de Campo,28,1,Rotativo 14x14,Neuquén - Vaca Muerta,48,Hipoacusia,0.3546,Medio
+1565,Transporte,Mecánico Industrial,49,2,Rotativo 14x14,Salta - NOA,25,Lumbalgia,0.7208,Alto
+1566,Transporte,Ingeniero de Pozo,37,5,Rotativo 7x7,Mendoza - Cuyo,32,Lumbalgia,0.6179,Alto
+1567,Transporte,Ingeniero de Pozo,40,18,Rotativo 7x7,Neuquén - Vaca Muerta,7,Estrés crónico,0.4361,Medio
+1568,Transporte,Electricista,40,0,Nocturno,Salta - NOA,30,Ninguna,0.442,Medio
+1569,Transporte,Supervisor,30,0,Rotativo 14x14,Neuquén - Vaca Muerta,20,Ninguna,0.4956,Medio
+1570,Transporte,Supervisor,41,11,Nocturno,Neuquén - Vaca Muerta,31,Ninguna,0.6225,Alto
+1571,Transporte,Operador Grúa,28,2,Rotativo 7x7,Oficina Central BA,16,Ninguna,0.6317,Alto
+1572,Transporte,Electricista,37,9,Diurno,Mendoza - Cuyo,12,Diabetes tipo 2,0.4925,Medio
+1573,Transporte,Técnico Senior,36,2,Nocturno,Mendoza - Cuyo,35,Ninguna,0.6038,Alto
+1574,Transporte,Mecánico Industrial,29,2,Rotativo 7x7,Chubut - San Jorge,39,Hipertensión,0.4628,Medio
+1575,Transporte,Electricista,35,11,Rotativo 14x14,Neuquén - Vaca Muerta,17,Diabetes tipo 2,0.4072,Medio
+1576,Transporte,Soldador,36,0,Nocturno,Oficina Central BA,38,Lumbalgia,0.4719,Medio
+1577,Transporte,Supervisor,49,2,Diurno,Neuquén - Vaca Muerta,23,Estrés crónico,0.6255,Alto
+1578,Transporte,Soldador,40,11,Rotativo 7x7,Chubut - San Jorge,44,Diabetes tipo 2,0.4244,Medio
+1579,Transporte,Mecánico Industrial,48,8,Nocturno,Neuquén - Vaca Muerta,38,Ninguna,0.4319,Medio
+1580,Transporte,Operador Grúa,46,6,Rotativo 14x14,Salta - NOA,11,Ninguna,0.6282,Alto
+1581,Transporte,Técnico Senior,22,0,Rotativo 7x7,Neuquén - Vaca Muerta,0,Ninguna,0.7023,Alto
+1582,Transporte,Mecánico Industrial,28,0,Nocturno,Neuquén - Vaca Muerta,49,Ninguna,0.4604,Medio
+1583,Transporte,Operador Grúa,39,1,Diurno,Mendoza - Cuyo,10,Ninguna,0.3963,Medio
+1584,Transporte,Maquinista,40,15,Diurno,Salta - NOA,56,Ninguna,0.3153,Medio
+1585,Transporte,Ingeniero de Pozo,26,4,Rotativo 7x7,Chubut - San Jorge,38,Estrés crónico,0.4989,Medio
+1586,Transporte,Ingeniero de Pozo,24,2,Rotativo 14x14,Chubut - San Jorge,29,Hipertensión,0.4643,Medio
+1587,Transporte,Supervisor,34,12,Rotativo 14x14,Salta - NOA,38,Ninguna,0.4823,Medio
+1588,Transporte,Ingeniero de Pozo,48,3,Rotativo 14x14,Chubut - San Jorge,28,Ninguna,0.5038,Medio
+1589,Transporte,Técnico HSE,34,0,Rotativo 14x14,Mendoza - Cuyo,31,Ninguna,0.5976,Medio
+1590,Transporte,Soldador,27,0,Rotativo 14x14,Neuquén - Vaca Muerta,41,Ninguna,0.4871,Medio
+1591,Transporte,Operador de Campo,22,0,Rotativo 7x7,Mendoza - Cuyo,42,Ninguna,0.5618,Medio
+1592,Transporte,Ingeniero de Pozo,28,1,Diurno,Neuquén - Vaca Muerta,29,Ninguna,0.4216,Medio
+1593,Transporte,Ingeniero de Pozo,28,6,Rotativo 14x14,Chubut - San Jorge,27,Lumbalgia,0.5721,Medio
+1594,Transporte,Electricista,38,2,Rotativo 14x14,Neuquén - Vaca Muerta,37,Estrés crónico,0.395,Medio
+1595,Transporte,Supervisor,23,1,Nocturno,Salta - NOA,47,Lumbalgia,0.4191,Medio
+1596,Transporte,Técnico HSE,35,3,Rotativo 14x14,Salta - NOA,37,Ninguna,0.3901,Medio
+1597,Transporte,Operador Grúa,39,9,Rotativo 14x14,Salta - NOA,4,Ninguna,0.5835,Medio
+1598,Transporte,Operador Grúa,38,2,Rotativo 7x7,Neuquén - Vaca Muerta,43,Lumbalgia,0.5601,Medio
+1599,Transporte,Técnico Senior,31,1,Nocturno,Chubut - San Jorge,31,Lumbalgia,0.7882,Alto
+1600,Transporte,Maquinista,38,6,Nocturno,Mendoza - Cuyo,33,Ninguna,0.39,Medio
+1601,Transporte,Ingeniero de Pozo,23,1,Diurno,Salta - NOA,22,Ninguna,0.3893,Medio
+1602,Transporte,Mecánico Industrial,55,4,Rotativo 7x7,Neuquén - Vaca Muerta,20,Estrés crónico,0.4468,Medio
+1603,Transporte,Electricista,24,2,Diurno,Mendoza - Cuyo,19,Diabetes tipo 2,0.4309,Medio
+1604,Transporte,Maquinista,38,9,Nocturno,Chubut - San Jorge,27,Ninguna,0.4752,Medio
+1605,Transporte,Técnico Senior,34,4,Diurno,Neuquén - Vaca Muerta,5,Ninguna,0.5932,Medio
+1606,Transporte,Técnico HSE,38,10,Rotativo 14x14,Neuquén - Vaca Muerta,10,Ninguna,0.3621,Medio
+1607,Transporte,Técnico Senior,37,13,Diurno,Mendoza - Cuyo,23,Estrés crónico,0.3854,Medio
+1608,Transporte,Maquinista,49,3,Diurno,Mendoza - Cuyo,12,Lumbalgia,0.3913,Medio
+1609,Transporte,Ingeniero de Pozo,40,8,Rotativo 7x7,Chubut - San Jorge,47,Ninguna,0.3552,Medio
+1610,Transporte,Técnico Senior,31,0,Diurno,Mendoza - Cuyo,24,Hipertensión,0.6039,Alto
+1611,Transporte,Técnico HSE,23,1,Rotativo 14x14,Neuquén - Vaca Muerta,36,Estrés crónico,0.6105,Alto
+1612,Transporte,Técnico Senior,40,13,Diurno,Mendoza - Cuyo,57,Ninguna,0.3523,Medio
+1613,Transporte,Técnico HSE,33,5,Rotativo 14x14,Neuquén - Vaca Muerta,38,Estrés crónico,0.4281,Medio
+1614,Transporte,Supervisor,56,3,Nocturno,Neuquén - Vaca Muerta,27,Ninguna,0.8116,Alto
+1615,Transporte,Mecánico Industrial,43,0,Rotativo 14x14,Neuquén - Vaca Muerta,12,Ninguna,0.8008,Alto
+1616,Transporte,Ingeniero de Pozo,35,10,Rotativo 7x7,Salta - NOA,26,Ninguna,0.3921,Medio
+1617,Transporte,Operador Grúa,24,0,Rotativo 14x14,Oficina Central BA,18,Estrés crónico,0.5602,Medio
+1618,Transporte,Ingeniero de Pozo,28,6,Rotativo 14x14,Neuquén - Vaca Muerta,53,Diabetes tipo 2,0.4595,Medio
+1619,Transporte,Electricista,31,3,Nocturno,Neuquén - Vaca Muerta,16,Hipertensión,0.8282,Alto
+1620,Transporte,Mecánico Industrial,48,3,Diurno,Oficina Central BA,24,Ninguna,0.3952,Medio
+1621,Transporte,Técnico Senior,32,6,Rotativo 14x14,Neuquén - Vaca Muerta,53,Ninguna,0.3138,Medio
+1622,Transporte,Maquinista,26,3,Rotativo 14x14,Salta - NOA,30,Ninguna,0.4172,Medio
+1623,Transporte,Operador Grúa,30,8,Rotativo 14x14,Neuquén - Vaca Muerta,58,Ninguna,0.4961,Medio
+1624,Transporte,Supervisor,38,9,Rotativo 14x14,Salta - NOA,53,Ninguna,0.3899,Medio
+1625,Transporte,Ingeniero de Pozo,54,4,Rotativo 14x14,Chubut - San Jorge,36,Hipoacusia,0.6884,Alto
+1626,Transporte,Ingeniero de Pozo,29,0,Rotativo 7x7,Neuquén - Vaca Muerta,29,Ninguna,0.6467,Alto
+1627,Transporte,Supervisor,22,0,Nocturno,Neuquén - Vaca Muerta,33,Ninguna,0.482,Medio
+1628,Transporte,Mecánico Industrial,36,1,Nocturno,Oficina Central BA,54,Hipoacusia,0.4812,Medio
+1629,Transporte,Técnico HSE,26,4,Nocturno,Mendoza - Cuyo,31,Ninguna,0.6484,Alto
+1630,Transporte,Operador de Campo,49,0,Rotativo 14x14,Neuquén - Vaca Muerta,41,Hipertensión,0.5454,Medio
+1631,Transporte,Operador de Campo,34,10,Diurno,Chubut - San Jorge,31,Lumbalgia,0.3871,Medio
+1632,Transporte,Mecánico Industrial,46,10,Rotativo 7x7,Neuquén - Vaca Muerta,32,Ninguna,0.543,Medio
+1633,Transporte,Mecánico Industrial,46,2,Rotativo 14x14,Neuquén - Vaca Muerta,33,Ninguna,0.4658,Medio
+1634,Transporte,Electricista,30,1,Diurno,Neuquén - Vaca Muerta,34,Estrés crónico,0.3441,Medio
+1635,Transporte,Mecánico Industrial,54,3,Rotativo 14x14,Oficina Central BA,28,Lumbalgia,0.4261,Medio
+1636,Transporte,Ingeniero de Pozo,35,2,Rotativo 14x14,Neuquén - Vaca Muerta,32,Diabetes tipo 2,0.6495,Alto
+1637,Transporte,Ingeniero de Pozo,42,0,Rotativo 7x7,Salta - NOA,27,Hipertensión,0.5466,Medio
+1638,Transporte,Técnico Senior,40,8,Diurno,Chubut - San Jorge,9,Estrés crónico,0.3441,Medio
+1639,Transporte,Ingeniero de Pozo,39,11,Diurno,Neuquén - Vaca Muerta,0,Ninguna,0.4302,Medio
+1640,Transporte,Técnico Senior,22,0,Rotativo 14x14,Salta - NOA,40,Ninguna,0.4469,Medio
+1641,Transporte,Electricista,39,3,Nocturno,Chubut - San Jorge,40,Ninguna,0.6314,Alto
+1642,Transporte,Ingeniero de Pozo,47,5,Rotativo 7x7,Neuquén - Vaca Muerta,64,Ninguna,0.4918,Medio
+1643,Transporte,Electricista,33,0,Diurno,Salta - NOA,20,Lumbalgia,0.3878,Medio
+1644,Transporte,Técnico HSE,38,10,Rotativo 14x14,Mendoza - Cuyo,55,Estrés crónico,0.2686,Bajo
+1645,Transporte,Técnico Senior,37,0,Rotativo 14x14,Chubut - San Jorge,0,Estrés crónico,0.5455,Medio
+1646,Transporte,Técnico HSE,24,1,Diurno,Neuquén - Vaca Muerta,28,Ninguna,0.459,Medio
+1647,Transporte,Maquinista,42,0,Diurno,Neuquén - Vaca Muerta,26,Hipertensión,0.453,Medio
+1648,Transporte,Ingeniero de Pozo,32,3,Rotativo 7x7,Mendoza - Cuyo,13,Ninguna,0.5374,Medio
+1649,Transporte,Operador Grúa,30,2,Rotativo 14x14,Salta - NOA,52,Ninguna,0.5659,Medio
+1650,Transporte,Operador Grúa,27,0,Rotativo 7x7,Salta - NOA,48,Ninguna,0.4016,Medio
+1651,Transporte,Supervisor,36,1,Nocturno,Mendoza - Cuyo,48,Hipertensión,0.6283,Alto
+1652,Transporte,Operador de Campo,47,17,Nocturno,Mendoza - Cuyo,56,Ninguna,0.4015,Medio
+1653,Transporte,Mecánico Industrial,39,8,Rotativo 14x14,Chubut - San Jorge,6,Ninguna,0.5438,Medio
+1654,Transporte,Operador Grúa,37,2,Diurno,Chubut - San Jorge,8,Ninguna,0.3708,Medio
+1655,Transporte,Electricista,22,0,Rotativo 14x14,Neuquén - Vaca Muerta,39,Lumbalgia,0.6192,Alto
+1656,Transporte,Maquinista,34,7,Rotativo 14x14,Chubut - San Jorge,36,Ninguna,0.4538,Medio
+1657,Transporte,Supervisor,38,0,Nocturno,Mendoza - Cuyo,27,Hipertensión,0.501,Medio
+1658,Transporte,Supervisor,33,0,Rotativo 14x14,Mendoza - Cuyo,38,Ninguna,0.5881,Medio
+1659,Transporte,Ingeniero de Pozo,36,0,Rotativo 14x14,Neuquén - Vaca Muerta,44,Ninguna,0.3951,Medio
+1660,Transporte,Electricista,32,2,Nocturno,Salta - NOA,25,Ninguna,0.7994,Alto
+1661,Transporte,Electricista,62,18,Rotativo 14x14,Neuquén - Vaca Muerta,36,Ninguna,0.6174,Alto
+1662,Transporte,Técnico HSE,40,0,Diurno,Neuquén - Vaca Muerta,29,Ninguna,0.4443,Medio
+1663,Transporte,Supervisor,44,5,Rotativo 14x14,Oficina Central BA,37,Ninguna,0.6037,Alto
+1664,Transporte,Técnico HSE,36,12,Diurno,Mendoza - Cuyo,26,Diabetes tipo 2,0.3569,Medio
+1665,Transporte,Operador de Campo,25,3,Nocturno,Oficina Central BA,47,Hipertensión,0.688,Alto
+1666,Transporte,Técnico HSE,43,8,Nocturno,Neuquén - Vaca Muerta,42,Ninguna,0.5387,Medio
+1667,Transporte,Maquinista,47,15,Rotativo 7x7,Mendoza - Cuyo,35,Lumbalgia,0.4596,Medio
+1668,Transporte,Operador Grúa,62,1,Rotativo 7x7,Neuquén - Vaca Muerta,32,Ninguna,0.6733,Alto
+1669,Transporte,Técnico HSE,42,0,Rotativo 14x14,Chubut - San Jorge,42,Ninguna,0.5299,Medio
+1670,HSE,Asistente,47,9,Diurno,Neuquén - Vaca Muerta,44,Ninguna,0.1068,Bajo
+1671,HSE,Asistente,48,0,Diurno,Neuquén - Vaca Muerta,36,Hipoacusia,0.1408,Bajo
+1672,HSE,Especialista,22,0,Diurno,Neuquén - Vaca Muerta,37,Hipertensión,0.186,Bajo
+1673,HSE,Coordinador,52,7,Diurno,Mendoza - Cuyo,39,Ninguna,0.1187,Bajo
+1674,HSE,Coordinador,45,23,Diurno,Mendoza - Cuyo,38,Ninguna,0.1027,Bajo
+1675,HSE,Coordinador,23,1,Diurno,Chubut - San Jorge,46,Ninguna,0.1812,Bajo
+1676,HSE,Analista,43,2,Diurno,Neuquén - Vaca Muerta,38,Ninguna,0.1492,Bajo
+1677,HSE,Asistente,43,1,Diurno,Neuquén - Vaca Muerta,42,Ninguna,0.1533,Bajo
+1678,HSE,Gerente de Área,31,9,Diurno,Neuquén - Vaca Muerta,22,Hipertensión,0.1159,Bajo
+1679,HSE,Gerente de Área,51,2,Diurno,Oficina Central BA,40,Ninguna,0.1338,Bajo
+1680,HSE,Analista,23,1,Diurno,Neuquén - Vaca Muerta,27,Estrés crónico,0.1855,Bajo
+1681,HSE,Analista,43,7,Diurno,Mendoza - Cuyo,30,Lumbalgia,0.1086,Bajo
+1682,HSE,Gerente de Área,45,5,Diurno,Salta - NOA,4,Ninguna,0.1384,Bajo
+1683,HSE,Asistente,27,0,Diurno,Neuquén - Vaca Muerta,40,Ninguna,0.1347,Bajo
+1684,HSE,Asistente,35,1,Diurno,Chubut - San Jorge,18,Ninguna,0.1921,Bajo
+1685,HSE,Gerente de Área,37,15,Diurno,Salta - NOA,23,Ninguna,0.1604,Bajo
+1686,HSE,Gerente de Área,47,25,Diurno,Neuquén - Vaca Muerta,49,Estrés crónico,0.0848,Bajo
+1687,HSE,Coordinador,29,7,Diurno,Mendoza - Cuyo,20,Ninguna,0.1669,Bajo
+1688,HSE,Coordinador,22,0,Diurno,Mendoza - Cuyo,23,Diabetes tipo 2,0.2238,Bajo
+1689,HSE,Coordinador,43,4,Diurno,Neuquén - Vaca Muerta,11,Hipertensión,0.2169,Bajo
+1690,HSE,Especialista,29,7,Diurno,Chubut - San Jorge,45,Ninguna,0.1173,Bajo
+1691,HSE,Coordinador,36,0,Diurno,Oficina Central BA,34,Lumbalgia,0.1431,Bajo
+1692,HSE,Especialista,45,23,Diurno,Neuquén - Vaca Muerta,13,Hipertensión,0.1521,Bajo
+1693,HSE,Coordinador,38,5,Diurno,Neuquén - Vaca Muerta,29,Ninguna,0.1831,Bajo
+1694,HSE,Asistente,35,13,Diurno,Mendoza - Cuyo,22,Hipoacusia,0.1054,Bajo
+1695,HSE,Analista,32,0,Diurno,Chubut - San Jorge,44,Lumbalgia,0.1773,Bajo
+1696,HSE,Coordinador,30,4,Diurno,Chubut - San Jorge,16,Ninguna,0.1928,Bajo
+1697,HSE,Gerente de Área,50,0,Diurno,Oficina Central BA,11,Lumbalgia,0.2001,Bajo
+1698,HSE,Coordinador,50,6,Diurno,Salta - NOA,27,Ninguna,0.1848,Bajo
+1699,HSE,Especialista,35,7,Diurno,Neuquén - Vaca Muerta,33,Lumbalgia,0.1188,Bajo
+1700,HSE,Analista,38,1,Diurno,Neuquén - Vaca Muerta,1,Hipertensión,0.2205,Bajo
+1701,HSE,Gerente de Área,40,6,Diurno,Mendoza - Cuyo,34,Ninguna,0.1477,Bajo
+1702,HSE,Gerente de Área,52,4,Diurno,Neuquén - Vaca Muerta,23,Ninguna,0.232,Bajo
+1703,HSE,Especialista,33,4,Diurno,Salta - NOA,16,Ninguna,0.1607,Bajo
+1704,HSE,Gerente de Área,41,4,Diurno,Chubut - San Jorge,44,Estrés crónico,0.1053,Bajo
+1705,HSE,Analista,38,4,Diurno,Chubut - San Jorge,60,Lumbalgia,0.161,Bajo
+1706,HSE,Asistente,53,6,Diurno,Neuquén - Vaca Muerta,26,Ninguna,0.1678,Bajo
+1707,HSE,Asistente,35,13,Diurno,Chubut - San Jorge,41,Ninguna,0.1207,Bajo
+1708,HSE,Analista,30,6,Diurno,Neuquén - Vaca Muerta,28,Ninguna,0.1334,Bajo
+1709,HSE,Coordinador,48,18,Diurno,Mendoza - Cuyo,30,Ninguna,0.1256,Bajo
+1710,Administración,Analista,43,0,Diurno,Oficina Central BA,7,Hipertensión,0.0777,Bajo
+1711,Administración,Gerente de Área,45,10,Diurno,Oficina Central BA,17,Ninguna,0.0515,Bajo
+1712,Administración,Gerente de Área,38,0,Diurno,Oficina Central BA,17,Hipoacusia,0.0933,Bajo
+1713,Administración,Asistente,42,7,Diurno,Oficina Central BA,37,Diabetes tipo 2,0.0578,Bajo
+1714,Administración,Gerente de Área,30,8,Diurno,Oficina Central BA,27,Ninguna,0.0656,Bajo
+1715,Administración,Gerente de Área,46,1,Diurno,Oficina Central BA,39,Lumbalgia,0.0873,Bajo
+1716,Administración,Especialista,45,6,Diurno,Oficina Central BA,35,Ninguna,0.0861,Bajo
+1717,Administración,Asistente,36,10,Diurno,Oficina Central BA,40,Hipertensión,0.0479,Bajo
+1718,Administración,Asistente,28,1,Diurno,Oficina Central BA,51,Ninguna,0.0606,Bajo
+1719,Administración,Especialista,22,0,Diurno,Oficina Central BA,48,Ninguna,0.098,Bajo
+1720,Administración,Gerente de Área,22,0,Diurno,Oficina Central BA,32,Hipertensión,0.1058,Bajo
+1721,Administración,Asistente,22,0,Diurno,Oficina Central BA,63,Ninguna,0.0761,Bajo
+1722,Administración,Analista,37,1,Diurno,Oficina Central BA,55,Estrés crónico,0.0726,Bajo
+1723,Administración,Gerente de Área,42,0,Diurno,Oficina Central BA,12,Ninguna,0.095,Bajo
+1724,Administración,Gerente de Área,25,3,Diurno,Oficina Central BA,42,Diabetes tipo 2,0.0797,Bajo
+1725,Administración,Coordinador,44,14,Diurno,Oficina Central BA,19,Lumbalgia,0.0718,Bajo
+1726,Administración,Analista,30,0,Diurno,Oficina Central BA,16,Ninguna,0.0699,Bajo
+1727,Administración,Coordinador,43,0,Diurno,Oficina Central BA,26,Hipertensión,0.0617,Bajo
+1728,Administración,Analista,32,2,Diurno,Oficina Central BA,36,Lumbalgia,0.0911,Bajo
+1729,Administración,Gerente de Área,26,0,Diurno,Oficina Central BA,4,Hipertensión,0.0781,Bajo
+1730,Administración,Analista,34,4,Diurno,Oficina Central BA,35,Ninguna,0.0619,Bajo
+1731,Administración,Gerente de Área,25,3,Diurno,Oficina Central BA,11,Ninguna,0.1047,Bajo
+1732,Administración,Coordinador,32,0,Diurno,Oficina Central BA,48,Diabetes tipo 2,0.08,Bajo
+1733,Administración,Especialista,41,16,Diurno,Oficina Central BA,35,Ninguna,0.0587,Bajo
+1734,Administración,Analista,39,1,Diurno,Oficina Central BA,27,Ninguna,0.0611,Bajo
+1735,Administración,Analista,57,3,Diurno,Oficina Central BA,59,Ninguna,0.0863,Bajo
+1736,Administración,Gerente de Área,30,4,Diurno,Oficina Central BA,23,Ninguna,0.0941,Bajo
+1737,Administración,Analista,50,2,Diurno,Oficina Central BA,25,Estrés crónico,0.1144,Bajo
+1738,Administración,Coordinador,28,6,Diurno,Oficina Central BA,67,Ninguna,0.0717,Bajo
+1739,Administración,Coordinador,29,7,Diurno,Oficina Central BA,49,Ninguna,0.0559,Bajo
+1740,Administración,Gerente de Área,33,0,Diurno,Oficina Central BA,27,Diabetes tipo 2,0.0801,Bajo
+1741,Administración,Asistente,22,0,Diurno,Oficina Central BA,36,Ninguna,0.0797,Bajo
+1742,Administración,Asistente,39,1,Diurno,Oficina Central BA,58,Hipoacusia,0.0489,Bajo
+1743,Administración,Gerente de Área,43,4,Diurno,Oficina Central BA,41,Ninguna,0.0578,Bajo
+1744,Administración,Coordinador,50,5,Diurno,Oficina Central BA,22,Hipertensión,0.0765,Bajo
+1745,Administración,Gerente de Área,50,0,Diurno,Oficina Central BA,46,Ninguna,0.0978,Bajo
+1746,Administración,Especialista,30,8,Diurno,Oficina Central BA,27,Ninguna,0.0838,Bajo
+1747,Administración,Gerente de Área,37,15,Diurno,Oficina Central BA,26,Ninguna,0.0638,Bajo
+1748,Administración,Especialista,45,1,Diurno,Oficina Central BA,46,Ninguna,0.0598,Bajo
+1749,Administración,Analista,31,2,Diurno,Oficina Central BA,11,Ninguna,0.0746,Bajo
+1750,Administración,Analista,25,3,Diurno,Oficina Central BA,47,Estrés crónico,0.0527,Bajo
+1751,Administración,Asistente,62,5,Diurno,Oficina Central BA,52,Ninguna,0.0872,Bajo
+1752,Administración,Asistente,38,4,Diurno,Oficina Central BA,58,Ninguna,0.061,Bajo
+1753,Administración,Coordinador,36,0,Diurno,Oficina Central BA,26,Ninguna,0.1131,Bajo
+1754,Administración,Asistente,29,7,Diurno,Oficina Central BA,37,Ninguna,0.0579,Bajo
+1755,Administración,Coordinador,31,9,Diurno,Oficina Central BA,56,Diabetes tipo 2,0.0445,Bajo
+1756,Administración,Coordinador,30,3,Diurno,Oficina Central BA,13,Hipertensión,0.1084,Bajo
+1757,Administración,Coordinador,35,5,Diurno,Oficina Central BA,24,Lumbalgia,0.0626,Bajo
+1758,Administración,Asistente,29,3,Diurno,Oficina Central BA,41,Ninguna,0.0544,Bajo
+1759,Administración,Especialista,38,4,Diurno,Oficina Central BA,0,Ninguna,0.095,Bajo
+1760,Administración,Gerente de Área,47,7,Diurno,Oficina Central BA,26,Ninguna,0.0733,Bajo
+1761,Administración,Gerente de Área,27,1,Diurno,Oficina Central BA,41,Lumbalgia,0.0892,Bajo
+1762,Administración,Asistente,27,5,Diurno,Oficina Central BA,37,Ninguna,0.0554,Bajo
+1763,Administración,Coordinador,35,2,Diurno,Oficina Central BA,40,Ninguna,0.0722,Bajo
+1764,Administración,Analista,51,12,Diurno,Oficina Central BA,48,Ninguna,0.0774,Bajo
+1765,Administración,Coordinador,25,3,Diurno,Oficina Central BA,33,Estrés crónico,0.0573,Bajo
+1766,Administración,Coordinador,44,19,Diurno,Oficina Central BA,27,Ninguna,0.0761,Bajo
+1767,Administración,Especialista,57,7,Diurno,Oficina Central BA,49,Hipertensión,0.0822,Bajo
+1768,Administración,Gerente de Área,39,11,Diurno,Oficina Central BA,49,Ninguna,0.0434,Bajo
+1769,Administración,Analista,27,0,Diurno,Oficina Central BA,29,Ninguna,0.0642,Bajo
+1770,Administración,Coordinador,28,6,Diurno,Oficina Central BA,47,Lumbalgia,0.0597,Bajo
+1771,Administración,Especialista,31,9,Diurno,Oficina Central BA,0,Ninguna,0.0759,Bajo
+1772,Administración,Asistente,50,3,Diurno,Oficina Central BA,33,Ninguna,0.0959,Bajo
+1773,Administración,Coordinador,28,5,Diurno,Oficina Central BA,23,Ninguna,0.0867,Bajo
+1774,Administración,Analista,39,5,Diurno,Oficina Central BA,67,Ninguna,0.0572,Bajo
+1775,Administración,Coordinador,26,4,Diurno,Oficina Central BA,48,Ninguna,0.0512,Bajo
+1776,Administración,Coordinador,40,4,Diurno,Oficina Central BA,58,Ninguna,0.0494,Bajo
+1777,Administración,Asistente,51,16,Diurno,Oficina Central BA,24,Hipertensión,0.057,Bajo
+1778,Administración,Especialista,47,3,Diurno,Oficina Central BA,39,Ninguna,0.1004,Bajo
+1779,Administración,Coordinador,33,5,Diurno,Oficina Central BA,32,Ninguna,0.0732,Bajo
+1780,Administración,Asistente,28,6,Diurno,Oficina Central BA,22,Ninguna,0.0661,Bajo
+1781,Administración,Analista,58,3,Diurno,Oficina Central BA,13,Hipertensión,0.1258,Bajo
+1782,Administración,Gerente de Área,42,17,Diurno,Oficina Central BA,29,Hipertensión,0.0608,Bajo
+1783,Administración,Especialista,43,0,Diurno,Oficina Central BA,33,Hipertensión,0.0672,Bajo
+1784,Administración,Gerente de Área,45,9,Diurno,Oficina Central BA,36,Ninguna,0.0871,Bajo
+1785,Administración,Asistente,35,7,Diurno,Oficina Central BA,50,Hipertensión,0.0742,Bajo
+1786,Administración,Coordinador,22,0,Diurno,Oficina Central BA,31,Ninguna,0.0815,Bajo
+1787,Administración,Gerente de Área,41,19,Diurno,Oficina Central BA,52,Ninguna,0.0525,Bajo
+1788,Administración,Asistente,22,0,Diurno,Oficina Central BA,21,Ninguna,0.0737,Bajo
+1789,Administración,Analista,34,12,Diurno,Oficina Central BA,20,Lumbalgia,0.0781,Bajo
+1790,Ingeniería,Coordinador,42,1,Diurno,Neuquén - Vaca Muerta,27,Ninguna,0.2446,Bajo
+1791,Ingeniería,Gerente de Área,43,8,Diurno,Neuquén - Vaca Muerta,8,Ninguna,0.2406,Bajo
+1792,Ingeniería,Coordinador,51,3,Diurno,Neuquén - Vaca Muerta,48,Ninguna,0.2377,Bajo
+1793,Ingeniería,Gerente de Área,38,5,Diurno,Chubut - San Jorge,25,Ninguna,0.2265,Bajo
+1794,Ingeniería,Analista,33,0,Diurno,Chubut - San Jorge,33,Hipertensión,0.21,Bajo
+1795,Ingeniería,Gerente de Área,55,13,Diurno,Neuquén - Vaca Muerta,30,Lumbalgia,0.2735,Bajo
+1796,Ingeniería,Gerente de Área,47,7,Diurno,Mendoza - Cuyo,39,Lumbalgia,0.2332,Bajo
+1797,Ingeniería,Gerente de Área,44,9,Diurno,Chubut - San Jorge,65,Ninguna,0.1521,Bajo
+1798,Ingeniería,Analista,37,12,Diurno,Neuquén - Vaca Muerta,5,Hipertensión,0.1644,Bajo
+1799,Ingeniería,Asistente,32,4,Diurno,Mendoza - Cuyo,11,Ninguna,0.1866,Bajo
+1800,Ingeniería,Coordinador,32,0,Diurno,Salta - NOA,41,Hipertensión,0.1721,Bajo
+1801,Ingeniería,Gerente de Área,42,2,Diurno,Chubut - San Jorge,5,Lumbalgia,0.2054,Bajo
+1802,Ingeniería,Especialista,41,4,Diurno,Chubut - San Jorge,38,Ninguna,0.1846,Bajo
+1803,Ingeniería,Especialista,44,4,Diurno,Neuquén - Vaca Muerta,52,Hipoacusia,0.1511,Bajo
+1804,Ingeniería,Gerente de Área,47,5,Diurno,Oficina Central BA,25,Ninguna,0.1717,Bajo
+1805,Ingeniería,Coordinador,45,15,Diurno,Chubut - San Jorge,14,Lumbalgia,0.1588,Bajo
+1806,Ingeniería,Gerente de Área,30,5,Diurno,Neuquén - Vaca Muerta,31,Lumbalgia,0.2615,Bajo
+1807,Ingeniería,Gerente de Área,36,2,Diurno,Salta - NOA,2,Ninguna,0.3216,Medio
+1808,Ingeniería,Especialista,29,6,Diurno,Neuquén - Vaca Muerta,23,Ninguna,0.2783,Bajo
+1809,Ingeniería,Asistente,26,4,Diurno,Mendoza - Cuyo,50,Hipertensión,0.1659,Bajo
+1810,Ingeniería,Gerente de Área,36,14,Diurno,Salta - NOA,23,Lumbalgia,0.2418,Bajo
+1811,Ingeniería,Gerente de Área,40,3,Diurno,Chubut - San Jorge,22,Ninguna,0.2189,Bajo
+1812,Ingeniería,Gerente de Área,28,6,Diurno,Salta - NOA,24,Ninguna,0.267,Bajo
+1813,Ingeniería,Analista,35,13,Diurno,Mendoza - Cuyo,24,Diabetes tipo 2,0.2013,Bajo
+1814,Ingeniería,Coordinador,38,4,Diurno,Neuquén - Vaca Muerta,9,Diabetes tipo 2,0.2694,Bajo
+1815,Ingeniería,Especialista,44,10,Diurno,Neuquén - Vaca Muerta,26,Ninguna,0.2305,Bajo
+1816,Ingeniería,Gerente de Área,46,3,Diurno,Neuquén - Vaca Muerta,58,Hipertensión,0.2062,Bajo
+1817,Ingeniería,Coordinador,44,22,Diurno,Salta - NOA,42,Ninguna,0.1851,Bajo
+1818,Ingeniería,Analista,31,1,Diurno,Oficina Central BA,57,Ninguna,0.2667,Bajo
+1819,Ingeniería,Coordinador,58,2,Diurno,Mendoza - Cuyo,18,Lumbalgia,0.3614,Medio
+1820,Ingeniería,Especialista,46,2,Diurno,Salta - NOA,31,Hipertensión,0.3057,Medio
+1821,Ingeniería,Asistente,34,1,Diurno,Mendoza - Cuyo,44,Ninguna,0.1951,Bajo
+1822,Ingeniería,Analista,34,5,Diurno,Salta - NOA,20,Lumbalgia,0.2267,Bajo
+1823,Ingeniería,Asistente,33,11,Diurno,Neuquén - Vaca Muerta,28,Ninguna,0.1566,Bajo
+1824,Ingeniería,Especialista,32,0,Diurno,Chubut - San Jorge,43,Estrés crónico,0.2388,Bajo
+1825,Ingeniería,Especialista,41,0,Diurno,Chubut - San Jorge,39,Ninguna,0.1714,Bajo
+1826,Ingeniería,Gerente de Área,43,0,Diurno,Salta - NOA,0,Ninguna,0.2847,Bajo
+1827,Ingeniería,Analista,36,8,Diurno,Mendoza - Cuyo,4,Ninguna,0.2927,Bajo
+1828,Ingeniería,Analista,52,3,Diurno,Mendoza - Cuyo,38,Lumbalgia,0.3056,Medio
+1829,Ingeniería,Especialista,29,1,Diurno,Neuquén - Vaca Muerta,19,Hipertensión,0.2233,Bajo
+1830,Ingeniería,Gerente de Área,40,3,Diurno,Chubut - San Jorge,35,Ninguna,0.1969,Bajo
+1831,Ingeniería,Especialista,46,15,Diurno,Neuquén - Vaca Muerta,35,Lumbalgia,0.1838,Bajo
+1832,Ingeniería,Asistente,38,13,Diurno,Neuquén - Vaca Muerta,26,Ninguna,0.1365,Bajo
+1833,Ingeniería,Especialista,42,8,Diurno,Neuquén - Vaca Muerta,17,Diabetes tipo 2,0.1944,Bajo
+1834,Ingeniería,Analista,47,4,Diurno,Salta - NOA,35,Lumbalgia,0.2252,Bajo
+1835,Ingeniería,Asistente,38,6,Diurno,Mendoza - Cuyo,16,Ninguna,0.292,Bajo
+1836,Ingeniería,Coordinador,31,1,Diurno,Salta - NOA,24,Hipoacusia,0.3217,Medio
+1837,Ingeniería,Especialista,41,2,Diurno,Salta - NOA,27,Ninguna,0.2695,Bajo
+1838,Ingeniería,Especialista,22,0,Diurno,Neuquén - Vaca Muerta,23,Ninguna,0.2795,Bajo
+1839,Ingeniería,Asistente,51,6,Diurno,Chubut - San Jorge,0,Diabetes tipo 2,0.3525,Medio
+1840,Ingeniería,Especialista,41,5,Diurno,Neuquén - Vaca Muerta,37,Ninguna,0.1705,Bajo
+1841,Ingeniería,Especialista,28,2,Diurno,Neuquén - Vaca Muerta,45,Ninguna,0.2268,Bajo
+1842,Ingeniería,Gerente de Área,35,4,Diurno,Salta - NOA,27,Diabetes tipo 2,0.2843,Bajo
+1843,Ingeniería,Analista,40,1,Diurno,Chubut - San Jorge,50,Ninguna,0.2612,Bajo
+1844,Ingeniería,Gerente de Área,38,16,Diurno,Chubut - San Jorge,21,Ninguna,0.1859,Bajo
+1845,Ingeniería,Coordinador,43,1,Diurno,Neuquén - Vaca Muerta,23,Ninguna,0.3323,Medio
+1846,Ingeniería,Coordinador,35,2,Diurno,Oficina Central BA,47,Ninguna,0.1749,Bajo
+1847,Ingeniería,Especialista,28,6,Diurno,Chubut - San Jorge,37,Lumbalgia,0.2435,Bajo
+1848,Ingeniería,Asistente,22,0,Diurno,Mendoza - Cuyo,34,Estrés crónico,0.2342,Bajo
+1849,Ingeniería,Gerente de Área,22,0,Diurno,Neuquén - Vaca Muerta,14,Hipertensión,0.25,Bajo
