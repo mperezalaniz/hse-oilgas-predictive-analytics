@@ -1,0 +1,57 @@
+{
+  "name": "k21",
+  "position": {
+    "x": 14,
+    "y": 60,
+    "z": 2000,
+    "width": 280,
+    "height": 90,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "Total Incidentes"
+                }
+              },
+              "queryRef": "Incidentes.Total Incidentes"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

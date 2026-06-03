@@ -1,0 +1,53 @@
+{
+  "name": "risg_turn",
+  "position": {
+    "x": 643,
+    "y": 165,
+    "z": 2000,
+    "width": 610,
+    "height": 255,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "turno"
+                }
+              },
+              "queryRef": "Empleados.turno"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "Empleados Riesgo Alto"
+                }
+              },
+              "queryRef": "Empleados.Empleados Riesgo Alto"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

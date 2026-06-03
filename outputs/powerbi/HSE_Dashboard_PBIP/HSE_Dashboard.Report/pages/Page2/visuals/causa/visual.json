@@ -1,0 +1,53 @@
+{
+  "name": "causa",
+  "position": {
+    "x": 643,
+    "y": 165,
+    "z": 2000,
+    "width": 610,
+    "height": 250,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "causa_raiz"
+                }
+              },
+              "queryRef": "Incidentes.causa_raiz"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "Total Incidentes"
+                }
+              },
+              "queryRef": "Incidentes.Total Incidentes"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

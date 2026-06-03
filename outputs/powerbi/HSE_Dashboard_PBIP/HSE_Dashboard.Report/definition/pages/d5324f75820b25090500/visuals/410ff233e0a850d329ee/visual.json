@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "410ff233e0a850d329ee",
+  "position": {
+    "x": 1104.4117647058822,
+    "y": 51.470588235294116,
+    "z": 2001,
+    "height": 108.8235294117647,
+    "width": 175,
+    "tabOrder": 2001
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "% Riesgo Alto"
+                }
+              },
+              "queryRef": "Empleados.% Riesgo Alto",
+              "nativeQueryRef": "% Riesgo Alto"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Empleados"
+                  }
+                },
+                "Property": "% Riesgo Alto"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "df033c6e34a0264aa704",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Empleados"
+              }
+            },
+            "Property": "% Riesgo Alto"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

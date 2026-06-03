@@ -1,0 +1,53 @@
+{
+  "name": "risg_dep",
+  "position": {
+    "x": 14,
+    "y": 165,
+    "z": 2000,
+    "width": 615,
+    "height": 255,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "departamento"
+                }
+              },
+              "queryRef": "Empleados.departamento"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "Empleados Riesgo Alto"
+                }
+              },
+              "queryRef": "Empleados.Empleados Riesgo Alto"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

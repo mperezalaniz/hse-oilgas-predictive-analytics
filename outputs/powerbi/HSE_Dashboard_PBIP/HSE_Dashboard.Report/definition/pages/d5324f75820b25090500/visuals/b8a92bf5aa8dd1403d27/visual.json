@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "b8a92bf5aa8dd1403d27",
+  "position": {
+    "x": 920.58823529411757,
+    "y": 51.470588235294116,
+    "z": 2000,
+    "height": 97.058823529411754,
+    "width": 183.8235294117647,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "Tasa Ausentismo %"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.Tasa Ausentismo %",
+              "nativeQueryRef": "Tasa Ausentismo %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "KPIs_Mensuales"
+                  }
+                },
+                "Property": "Tasa Ausentismo %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "108247db03b3642349ca",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPIs_Mensuales"
+              }
+            },
+            "Property": "Tasa Ausentismo %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

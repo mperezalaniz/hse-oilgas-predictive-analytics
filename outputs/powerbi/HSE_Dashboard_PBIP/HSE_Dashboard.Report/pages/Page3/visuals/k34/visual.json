@@ -1,0 +1,57 @@
+{
+  "name": "k34",
+  "position": {
+    "x": 866,
+    "y": 60,
+    "z": 2000,
+    "width": 270,
+    "height": 90,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "% Origen Laboral"
+                }
+              },
+              "queryRef": "Ausentismo.% Origen Laboral"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "aus_turn",
+  "position": {
+    "x": 643,
+    "y": 435,
+    "z": 2000,
+    "width": 610,
+    "height": 250,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "turno"
+                }
+              },
+              "queryRef": "Ausentismo.turno"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "Total Dias Ausencia"
+                }
+              },
+              "queryRef": "Ausentismo.Total Dias Ausencia"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

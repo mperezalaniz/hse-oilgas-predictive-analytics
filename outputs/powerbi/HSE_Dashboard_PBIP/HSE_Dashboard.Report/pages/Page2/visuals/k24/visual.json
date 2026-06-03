@@ -1,0 +1,57 @@
+{
+  "name": "k24",
+  "position": {
+    "x": 896,
+    "y": 60,
+    "z": 2000,
+    "width": 280,
+    "height": 90,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "Dias Perdidos Inc"
+                }
+              },
+              "queryRef": "Incidentes.Dias Perdidos Inc"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

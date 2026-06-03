@@ -1,0 +1,53 @@
+{
+  "name": "area",
+  "position": {
+    "x": 14,
+    "y": 430,
+    "z": 2000,
+    "width": 615,
+    "height": 255,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "area"
+                }
+              },
+              "queryRef": "Incidentes.area"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "Total Incidentes"
+                }
+              },
+              "queryRef": "Incidentes.Total Incidentes"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

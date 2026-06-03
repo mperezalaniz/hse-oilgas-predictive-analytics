@@ -1,0 +1,8 @@
+relationship Emp_Inc
+	fromColumn: Incidentes.empleado_id
+	toColumn: Empleados.empleado_id
+
+relationship Emp_Aus
+	fromColumn: Ausentismo.empleado_id
+	toColumn: Empleados.empleado_id
+

@@ -1,0 +1,66 @@
+{
+  "name": "lineas",
+  "position": {
+    "x": 14,
+    "y": 205,
+    "z": 2000,
+    "width": 615,
+    "height": 255,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "fecha"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.fecha"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "LTIFR Promedio"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.LTIFR Promedio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "TRIFR Promedio"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.TRIFR Promedio"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

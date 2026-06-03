@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "f975bdc0e132d7c5b002",
+  "position": {
+    "x": 0,
+    "y": 419.56521739130432,
+    "z": 2004,
+    "height": 300,
+    "width": 673.91304347826087,
+    "tabOrder": 2004
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "fecha"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.fecha",
+              "nativeQueryRef": "fecha",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "Tasa Ausentismo %"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.Tasa Ausentismo %",
+              "nativeQueryRef": "Tasa Ausentismo %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "KPIs_Mensuales"
+                  }
+                },
+                "Property": "Tasa Ausentismo %"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6bc540698d0ac1ede44e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPIs_Mensuales"
+              }
+            },
+            "Property": "fecha"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

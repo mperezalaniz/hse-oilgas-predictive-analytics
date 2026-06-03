@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "HSE_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e7640558-d1b7-4e07-8c97-12f4691e84a6"
+  }
+}

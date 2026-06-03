@@ -1,0 +1,53 @@
+{
+  "name": "risg_cat",
+  "position": {
+    "x": 643,
+    "y": 435,
+    "z": 2000,
+    "width": 610,
+    "height": 255,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "categoria_riesgo"
+                }
+              },
+              "queryRef": "Empleados.categoria_riesgo"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "Total Empleados"
+                }
+              },
+              "queryRef": "Empleados.Total Empleados"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

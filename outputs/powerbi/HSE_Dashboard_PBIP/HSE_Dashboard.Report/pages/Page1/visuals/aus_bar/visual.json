@@ -1,0 +1,53 @@
+{
+  "name": "aus_bar",
+  "position": {
+    "x": 643,
+    "y": 205,
+    "z": 2000,
+    "width": 605,
+    "height": 255,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "fecha"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.fecha"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "Tasa Ausentismo %"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.Tasa Ausentismo %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

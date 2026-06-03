@@ -1,0 +1,57 @@
+{
+  "name": "kpi1",
+  "position": {
+    "x": 14,
+    "y": 90,
+    "z": 2000,
+    "width": 270,
+    "height": 100,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "LTIFR Promedio"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.LTIFR Promedio"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

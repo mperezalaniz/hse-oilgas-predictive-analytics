@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "61ce377f67d4d70dd3ca",
+  "position": {
+    "x": 672.05882352941171,
+    "y": 148.52941176470588,
+    "z": 2003,
+    "height": 272.05882352941177,
+    "width": 607.35294117647049,
+    "tabOrder": 2003
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "departamento"
+                }
+              },
+              "queryRef": "Incidentes.departamento",
+              "nativeQueryRef": "departamento",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "Total Incidentes"
+                }
+              },
+              "queryRef": "Incidentes.Total Incidentes",
+              "nativeQueryRef": "Total Incidentes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Incidentes"
+                  }
+                },
+                "Property": "Total Incidentes"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "247290002766d0bab318",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Incidentes"
+              }
+            },
+            "Property": "departamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "19f7bd7e8000d5cbe6ee",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Incidentes"
+              }
+            },
+            "Property": "Total Incidentes"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

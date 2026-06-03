@@ -1,0 +1,53 @@
+{
+  "name": "risg_ubic",
+  "position": {
+    "x": 14,
+    "y": 435,
+    "z": 2000,
+    "width": 615,
+    "height": 255,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "ubicacion"
+                }
+              },
+              "queryRef": "Empleados.ubicacion"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "Score Riesgo Prom"
+                }
+              },
+              "queryRef": "Empleados.Score Riesgo Prom"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

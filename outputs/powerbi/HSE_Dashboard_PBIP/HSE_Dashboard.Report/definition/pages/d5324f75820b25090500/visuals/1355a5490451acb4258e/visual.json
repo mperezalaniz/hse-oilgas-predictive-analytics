@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "1355a5490451acb4258e",
+  "position": {
+    "x": 761.76470588235293,
+    "y": 45.588235294117645,
+    "z": 1000,
+    "height": 102.94117647058823,
+    "width": 179.41176470588235,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "TRIFR Promedio"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.TRIFR Promedio",
+              "nativeQueryRef": "TRIFR Promedio"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "KPIs_Mensuales"
+                  }
+                },
+                "Property": "TRIFR Promedio"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ec2d967e0c540c1352c0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPIs_Mensuales"
+              }
+            },
+            "Property": "TRIFR Promedio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

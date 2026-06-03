@@ -1,0 +1,35 @@
+{
+  "name": "HSE Oil & Gas Corporate",
+  "dataColors": [
+    "#1B4F72",
+    "#C1121F",
+    "#E85D04",
+    "#F48C06",
+    "#2D6A4F",
+    "#4A4E69",
+    "#457B9D",
+    "#6D6875"
+  ],
+  "background": "#F8F9FA",
+  "foreground": "#1B4F72",
+  "tableAccent": "#1B4F72",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{ "value": "Segoe UI" }],
+        "fontSize": [{ "value": 11 }]
+      }
+    },
+    "card": {
+      "*": {
+        "calloutValue": [{
+          "fontSize": [{ "value": 28 }],
+          "fontBold": [{ "value": true }]
+        }],
+        "label": [{
+          "fontSize": [{ "value": 11 }]
+        }]
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "tipo",
+  "position": {
+    "x": 14,
+    "y": 165,
+    "z": 2000,
+    "width": 615,
+    "height": 250,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "tipo_incidente"
+                }
+              },
+              "queryRef": "Incidentes.tipo_incidente"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "Total Incidentes"
+                }
+              },
+              "queryRef": "Incidentes.Total Incidentes"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

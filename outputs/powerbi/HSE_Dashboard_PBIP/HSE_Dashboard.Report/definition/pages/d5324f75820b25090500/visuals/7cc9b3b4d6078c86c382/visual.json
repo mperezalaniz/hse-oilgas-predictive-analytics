@@ -1,0 +1,135 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "7cc9b3b4d6078c86c382",
+  "position": {
+    "x": 0,
+    "y": 148.52941176470588,
+    "z": 2002,
+    "height": 270.58823529411762,
+    "width": 673.52941176470586,
+    "tabOrder": 2002
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "fecha"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.fecha",
+              "nativeQueryRef": "fecha",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "LTIFR Promedio"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.LTIFR Promedio",
+              "nativeQueryRef": "LTIFR Promedio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPIs_Mensuales"
+                    }
+                  },
+                  "Property": "TRIFR Promedio"
+                }
+              },
+              "queryRef": "KPIs_Mensuales.TRIFR Promedio",
+              "nativeQueryRef": "TRIFR Promedio"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "KPIs_Mensuales"
+                  }
+                },
+                "Property": "LTIFR Promedio"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c2be214b1e5c820533d9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPIs_Mensuales"
+              }
+            },
+            "Property": "fecha"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "18e3cc6b01947c0c100c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPIs_Mensuales"
+              }
+            },
+            "Property": "LTIFR Promedio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f6854dfe851a16001db8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPIs_Mensuales"
+              }
+            },
+            "Property": "TRIFR Promedio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

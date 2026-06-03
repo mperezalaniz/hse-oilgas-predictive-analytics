@@ -1,0 +1,143 @@
+table Incidentes
+	lineageTag: 2c0dc6ad-a630-4526-adb1-ba46de0e4c0e
+
+	measure 'Total Incidentes' = COUNTROWS(Incidentes)
+		formatString: 0
+		lineageTag: adb1792d-143a-4cd1-9963-dec00267937c
+
+	measure 'Incidentes Registrables' = SUM(Incidentes[es_registrable])
+		formatString: 0
+		lineageTag: b5d713b8-ebc1-4cb3-8cf6-5e4f5a0d6b5d
+
+	measure 'Total LTI Inc' = SUM(Incidentes[es_lti])
+		formatString: 0
+		lineageTag: 56d910f7-489f-4d6b-8a01-b864669de570
+
+	measure 'Dias Perdidos Inc' = SUM(Incidentes[dias_perdidos])
+		formatString: 0
+		lineageTag: 7b7eac66-62f4-4c34-a02d-8a8cff4ab784
+
+	column empleado_id
+		dataType: string
+		lineageTag: fb934e08-9c71-4a5a-922b-d39aa19a51a3
+		summarizeBy: none
+		sourceColumn: empleado_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column departamento
+		dataType: string
+		lineageTag: e924c351-e4be-4156-8321-32ac7d123505
+		sourceColumn: departamento
+
+	column turno
+		dataType: string
+		lineageTag: fa600523-f4be-49c3-9351-e63d8adbd608
+		sourceColumn: turno
+
+	column tipo_incidente
+		dataType: string
+		lineageTag: 2c154050-b6a8-4342-9caa-afe7b65909d0
+		sourceColumn: tipo_incidente
+
+	column gravedad
+		dataType: int64
+		formatString: 0
+		lineageTag: 12233655-2611-4d89-af12-f46eca058f66
+		summarizeBy: sum
+		sourceColumn: gravedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column causa_raiz
+		dataType: string
+		lineageTag: b1ef928f-cb20-418f-aa73-7f74b3ca8bad
+		sourceColumn: causa_raiz
+
+	column area
+		dataType: string
+		lineageTag: dd3010a1-831f-42d1-94b9-40d57c5a5fa8
+		sourceColumn: area
+
+	column fecha
+		dataType: string
+		lineageTag: 5b365d69-c26b-4073-8b5e-52c84a51f4f6
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column hora
+		dataType: int64
+		formatString: 0
+		lineageTag: 00d0013f-bde1-44f4-b702-bfb22ef0e063
+		summarizeBy: sum
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: string
+		lineageTag: f81a05fa-f959-4740-9d43-cc6bf6430656
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_perdidos
+		dataType: int64
+		formatString: 0
+		lineageTag: 5706ffc5-e8ef-402e-ac76-4f52ee7412a5
+		summarizeBy: sum
+		sourceColumn: dias_perdidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_registrable
+		dataType: int64
+		formatString: 0
+		lineageTag: 63e77599-ac04-47d3-83b1-3b8ce4e5b5e3
+		summarizeBy: sum
+		sourceColumn: es_registrable
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_lti
+		dataType: int64
+		formatString: 0
+		lineageTag: d2564473-b9bc-4f95-a55b-758533d5654f
+		summarizeBy: sum
+		sourceColumn: es_lti
+
+		annotation SummarizationSetBy = Automatic
+
+	column ubicacion
+		dataType: string
+		lineageTag: 651291ad-8666-4146-b132-bf204b291190
+		summarizeBy: none
+		sourceColumn: ubicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: string
+		lineageTag: 99d070c2-d602-4eed-800d-23f21b570a30
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Incidentes = m
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mpere\Documents\hse-oilgas-predictive-analytics\outputs\powerbi\HSE_PowerBI_Ready.xlsx"), null, true),
+				    Hoja = Source{[Item="Incidentes",Kind="Sheet"]}[Data],
+				    Headers = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Headers,{{"dias_perdidos", Int64.Type}, {"es_registrable", Int64.Type}, {"es_lti", Int64.Type}, {"gravedad", Int64.Type}, {"hora", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

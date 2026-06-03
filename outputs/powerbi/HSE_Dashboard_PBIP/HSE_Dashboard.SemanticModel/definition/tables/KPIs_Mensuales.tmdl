@@ -1,0 +1,173 @@
+table KPIs_Mensuales
+	lineageTag: d8273084-8901-4127-89c8-6f9aacf0f1d7
+
+	measure 'LTIFR Promedio' = AVERAGE(KPIs_Mensuales[ltifr])
+		formatString: 0.00
+		lineageTag: 190f471b-dd39-4c13-9def-2ce5de3551fb
+
+	measure 'TRIFR Promedio' = AVERAGE(KPIs_Mensuales[trifr])
+		formatString: 0.00
+		lineageTag: 4dc66ae4-1a32-462b-bc08-fe543fafa16c
+
+	measure 'Tasa Ausentismo %' = AVERAGE(KPIs_Mensuales[tasa_ausentismo_pct])
+		formatString: 0.00
+		lineageTag: 88d59440-12aa-4711-9527-3fc7b33078b8
+
+	measure 'Total LTI' = SUM(KPIs_Mensuales[lti])
+		formatString: 0
+		lineageTag: 24130ceb-8279-4d79-8438-2f9ae70e32b5
+
+	measure 'Total Near Misses' = SUM(KPIs_Mensuales[near_misses])
+		formatString: 0
+		lineageTag: 58cbeecd-70cb-4282-b051-75f41d38b8bd
+
+	measure 'Total Dias Perdidos' = SUM(KPIs_Mensuales[dias_perdidos])
+		formatString: 0
+		lineageTag: 68a9827c-5cb3-41ef-a0eb-fd4eab89c162
+
+	measure 'Ratio NM LTI' = DIVIDE(SUM(KPIs_Mensuales[near_misses]),SUM(KPIs_Mensuales[lti]),0)
+		formatString: 0.0
+		lineageTag: 0ed505dd-dd52-45a6-b12f-5d2991ba92fe
+
+	measure 'Estado LTIFR' = IF(AVERAGE(KPIs_Mensuales[ltifr])<=1.5,"CLASE MUNDIAL",IF(AVERAGE(KPIs_Mensuales[ltifr])<=5,"EN MEJORA","REQUIERE ACCION"))
+		lineageTag: 7699bb3f-873e-4d47-9f8c-f19195eea2e3
+
+	column fecha
+		dataType: string
+		lineageTag: 7450bff6-9cc6-4188-9f9c-5c0754d790f2
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: string
+		lineageTag: 9ec3b851-e913-44fb-a0dd-cf71b5f7247b
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: string
+		lineageTag: eefd6d0c-8fae-4405-a6bf-449df1ff555e
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: string
+		lineageTag: 923ebf5b-e084-4b1f-8293-1f0e2fd6d9f9
+		sourceColumn: trimestre
+
+	column horas_hombre
+		dataType: string
+		lineageTag: 8ccd89d9-19b5-4a16-bd74-fc7f67b0892d
+		summarizeBy: none
+		sourceColumn: horas_hombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column near_misses
+		dataType: string
+		lineageTag: f74c5113-ab46-4c75-a83f-33f286280897
+		summarizeBy: none
+		sourceColumn: near_misses
+
+		annotation SummarizationSetBy = Automatic
+
+	column registrables
+		dataType: string
+		lineageTag: fbebe3a5-7d8f-4536-aeec-8ad7d091de85
+		summarizeBy: none
+		sourceColumn: registrables
+
+		annotation SummarizationSetBy = Automatic
+
+	column lti
+		dataType: string
+		lineageTag: 7c0248ed-5025-48be-ad6f-bf656c328d9b
+		summarizeBy: none
+		sourceColumn: lti
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_perdidos
+		dataType: string
+		lineageTag: bed55d01-aed6-4210-b454-bf2789c57eb7
+		summarizeBy: none
+		sourceColumn: dias_perdidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_ausencia_total
+		dataType: string
+		lineageTag: a8ef5bc8-2bed-456d-aa06-9c9929fb8151
+		summarizeBy: none
+		sourceColumn: dias_ausencia_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column tasa_ausentismo_pct
+		dataType: double
+		lineageTag: 6d58a8d7-1cea-41e9-97b6-4015fa0ce08b
+		summarizeBy: sum
+		sourceColumn: tasa_ausentismo_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ltifr
+		dataType: double
+		lineageTag: 5272e940-4b17-4e8f-aa81-59ce1eddd5bc
+		summarizeBy: sum
+		sourceColumn: ltifr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column trifr
+		dataType: double
+		lineageTag: aec682cf-de58-4fcd-ac19-20b2e5289da8
+		summarizeBy: sum
+		sourceColumn: trifr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ratio_nm_a_lti
+		dataType: double
+		lineageTag: 8764d369-40d3-404a-8091-952f872290a4
+		summarizeBy: sum
+		sourceColumn: ratio_nm_a_lti
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column incidentes_total
+		dataType: string
+		lineageTag: 088a2486-b38f-48fa-9b43-1be4883a440b
+		summarizeBy: none
+		sourceColumn: incidentes_total
+
+		annotation SummarizationSetBy = Automatic
+
+	partition KPIs_Mensuales = m
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mpere\Documents\hse-oilgas-predictive-analytics\outputs\powerbi\HSE_PowerBI_Ready.xlsx"), null, true),
+				    Hoja = Source{[Item="KPIs_Mensuales",Kind="Sheet"]}[Data],
+				    Headers = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Headers,{{"ltifr", type number}, {"trifr", type number}, {"tasa_ausentismo_pct", type number}, {"ratio_nm_a_lti", type number}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

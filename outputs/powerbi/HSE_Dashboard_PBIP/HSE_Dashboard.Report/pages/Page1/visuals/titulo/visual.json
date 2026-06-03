@@ -1,0 +1,42 @@
+{
+  "name": "titulo",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 500,
+    "width": 1280,
+    "height": 55,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "YPF-Patagonia S.A. — Dashboard HSE  |  2022–2024",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "18pt",
+                      "bold": true,
+                      "color": {
+                        "solid": {
+                          "color": "#1B4F72"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

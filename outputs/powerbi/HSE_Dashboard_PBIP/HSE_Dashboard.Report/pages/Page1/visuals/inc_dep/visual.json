@@ -1,0 +1,53 @@
+{
+  "name": "inc_dep",
+  "position": {
+    "x": 14,
+    "y": 475,
+    "z": 2000,
+    "width": 615,
+    "height": 220,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "departamento"
+                }
+              },
+              "queryRef": "Incidentes.departamento"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Incidentes"
+                    }
+                  },
+                  "Property": "Total Incidentes"
+                }
+              },
+              "queryRef": "Incidentes.Total Incidentes"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "k44",
+  "position": {
+    "x": 866,
+    "y": 60,
+    "z": 2000,
+    "width": 270,
+    "height": 90,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Empleados"
+                    }
+                  },
+                  "Property": "Score Riesgo Prom"
+                }
+              },
+              "queryRef": "Empleados.Score Riesgo Prom"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

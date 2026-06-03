@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "79a951661c5475bd560b",
+  "position": {
+    "x": 674,
+    "y": 420,
+    "z": 2005,
+    "height": 300,
+    "width": 606,
+    "tabOrder": 2005
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "causa"
+                }
+              },
+              "queryRef": "Ausentismo.causa",
+              "nativeQueryRef": "causa",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "Total Dias Ausencia"
+                }
+              },
+              "queryRef": "Ausentismo.Total Dias Ausencia",
+              "nativeQueryRef": "Total Dias Ausencia"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Ausentismo"
+                  }
+                },
+                "Property": "Total Dias Ausencia"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "552b294906db4ebbb785",
+  "position": {
+    "x": 482.35294117647055,
+    "y": 0,
+    "z": 2006,
+    "height": 52.941176470588232,
+    "width": 710.29411764705878,
+    "tabOrder": 2006
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "YPF-Patagonia S.A. — ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "monospace",
+                      "fontSize": "20pt",
+                      "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": "Dashboard",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "20pt",
+                      "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": " HSE | 2022–2024",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "monospace",
+                      "fontSize": "20pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

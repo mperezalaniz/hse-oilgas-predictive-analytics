@@ -1,0 +1,108 @@
+table Ausentismo
+	lineageTag: 47c36499-48b9-43bc-bb1d-5b2d3bd8699d
+
+	measure 'Total Dias Ausencia' = SUM(Ausentismo[dias_ausencia])
+		formatString: 0
+		lineageTag: ccf55279-6b55-4cd8-9d5d-f3ffea074847
+
+	measure 'Total Ausencias' = COUNTROWS(Ausentismo)
+		formatString: 0
+		lineageTag: 27a6d5ca-2aff-4f54-a5a2-d473826904ff
+
+	measure 'Prom Dias Evento' = AVERAGE(Ausentismo[dias_ausencia])
+		formatString: 0.0
+		lineageTag: 44a24bba-6e38-4e19-867d-cca24366b3ab
+
+	measure '% Origen Laboral' = DIVIDE(CALCULATE(SUM(Ausentismo[dias_ausencia]),Ausentismo[es_accidente]=1),SUM(Ausentismo[dias_ausencia]),0)
+		formatString: 0.0%
+		lineageTag: 07d1f61e-f106-490a-ae55-12e0beacfa25
+
+	column empleado_id
+		dataType: string
+		lineageTag: 26066e28-b8bd-4173-ab3c-a5f37a2438c5
+		summarizeBy: none
+		sourceColumn: empleado_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column departamento
+		dataType: string
+		lineageTag: b5c45303-2d06-49ef-bac3-b652c051c48f
+		sourceColumn: departamento
+
+	column turno
+		dataType: string
+		lineageTag: 5e057705-0874-4056-aa6d-33e1307d0bca
+		sourceColumn: turno
+
+	column causa
+		dataType: string
+		lineageTag: 11caa8b5-8d6d-4b42-85af-bb08d84fc0d4
+		sourceColumn: causa
+
+	column fecha_inicio
+		dataType: string
+		lineageTag: 65080fec-3710-4ca7-b0e9-669bb3d2c8b3
+		summarizeBy: none
+		sourceColumn: fecha_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_ausencia
+		dataType: int64
+		formatString: 0
+		lineageTag: b57e02fc-769e-4540-ad1e-591fd9f0c3e8
+		summarizeBy: sum
+		sourceColumn: dias_ausencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e0e9cc5-a72c-4df8-953f-1fabdbd36d6e
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_accidente
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c156219-9c39-43d8-9332-84baa8355825
+		summarizeBy: sum
+		sourceColumn: es_accidente
+
+		annotation SummarizationSetBy = Automatic
+
+	column ubicacion
+		dataType: string
+		lineageTag: 87ed8f9f-b332-4d68-9716-7bf4cede6a81
+		summarizeBy: none
+		sourceColumn: ubicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: fa8440ab-0236-45d6-9e5f-85d3421f66ff
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Ausentismo = m
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mpere\Documents\hse-oilgas-predictive-analytics\outputs\powerbi\HSE_PowerBI_Ready.xlsx"), null, true),
+				    Hoja = Source{[Item="Ausentismo",Kind="Sheet"]}[Data],
+				    Headers = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Headers,{{"dias_ausencia", Int64.Type}, {"mes", Int64.Type}, {"anio", Int64.Type}, {"es_accidente", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

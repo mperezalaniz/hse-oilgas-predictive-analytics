@@ -1,0 +1,57 @@
+{
+  "name": "k32",
+  "position": {
+    "x": 298,
+    "y": 60,
+    "z": 2000,
+    "width": 270,
+    "height": 90,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "Total Ausencias"
+                }
+              },
+              "queryRef": "Ausentismo.Total Ausencias"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

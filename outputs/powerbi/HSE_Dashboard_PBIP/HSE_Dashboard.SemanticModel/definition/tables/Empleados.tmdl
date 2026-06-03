@@ -1,0 +1,102 @@
+table Empleados
+	lineageTag: a9e58223-ab65-4d66-90ea-e5587f167a09
+
+	measure 'Total Empleados' = COUNTROWS(Empleados)
+		formatString: 0
+		lineageTag: 6a746d55-7f01-481d-9bd8-1209c6d04339
+
+	measure 'Empleados Riesgo Alto' = CALCULATE(COUNTROWS(Empleados),Empleados[categoria_riesgo]="Alto")
+		formatString: 0
+		lineageTag: c549ba1e-7e5c-4dbd-8574-1dd32cf65ae1
+
+	measure '% Riesgo Alto' = DIVIDE(CALCULATE(COUNTROWS(Empleados),Empleados[categoria_riesgo]="Alto"),COUNTROWS(Empleados),0)
+		formatString: 0.0%
+		lineageTag: d9e041de-3777-485b-9f90-42b56d5fd5c2
+
+	measure 'Score Riesgo Prom' = AVERAGE(Empleados[riesgo_score])
+		formatString: 0.00
+		lineageTag: 248c74fd-ac0d-4fcf-9a01-2a52cdb1171e
+
+	measure 'Horas Cap Promedio' = AVERAGE(Empleados[capacitacion_hs_a])
+		formatString: 0
+		lineageTag: cd7d6db3-2760-4858-904b-77d18ad3b274
+
+	column empleado_id
+		dataType: string
+		lineageTag: baf7b708-68b8-4815-8de7-2b7d1ca6c269
+		summarizeBy: none
+		sourceColumn: empleado_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column departamento
+		dataType: string
+		lineageTag: 25d85301-1d8f-474b-a4f5-a7972796a806
+		sourceColumn: departamento
+
+	column cargo
+		dataType: string
+		lineageTag: 030798bf-967a-4b3b-baa3-02996d4828e6
+		sourceColumn: cargo
+
+	column edad
+		dataType: string
+		lineageTag: 8f2779b6-f05f-44a4-9bbc-07f6a6d9460b
+		summarizeBy: none
+		sourceColumn: edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column antiguedad_anios
+		dataType: string
+		lineageTag: a8c0ac1d-ef09-463a-9bff-1cb5a4899c72
+		summarizeBy: none
+		sourceColumn: antiguedad_anios
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno
+		dataType: string
+		lineageTag: 97c914d1-a870-46c7-9f95-677905b3afcf
+		sourceColumn: turno
+
+	column ubicacion
+		dataType: string
+		lineageTag: ff15e991-28f6-4fee-b151-4d2babe86a4c
+		sourceColumn: ubicacion
+
+	column condicion_cronica
+		dataType: string
+		lineageTag: 6b095541-11a5-432f-956b-4f9a0e42aa70
+		sourceColumn: condicion_cronica
+
+	column riesgo_score
+		dataType: string
+		lineageTag: e51e8a4a-80d7-4b0f-87a4-0a7b73095bd9
+		summarizeBy: none
+		sourceColumn: riesgo_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria_riesgo
+		dataType: string
+		lineageTag: 43a14b17-aee0-4839-b026-66b2417488c6
+		sourceColumn: categoria_riesgo
+
+	column capacitacion_hs_ano
+		dataType: string
+		lineageTag: f2816f3e-4e8f-46ad-bcac-552d6c23de59
+		summarizeBy: none
+		sourceColumn: capacitacion_hs_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Empleados = m
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\mpere\Documents\hse-oilgas-predictive-analytics\outputs\powerbi\HSE_PowerBI_Ready.xlsx"), null, true),
+				    Hoja = Source{[Item="Empleados",Kind="Sheet"]}[Data],
+				    Headers = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true])
+				in
+				    Headers
+

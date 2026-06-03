@@ -1,0 +1,53 @@
+{
+  "name": "aus_causa",
+  "position": {
+    "x": 643,
+    "y": 475,
+    "z": 2000,
+    "width": 605,
+    "height": 220,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "causa"
+                }
+              },
+              "queryRef": "Ausentismo.causa"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Ausentismo"
+                    }
+                  },
+                  "Property": "Total Dias Ausencia"
+                }
+              },
+              "queryRef": "Ausentismo.Total Dias Ausencia"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {}
+  }
+}

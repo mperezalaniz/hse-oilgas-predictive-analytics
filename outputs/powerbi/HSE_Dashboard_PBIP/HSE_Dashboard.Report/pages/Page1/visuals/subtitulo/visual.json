@@ -1,0 +1,42 @@
+{
+  "name": "subtitulo",
+  "position": {
+    "x": 0,
+    "y": 52,
+    "z": 500,
+    "width": 1280,
+    "height": 28,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Health, Safety & Environment Analytics  |  Cuenca Neuquina, Argentina",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt",
+                      "bold": false,
+                      "color": {
+                        "solid": {
+                          "color": "#4A4E69"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
