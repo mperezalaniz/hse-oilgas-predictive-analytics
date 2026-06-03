@@ -52,23 +52,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5548e6ae4e7006643642",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "KPIs_Mensuales"
-              }
-            },
-            "Property": "LTIFR Promedio"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

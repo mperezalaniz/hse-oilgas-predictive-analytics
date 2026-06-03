@@ -52,23 +52,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "108247db03b3642349ca",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "KPIs_Mensuales"
-              }
-            },
-            "Property": "Tasa Ausentismo %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,0 +1,197 @@
+══════════════════════════════════════════════════════════
+  DAX MEASURES — HSE Oil & Gas Dashboard
+  YPF-Patagonia S.A. | Power BI Desktop
+  Copiar cada medida en: Nueva medida (Modelado → Nueva medida)
+══════════════════════════════════════════════════════════
+
+━━━ TABLA: KPIs_Mensuales ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// KPI: LTIFR promedio del período seleccionado
+LTIFR Promedio = AVERAGE(KPIs_Mensuales[ltifr])
+
+// KPI: TRIFR promedio del período seleccionado
+TRIFR Promedio = AVERAGE(KPIs_Mensuales[trifr])
+
+// KPI: Tasa de ausentismo promedio
+Tasa Ausentismo % = AVERAGE(KPIs_Mensuales[tasa_ausentismo_pct])
+
+// KPI: Total LTI (accidentes con tiempo perdido)
+Total LTI = SUM(KPIs_Mensuales[lti])
+
+// KPI: Total near misses
+Total Near Misses = SUM(KPIs_Mensuales[near_misses])
+
+// KPI: Total horas hombre
+Total HH = SUM(KPIs_Mensuales[horas_hombre])
+
+// KPI: Días perdidos por accidentes
+Total Dias Perdidos = SUM(KPIs_Mensuales[dias_perdidos])
+
+// Ratio Near Miss / LTI (indicador adelantado de cultura HSE)
+// Objetivo: > 10:1. Menor ratio = subregistro de near misses
+Ratio NM LTI =
+DIVIDE(
+    SUM(KPIs_Mensuales[near_misses]),
+    SUM(KPIs_Mensuales[lti]),
+    0
+)
+
+// LTIFR calculado desde datos base (verificación)
+LTIFR Calculado =
+DIVIDE(
+    SUM(KPIs_Mensuales[lti]) * 1000000,
+    SUM(KPIs_Mensuales[horas_hombre]),
+    0
+)
+
+// TRIFR calculado desde datos base
+TRIFR Calculado =
+DIVIDE(
+    SUM(KPIs_Mensuales[registrables]) * 1000000,
+    SUM(KPIs_Mensuales[horas_hombre]),
+    0
+)
+
+// Variación LTIFR vs año anterior (para tarjeta de tendencia)
+LTIFR vs Año Anterior =
+VAR AnioActual = MAX(KPIs_Mensuales[anio])
+VAR LTIFRActual = CALCULATE(AVERAGE(KPIs_Mensuales[ltifr]), KPIs_Mensuales[anio] = AnioActual)
+VAR LTIFRAnterior = CALCULATE(AVERAGE(KPIs_Mensuales[ltifr]), KPIs_Mensuales[anio] = AnioActual - 1)
+RETURN
+DIVIDE(LTIFRActual - LTIFRAnterior, LTIFRAnterior, 0)
+
+// Color dinámico ausentismo (para formato condicional)
+// Usar en "Reglas de formato condicional" → campo = esta medida
+Color Ausentismo =
+IF(
+    AVERAGE(KPIs_Mensuales[tasa_ausentismo_pct]) > 4.5, "#C1121F",
+    IF(AVERAGE(KPIs_Mensuales[tasa_ausentismo_pct]) > 3.0, "#F48C06", "#2D6A4F")
+)
+
+
+━━━ TABLA: Incidentes ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// Total de incidentes en el período
+Total Incidentes = COUNTROWS(Incidentes)
+
+// Solo incidentes registrables (gravedad ≥ 2)
+Incidentes Registrables = SUM(Incidentes[es_registrable])
+
+// Solo LTI
+Total LTI Incidentes = SUM(Incidentes[es_lti])
+
+// Días perdidos por accidentes laborales
+Dias Perdidos Accidentes = SUM(Incidentes[dias_perdidos])
+
+// % incidentes en turno nocturno
+% Incidentes Nocturno =
+DIVIDE(
+    CALCULATE(COUNTROWS(Incidentes), Incidentes[turno] = "Nocturno"),
+    COUNTROWS(Incidentes),
+    0
+)
+
+// Incidente más frecuente (para tarjeta de texto)
+Tipo Incidente Top =
+FIRSTNONBLANK(
+    TOPN(1,
+        SUMMARIZE(Incidentes, Incidentes[tipo_incidente], "n", COUNTROWS(Incidentes)),
+        [n], DESC
+    ),
+    1
+)
+
+// Causa raíz más frecuente
+Causa Raiz Top =
+FIRSTNONBLANK(
+    TOPN(1,
+        SUMMARIZE(Incidentes, Incidentes[causa_raiz], "n", COUNTROWS(Incidentes)),
+        [n], DESC
+    ),
+    1
+)
+
+
+━━━ TABLA: Ausentismo ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// Total días de ausencia
+Total Dias Ausencia = SUM(Ausentismo[dias_ausencia])
+
+// Total eventos de ausentismo
+Total Eventos Ausentismo = COUNTROWS(Ausentismo)
+
+// Promedio días por evento
+Promedio Dias por Evento = AVERAGE(Ausentismo[dias_ausencia])
+
+// Solo ausencias por accidente laboral o enfermedad profesional
+Dias Perdidos Origen Laboral =
+CALCULATE(
+    SUM(Ausentismo[dias_ausencia]),
+    Ausentismo[es_accidente] = 1
+)
+
+// % ausencias de origen laboral vs total
+% Origen Laboral =
+DIVIDE(
+    [Dias Perdidos Origen Laboral],
+    [Total Dias Ausencia],
+    0
+)
+
+
+━━━ TABLA: Empleados ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// Total empleados activos
+Total Empleados = COUNTROWS(Empleados)
+
+// Empleados en riesgo Alto
+Empleados Riesgo Alto =
+CALCULATE(COUNTROWS(Empleados), Empleados[categoria_riesgo] = "Alto")
+
+// Empleados en riesgo Medio
+Empleados Riesgo Medio =
+CALCULATE(COUNTROWS(Empleados), Empleados[categoria_riesgo] = "Medio")
+
+// % de empleados en riesgo Alto
+% Riesgo Alto =
+DIVIDE([Empleados Riesgo Alto], [Total Empleados], 0)
+
+// Score promedio de riesgo
+Score Riesgo Promedio = AVERAGE(Empleados[riesgo_score])
+
+// Empleados en turno nocturno
+Empleados Turno Nocturno =
+CALCULATE(COUNTROWS(Empleados), Empleados[turno] = "Nocturno")
+
+// Promedio horas de capacitación
+Horas Capacitacion Promedio = AVERAGE(Empleados[capacitacion_hs_año])
+
+// Antigüedad promedio
+Antiguedad Promedio = AVERAGE(Empleados[antiguedad_anios])
+
+
+━━━ MEDIDAS CRUZADAS (multitabla) ━━━━━━━━━━━━━━━━━━━━━
+
+// Índice de gravedad (días perdidos × 1M / HH)
+// Agregar a tabla KPIs_Mensuales o crear tabla de medidas aparte
+Indice Gravedad =
+DIVIDE(
+    SUM(KPIs_Mensuales[dias_perdidos]) * 1000000,
+    SUM(KPIs_Mensuales[horas_hombre]),
+    0
+)
+
+// Benchmark: LTIFR clase mundial = 1.5
+Benchmark LTIFR = 1.5
+
+// Benchmark: TRIFR clase mundial = 5.0
+Benchmark TRIFR = 5.0
+
+// Benchmark: Tasa ausentismo objetivo = 3.5%
+Objetivo Ausentismo = 3.5
+
+// Semáforo LTIFR (para KPI card con icono)
+Estado LTIFR =
+IF([LTIFR Promedio] <= 1.5, "CLASE MUNDIAL",
+   IF([LTIFR Promedio] <= 5.0, "EN MEJORA",
+      IF([LTIFR Promedio] <= 15.0, "REQUIERE ACCION", "CRITICO")))

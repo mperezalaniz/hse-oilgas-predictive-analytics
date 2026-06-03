@@ -52,23 +52,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ec2d967e0c540c1352c0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "KPIs_Mensuales"
-              }
-            },
-            "Property": "TRIFR Promedio"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

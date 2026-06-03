@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "552b294906db4ebbb785",
   "position": {
-    "x": 482.35294117647055,
+    "x": 85.819101834282108,
     "y": 0,
-    "z": 2006,
-    "height": 52.941176470588232,
-    "width": 710.29411764705878,
-    "tabOrder": 2006
+    "z": 8000,
+    "height": 53.434535104364329,
+    "width": 1107.5521821631878,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "textbox",
@@ -24,7 +24,7 @@
                       "fontWeight": "bold",
                       "fontFamily": "monospace",
                       "fontSize": "20pt",
-                      "color": "#ffffff"
+                      "color": "#00b4d8"
                     }
                   },
                   {
@@ -32,16 +32,16 @@
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "20pt",
-                      "color": "#ffffff"
+                      "color": "#00b4d8"
                     }
                   },
                   {
-                    "value": " HSE | 2022–2024",
+                    "value": " HSE | 2022–2024 - Cuenca Neuquina Argentina",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "monospace",
                       "fontSize": "20pt",
-                      "color": "#ffffff"
+                      "color": "#00b4d8"
                     }
                   }
                 ],
