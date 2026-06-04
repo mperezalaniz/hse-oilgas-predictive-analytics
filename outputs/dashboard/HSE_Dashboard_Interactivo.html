@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard HSE Predictivo | YPF Oil & Gas Argentina</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        :root {
+            --bg-primary: #080f1e;
+            --bg-card: #0f1f35;
+            --bg-card2: #132840;
+            --accent-blue: #0066cc;
+            --accent-yellow: #ffd100;
+            --accent-red: #e63946;
+            --accent-green: #2ec4b6;
+            --accent-orange: #f77f00;
+            --accent-purple: #8b5cf6;
+            --text-primary: #e8f4fd;
+            --text-secondary: #8babc7;
+            --text-muted: #3d6080;
+            --border: #162d4a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            background: linear-gradient(135deg, #040c18 0%, #081424 60%, #040c18 100%);
+            border-bottom: 2px solid var(--accent-yellow);
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-left { display: flex; align-items: center; gap: 18px; }
+        .ypf-logo {
+            background: var(--accent-yellow);
+            color: #001830;
+            font-weight: 900;
+            font-size: 20px;
+            padding: 7px 14px;
+            letter-spacing: 3px;
+            border-radius: 5px;
+        }
+        .header-title h1 { font-size: 18px; font-weight: 700; letter-spacing: .3px; }
+        .header-title p { font-size: 11px; color: var(--accent-yellow); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+        .header-meta { display: flex; align-items: center; gap: 20px; }
+        .live-badge {
+            display: flex; align-items: center; gap: 6px;
+            background: rgba(46,196,182,.12); border: 1px solid var(--accent-green);
+            border-radius: 20px; padding: 4px 12px; font-size: 11px; color: var(--accent-green);
+        }
+        .live-dot { width: 7px; height: 7px; background: var(--accent-green); border-radius: 50%; animation: blink 2s infinite; }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+        .header-stats { font-size: 11px; color: var(--text-muted); text-align: right; line-height: 1.6; }
+
+        /* ── FILTER BAR ── */
+        .filters-bar {
+            background: #0b1927;
+            border-bottom: 1px solid var(--border);
+            padding: 10px 28px;
+            display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+        }
+        .filter-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); }
+        .filter-group { display: flex; gap: 6px; }
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all .2s;
+            font-family: inherit;
+        }
+        .filter-btn:hover { border-color: var(--accent-blue); color: var(--text-primary); }
+        .filter-btn.active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; font-weight: 600; }
+        .filter-btn.active-metric { background: rgba(0,102,204,.25); border-color: var(--accent-blue); color: #5ba4e0; }
+        .fsep { width: 1px; height: 24px; background: var(--border); }
+
+        /* ── MAIN ── */
+        .main { padding: 20px 28px 32px; max-width: 1700px; margin: 0 auto; }
+
+        /* ── KPI GRID ── */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 20px;
+            position: relative; overflow: hidden;
+            transition: transform .2s, border-color .2s, box-shadow .2s;
+            cursor: default;
+        }
+        .kpi-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(0,0,0,.4); }
+        .kpi-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; border-radius:12px 12px 0 0; }
+        .kpi-card.c-red::after   { background: var(--accent-red); }
+        .kpi-card.c-orange::after{ background: var(--accent-orange); }
+        .kpi-card.c-blue::after  { background: var(--accent-blue); }
+        .kpi-card.c-yellow::after{ background: var(--accent-yellow); }
+        .kpi-card.c-green::after { background: var(--accent-green); }
+        .kpi-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 8px; }
+        .kpi-value { font-size: 34px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+        .kpi-card.c-red    .kpi-value { color: var(--accent-red); }
+        .kpi-card.c-orange .kpi-value { color: var(--accent-orange); }
+        .kpi-card.c-blue   .kpi-value { color: #5ba4e0; }
+        .kpi-card.c-yellow .kpi-value { color: var(--accent-yellow); }
+        .kpi-card.c-green  .kpi-value { color: var(--accent-green); }
+        .kpi-trend { font-size: 11px; margin-bottom: 4px; }
+        .kpi-trend.t-up   { color: var(--accent-red); }
+        .kpi-trend.t-down { color: var(--accent-green); }
+        .kpi-trend.t-neu  { color: var(--text-muted); }
+        .kpi-bench { font-size: 10px; color: var(--text-muted); }
+        .kpi-icon { position:absolute; bottom:12px; right:14px; font-size:32px; opacity:.08; }
+
+        /* ── CHART CARDS ── */
+        .row { display:grid; gap:14px; margin-bottom:18px; }
+        .row.r-2-1 { grid-template-columns: 2fr 1fr; }
+        .row.r-3   { grid-template-columns: repeat(3,1fr); }
+        .row.r-2   { grid-template-columns: 1fr 1fr; }
+        .row.r-4   { grid-template-columns: repeat(4,1fr); }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 20px;
+        }
+        .ch-head { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:14px; }
+        .ch-title { font-size:13px; font-weight:600; }
+        .ch-sub   { font-size:10px; color:var(--text-muted); margin-top:3px; }
+        .badge {
+            background: rgba(0,102,204,.2);
+            border: 1px solid rgba(0,102,204,.4);
+            color: #5ba4e0;
+            font-size: 9px; padding: 3px 8px; border-radius: 10px;
+            text-transform: uppercase; letter-spacing: .5px; white-space: nowrap;
+        }
+        .badge.b-green { background:rgba(46,196,182,.15); border-color:rgba(46,196,182,.4); color:var(--accent-green); }
+        .badge.b-yellow{ background:rgba(255,209,0,.15); border-color:rgba(255,209,0,.4); color:var(--accent-yellow); }
+
+        /* ── INSIGHTS ── */
+        .ins-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:18px; }
+        .ins-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            border-left: 3px solid;
+        }
+        .ins-card.i-red    { border-left-color: var(--accent-red); }
+        .ins-card.i-orange { border-left-color: var(--accent-orange); }
+        .ins-card.i-blue   { border-left-color: var(--accent-blue); }
+        .ins-card.i-green  { border-left-color: var(--accent-green); }
+        .ins-icon  { font-size:22px; margin-bottom:8px; }
+        .ins-title { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary); margin-bottom:5px; }
+        .ins-text  { font-size:12px; color:var(--text-primary); line-height:1.5; }
+        .ins-val   { font-size:24px; font-weight:800; margin-top:8px; }
+        .ins-card.i-red    .ins-val { color:var(--accent-red); }
+        .ins-card.i-orange .ins-val { color:var(--accent-orange); }
+        .ins-card.i-blue   .ins-val { color:#5ba4e0; }
+        .ins-card.i-green  .ins-val { color:var(--accent-green); }
+
+        /* ── FOOTER ── */
+        .footer {
+            text-align:center; padding:14px 28px;
+            color: var(--text-muted); font-size:10px;
+            border-top:1px solid var(--border);
+            letter-spacing:.5px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:1300px){
+            .kpi-grid{ grid-template-columns:repeat(3,1fr); }
+            .row.r-2-1{ grid-template-columns:1fr; }
+            .row.r-3  { grid-template-columns:1fr 1fr; }
+            .ins-grid { grid-template-columns:repeat(2,1fr); }
+        }
+        @media(max-width:800px){
+            .main{ padding:14px; }
+            .kpi-grid{ grid-template-columns:1fr 1fr; }
+            .row{ grid-template-columns:1fr !important; }
+            .ins-grid{ grid-template-columns:1fr; }
+            .row.r-4{ grid-template-columns:1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════ -->
+<div class="header">
+    <div class="header-left">
+        <div class="ypf-logo">YPF</div>
+        <div class="header-title">
+            <h1>Dashboard HSE — Analítica Predictiva</h1>
+            <p>Oil &amp; Gas Argentina · Plataforma de Gestión de Riesgo</p>
+        </div>
+    </div>
+    <div class="header-meta">
+        <div class="live-badge">
+            <div class="live-dot"></div>
+            Datos 2022–2024
+        </div>
+        <div class="header-stats">
+            850 empleados · 730 incidentes<br>
+            Modelo GB · 71.4% accuracy
+        </div>
+    </div>
+</div>
+
+<!-- ══ FILTERS ══════════════════════════════════════════════ -->
+<div class="filters-bar">
+    <span class="filter-label">Período:</span>
+    <div class="filter-group" id="yearBtns">
+        <button class="filter-btn active" data-year="all"   onclick="setYear(this,'all')">Todos (22–24)</button>
+        <button class="filter-btn"        data-year="2022"  onclick="setYear(this,'2022')">2022</button>
+        <button class="filter-btn"        data-year="2023"  onclick="setYear(this,'2023')">2023</button>
+        <button class="filter-btn"        data-year="2024"  onclick="setYear(this,'2024')">2024</button>
+    </div>
+    <div class="fsep"></div>
+    <span class="filter-label">Curvas tendencia:</span>
+    <div class="filter-group">
+        <button class="filter-btn active-metric" id="mLtifr"     onclick="toggleM('ltifr')">LTIFR</button>
+        <button class="filter-btn active-metric" id="mTrifr"     onclick="toggleM('trifr')">TRIFR</button>
+        <button class="filter-btn"               id="mAusentismo" onclick="toggleM('aus')">Ausentismo</button>
+    </div>
+</div>
+
+<!-- ══ MAIN ══════════════════════════════════════════════════ -->
+<div class="main">
+
+    <!-- KPIs -->
+    <div class="kpi-grid" id="kpiGrid"></div>
+
+    <!-- Row 1: Trend (big) + Bird Pyramid -->
+    <div class="row r-2-1">
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Evolución LTIFR / TRIFR</div>
+                    <div class="ch-sub">Frecuencia de lesiones por millón de horas · línea roja = benchmark clase mundial ≤1.5</div>
+                </div>
+                <div class="badge">36 meses</div>
+            </div>
+            <div id="trendChart" style="height:290px;"></div>
+        </div>
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Pirámide de Bird</div>
+                    <div class="ch-sub">Distribución severidad · 3 años acumulados</div>
+                </div>
+                <div class="badge b-yellow">HSE Classic</div>
+            </div>
+            <div id="pyramidChart" style="height:290px;"></div>
+        </div>
+    </div>
+
+    <!-- Row 2: Incidentes stacked + Risk Donut + Dept -->
+    <div class="row r-3">
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Incidentes Mensuales</div>
+                    <div class="ch-sub">Near Miss / Registrables / LTI por mes</div>
+                </div>
+            </div>
+            <div id="incidentesChart" style="height:255px;"></div>
+        </div>
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Clasificación de Riesgo</div>
+                    <div class="ch-sub">850 empleados · Gradient Boosting · 71.4% acc.</div>
+                </div>
+                <div class="badge b-green">ML Model</div>
+            </div>
+            <div id="riskDonut" style="height:255px;"></div>
+        </div>
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Incidentes por Departamento</div>
+                    <div class="ch-sub">Concentración de riesgo operativo · 730 eventos</div>
+                </div>
+            </div>
+            <div id="deptChart" style="height:255px;"></div>
+        </div>
+    </div>
+
+    <!-- Row 3: Causas + Ausentismo + Turno -->
+    <div class="row r-3">
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Causas Raíz de Incidentes</div>
+                    <div class="ch-sub">Top causas registradas en eventos HSE</div>
+                </div>
+            </div>
+            <div id="causasChart" style="height:245px;"></div>
+        </div>
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Ausentismo — 12,439 días</div>
+                    <div class="ch-sub">Distribución por causa de ausencia laboral</div>
+                </div>
+            </div>
+            <div id="ausentismoChart" style="height:245px;"></div>
+        </div>
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Riesgo por Tipo de Turno</div>
+                    <div class="ch-sub">% empleados Alto / Medio / Bajo por turno</div>
+                </div>
+            </div>
+            <div id="turnoChart" style="height:245px;"></div>
+        </div>
+    </div>
+
+    <!-- Row 4: KPI anual sparklines -->
+    <div class="row r-2">
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Días Perdidos por LTI</div>
+                    <div class="ch-sub">Evolución mensual · impacto productivo directo</div>
+                </div>
+            </div>
+            <div id="diasChart" style="height:220px;"></div>
+        </div>
+        <div class="chart-card">
+            <div class="ch-head">
+                <div>
+                    <div class="ch-title">Ratio Near Miss / LTI mensual</div>
+                    <div class="ch-sub">Cultura de reporte · benchmark ≥10:1</div>
+                </div>
+            </div>
+            <div id="ratioChart" style="height:220px;"></div>
+        </div>
+    </div>
+
+    <!-- Insights -->
+    <div class="ins-grid">
+        <div class="ins-card i-red">
+            <div class="ins-icon">⚠️</div>
+            <div class="ins-title">Concentración de Riesgo</div>
+            <div class="ins-text">Perforación y Mantenimiento concentran <strong>65% de incidentes</strong> con el 40% de la dotación total</div>
+            <div class="ins-val">65%</div>
+        </div>
+        <div class="ins-card i-orange">
+            <div class="ins-icon">🌙</div>
+            <div class="ins-title">Efecto Turno Nocturno</div>
+            <div class="ins-text">El turno nocturno eleva el score de riesgo individual en <strong>+35%</strong> respecto al turno diurno</div>
+            <div class="ins-val">+35%</div>
+        </div>
+        <div class="ins-card i-blue">
+            <div class="ins-icon">📚</div>
+            <div class="ins-title">ROI de Capacitación</div>
+            <div class="ins-text">Cada <strong>10 hs adicionales</strong> de capacitación anual reduce el score de riesgo en ~4%</div>
+            <div class="ins-val">−4% / 10hs</div>
+        </div>
+        <div class="ins-card i-green">
+            <div class="ins-icon">🔺</div>
+            <div class="ins-title">Near Miss / LTI Ratio</div>
+            <div class="ins-text">Ratio actual de <strong>5:1</strong> — por debajo del benchmark 10:1. Oportunidad en cultura de reporte</div>
+            <div class="ins-val">5:1</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    Dashboard HSE Predictivo · YPF Oil &amp; Gas Argentina · Datos 2022–2024 · 850 empleados · 730 incidentes · Modelo ML Gradient Boosting 71.4% accuracy · Martín Pérez Alaniz
+</div>
+
+<!-- ══ JAVASCRIPT ═══════════════════════════════════════════ -->
+<script>
+
+// ─────────────────────────────────────────────────────────────
+// DATOS REALES — kpis_mensuales.csv (36 filas)
+// ─────────────────────────────────────────────────────────────
+const RAW = [
+ {f:'2022-01',m:1,y:2022,inc:17,nm:7, reg:7, lti:1, dp:190,da:346,aus:1.850,ltifr:6.192,  trifr:43.3437,ratio:7.0},
+ {f:'2022-02',m:2,y:2022,inc:15,nm:10,reg:4, lti:2, dp:110,da:308,aus:1.647,ltifr:12.3839,trifr:24.7678,ratio:5.0},
+ {f:'2022-03',m:3,y:2022,inc:20,nm:12,reg:5, lti:1, dp:1,  da:222,aus:1.187,ltifr:6.192,  trifr:30.9598,ratio:12.0},
+ {f:'2022-04',m:4,y:2022,inc:31,nm:13,reg:12,lti:6, dp:105,da:542,aus:2.898,ltifr:37.1517,trifr:74.3034,ratio:2.2},
+ {f:'2022-05',m:5,y:2022,inc:20,nm:9, reg:6, lti:4, dp:114,da:338,aus:1.807,ltifr:24.7678,trifr:37.1517,ratio:2.2},
+ {f:'2022-06',m:6,y:2022,inc:17,nm:6, reg:3, lti:3, dp:13, da:321,aus:1.717,ltifr:18.5759,trifr:18.5759,ratio:2.0},
+ {f:'2022-07',m:7,y:2022,inc:29,nm:11,reg:7, lti:0, dp:101,da:281,aus:1.503,ltifr:0.0,    trifr:43.3437,ratio:11.0},
+ {f:'2022-08',m:8,y:2022,inc:18,nm:9, reg:4, lti:0, dp:61, da:352,aus:1.882,ltifr:0.0,    trifr:24.7678,ratio:9.0},
+ {f:'2022-09',m:9,y:2022,inc:27,nm:11,reg:10,lti:3, dp:106,da:234,aus:1.251,ltifr:18.5759,trifr:61.9195,ratio:3.7},
+ {f:'2022-10',m:10,y:2022,inc:22,nm:7, reg:10,lti:1, dp:255,da:386,aus:2.064,ltifr:6.192, trifr:61.9195,ratio:7.0},
+ {f:'2022-11',m:11,y:2022,inc:19,nm:7, reg:10,lti:4, dp:54, da:408,aus:2.182,ltifr:24.7678,trifr:61.9195,ratio:1.8},
+ {f:'2022-12',m:12,y:2022,inc:15,nm:9, reg:3, lti:0, dp:0,  da:332,aus:1.775,ltifr:0.0,   trifr:18.5759,ratio:9.0},
+ {f:'2023-01',m:1,y:2023,inc:21,nm:8, reg:9, lti:2, dp:310,da:390,aus:2.086,ltifr:12.3839,trifr:55.7276,ratio:4.0},
+ {f:'2023-02',m:2,y:2023,inc:16,nm:10,reg:3, lti:0, dp:67, da:229,aus:1.225,ltifr:0.0,    trifr:18.5759,ratio:10.0},
+ {f:'2023-03',m:3,y:2023,inc:19,nm:6, reg:5, lti:2, dp:12, da:373,aus:1.995,ltifr:12.3839,trifr:30.9598,ratio:3.0},
+ {f:'2023-04',m:4,y:2023,inc:18,nm:7, reg:8, lti:4, dp:148,da:493,aus:2.636,ltifr:24.7678,trifr:49.5356,ratio:1.8},
+ {f:'2023-05',m:5,y:2023,inc:23,nm:6, reg:10,lti:3, dp:40, da:419,aus:2.241,ltifr:18.5759,trifr:61.9195,ratio:2.0},
+ {f:'2023-06',m:6,y:2023,inc:18,nm:11,reg:4, lti:1, dp:43, da:313,aus:1.674,ltifr:6.192,  trifr:24.7678,ratio:11.0},
+ {f:'2023-07',m:7,y:2023,inc:24,nm:12,reg:7, lti:2, dp:108,da:368,aus:1.968,ltifr:12.3839,trifr:43.3437,ratio:6.0},
+ {f:'2023-08',m:8,y:2023,inc:25,nm:11,reg:12,lti:2, dp:428,da:338,aus:1.807,ltifr:12.3839,trifr:74.3034,ratio:5.5},
+ {f:'2023-09',m:9,y:2023,inc:16,nm:5, reg:6, lti:1, dp:225,da:466,aus:2.492,ltifr:6.192,  trifr:37.1517,ratio:5.0},
+ {f:'2023-10',m:10,y:2023,inc:22,nm:13,reg:4, lti:1, dp:122,da:361,aus:1.930,ltifr:6.192, trifr:24.7678,ratio:13.0},
+ {f:'2023-11',m:11,y:2023,inc:24,nm:12,reg:5, lti:1, dp:175,da:251,aus:1.342,ltifr:6.192, trifr:30.9598,ratio:12.0},
+ {f:'2023-12',m:12,y:2023,inc:20,nm:8, reg:5, lti:0, dp:102,da:362,aus:1.936,ltifr:0.0,   trifr:30.9598,ratio:8.0},
+ {f:'2024-01',m:1,y:2024,inc:23,nm:7, reg:7, lti:4, dp:18, da:385,aus:2.059,ltifr:24.7678,trifr:43.3437,ratio:1.8},
+ {f:'2024-02',m:2,y:2024,inc:12,nm:4, reg:6, lti:0, dp:0,  da:276,aus:1.476,ltifr:0.0,    trifr:37.1517,ratio:4.0},
+ {f:'2024-03',m:3,y:2024,inc:23,nm:9, reg:10,lti:5, dp:66, da:376,aus:2.011,ltifr:30.9598,trifr:61.9195,ratio:1.8},
+ {f:'2024-04',m:4,y:2024,inc:16,nm:6, reg:8, lti:2, dp:10, da:426,aus:2.278,ltifr:12.3839,trifr:49.5356,ratio:3.0},
+ {f:'2024-05',m:5,y:2024,inc:19,nm:6, reg:5, lti:4, dp:26, da:382,aus:2.043,ltifr:24.7678,trifr:30.9598,ratio:1.5},
+ {f:'2024-06',m:6,y:2024,inc:22,nm:11,reg:10,lti:3, dp:337,da:291,aus:1.556,ltifr:18.5759,trifr:61.9195,ratio:3.7},
+ {f:'2024-07',m:7,y:2024,inc:17,nm:4, reg:6, lti:3, dp:15, da:204,aus:1.091,ltifr:18.5759,trifr:37.1517,ratio:1.3},
+ {f:'2024-08',m:8,y:2024,inc:21,nm:13,reg:3, lti:2, dp:71, da:252,aus:1.348,ltifr:12.3839,trifr:18.5759,ratio:6.5},
+ {f:'2024-09',m:9,y:2024,inc:20,nm:11,reg:1, lti:0, dp:65, da:348,aus:1.861,ltifr:0.0,    trifr:6.192,  ratio:11.0},
+ {f:'2024-10',m:10,y:2024,inc:13,nm:5, reg:1, lti:0, dp:0,  da:395,aus:2.112,ltifr:0.0,   trifr:6.192,  ratio:5.0},
+ {f:'2024-11',m:11,y:2024,inc:20,nm:6, reg:9, lti:4, dp:103,da:245,aus:1.310,ltifr:24.7678,trifr:55.7276,ratio:1.5},
+ {f:'2024-12',m:12,y:2024,inc:28,nm:13,reg:9, lti:3, dp:29, da:426,aus:2.278,ltifr:18.5759,trifr:55.7276,ratio:4.3}
+];
+
+// ─────────────────────────────────────────────────────────────
+// STATIC SUMMARIES
+// ─────────────────────────────────────────────────────────────
+const DEPT = {
+    labels:  ['Perforación','Mantenimiento','Transporte','Logística','Administración','HSE / SSPA'],
+    valores: [256, 219, 110, 75, 46, 24]
+};
+const CAUSAS = {
+    labels:  ['Procedimiento inadecuado','Condición insegura','Acto inseguro','Falta de EPP','Comunicación deficiente','Condición climática','Fatiga / turno'],
+    valores: [198, 175, 162, 144, 98, 54, 32]
+};
+const AUSENTISMO = {
+    labels:  ['Licencia médica','Enfermedad común','Accidente laboral','Cirugía / recup.','Permiso gremial','Otros'],
+    valores: [4200, 3800, 2100, 1400, 520, 419]
+};
+const TURNO = {
+    labels:  ['Diurno','Nocturno','Rotativo 7×7','Rotativo 14×14'],
+    alto:    [18, 38, 29, 31],
+    medio:   [45, 42, 48, 51],
+    bajo:    [37, 20, 23, 18]
+};
+const RIESGO = {
+    labels: ['Riesgo Alto','Riesgo Medio','Riesgo Bajo'],
+    values: [238, 400, 212],
+    colors: ['#e63946','#f77f00','#2ec4b6']
+};
+const PYRAMID = {
+    labels: ['Fatal','LTI','Registrables','Primeros Auxilios','Near Miss'],
+    values: [5,     74,   160,            181,                315],
+    colors: ['#8b0000','#e63946','#f77f00','#0066cc','#2ec4b6']
+};
+
+// ─────────────────────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────────────────────
+let year = 'all';
+const M = { ltifr: true, trifr: true, aus: false };
+
+function getData() {
+    return year === 'all' ? RAW : RAW.filter(d => d.y === parseInt(year));
+}
+
+function avg(arr, fn) { return arr.reduce((s,d)=>s+fn(d),0) / arr.length; }
+function sum(arr, fn) { return arr.reduce((s,d)=>s+fn(d),0); }
+
+// ─────────────────────────────────────────────────────────────
+// FILTER HANDLERS
+// ─────────────────────────────────────────────────────────────
+function setYear(btn, y) {
+    year = y;
+    document.querySelectorAll('#yearBtns .filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    refreshAll();
+}
+
+function toggleM(key) {
+    M[key] = !M[key];
+    const ids = { ltifr:'mLtifr', trifr:'mTrifr', aus:'mAusentismo' };
+    const btn = document.getElementById(ids[key]);
+    btn.classList.toggle('active-metric', M[key]);
+    btn.classList.toggle('filter-btn', true);
+    renderTrend();
+}
+
+function refreshAll() {
+    renderKPIs();
+    renderTrend();
+    renderIncidentes();
+    renderDias();
+    renderRatio();
+}
+
+// ─────────────────────────────────────────────────────────────
+// PLOTLY BASE CONFIG
+// ─────────────────────────────────────────────────────────────
+const CFG = { displayModeBar: false, responsive: true };
+
+function baseLayout(extra) {
+    return Object.assign({
+        paper_bgcolor: 'transparent',
+        plot_bgcolor:  'transparent',
+        font: { color: '#8babc7', family: 'Segoe UI, sans-serif', size: 11 },
+        showlegend: true,
+        legend: { bgcolor:'transparent', font:{ color:'#8babc7', size:10 }, orientation:'h', y:-0.18 },
+        xaxis: { gridcolor:'#162d4a', linecolor:'#162d4a', color:'#8babc7', tickfont:{size:10} },
+        yaxis: { gridcolor:'#162d4a', linecolor:'#162d4a', color:'#8babc7', tickfont:{size:10} },
+        margin: { t:10, r:14, b:50, l:50 }
+    }, extra || {});
+}
+
+// ─────────────────────────────────────────────────────────────
+// RENDER KPIs
+// ─────────────────────────────────────────────────────────────
+function renderKPIs() {
+    const d  = getData();
+    const aL = avg(d, r=>r.ltifr).toFixed(2);
+    const aT = avg(d, r=>r.trifr).toFixed(1);
+    const aA = avg(d, r=>r.aus).toFixed(2);
+    const tI = sum(d, r=>r.inc);
+    const tL = sum(d, r=>r.lti);
+    const tN = sum(d, r=>r.nm);
+    const nmR = tL > 0 ? (tN/tL).toFixed(1)+'<span style="font-size:16px">:1</span>' : 'N/A';
+    const nmOk = tL > 0 && tN/tL >= 10;
+
+    let lT='', tT='', aT2='';
+    if (year !== 'all') {
+        const py = parseInt(year)-1;
+        const prev = RAW.filter(r=>r.y===py);
+        if (prev.length) {
+            const dL = ((aL - avg(prev,r=>r.ltifr)) / avg(prev,r=>r.ltifr) * 100).toFixed(1);
+            const dT = ((aT - avg(prev,r=>r.trifr)) / avg(prev,r=>r.trifr) * 100).toFixed(1);
+            const dA = ((aA - avg(prev,r=>r.aus))   / avg(prev,r=>r.aus)   * 100).toFixed(1);
+            lT = `<div class="kpi-trend ${dL>0?'t-up':'t-down'}">${dL>0?'▲':'▼'} ${Math.abs(dL)}% vs ${py}</div>`;
+            tT = `<div class="kpi-trend ${dT>0?'t-up':'t-down'}">${dT>0?'▲':'▼'} ${Math.abs(dT)}% vs ${py}</div>`;
+            aT2=`<div class="kpi-trend ${dA>0?'t-up':'t-down'}">${dA>0?'▲':'▼'} ${Math.abs(dA)}% vs ${py}</div>`;
+        }
+    }
+
+    document.getElementById('kpiGrid').innerHTML = `
+    <div class="kpi-card c-red">
+        <div class="kpi-icon">⚡</div>
+        <div class="kpi-label">LTIFR Promedio</div>
+        <div class="kpi-value">${aL}</div>
+        ${lT || '<div class="kpi-trend t-neu">por millón horas-hombre</div>'}
+        <div class="kpi-bench">Clase mundial ≤ 1.5</div>
+    </div>
+    <div class="kpi-card c-orange">
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-label">TRIFR Promedio</div>
+        <div class="kpi-value">${aT}</div>
+        ${tT || '<div class="kpi-trend t-neu">Total Recordable Inj. Freq.</div>'}
+        <div class="kpi-bench">Total registrables/1M HH</div>
+    </div>
+    <div class="kpi-card c-blue">
+        <div class="kpi-icon">📅</div>
+        <div class="kpi-label">Tasa Ausentismo</div>
+        <div class="kpi-value">${aA}%</div>
+        ${aT2 || '<div class="kpi-trend t-neu">promedio mensual</div>'}
+        <div class="kpi-bench">Industria O&amp;G: 3.5%–6%</div>
+    </div>
+    <div class="kpi-card c-yellow">
+        <div class="kpi-icon">🎯</div>
+        <div class="kpi-label">Total Incidentes</div>
+        <div class="kpi-value">${tI}</div>
+        <div class="kpi-trend t-neu">${d.length} meses · ${tL} LTI</div>
+        <div class="kpi-bench">${tN} near misses registrados</div>
+    </div>
+    <div class="kpi-card ${nmOk?'c-green':'c-red'}">
+        <div class="kpi-icon">🔺</div>
+        <div class="kpi-label">Ratio NM / LTI</div>
+        <div class="kpi-value">${nmR}</div>
+        <div class="kpi-trend ${nmOk?'t-down':'t-up'}">${nmOk?'✓ Sobre benchmark':'↓ Bajo benchmark 10:1'}</div>
+        <div class="kpi-bench">Objetivo: ≥ 10:1</div>
+    </div>`;
+}
+
+// ─────────────────────────────────────────────────────────────
+// RENDER TREND CHART
+// ─────────────────────────────────────────────────────────────
+function renderTrend() {
+    const d = getData();
+    const xs = d.map(r=>r.f);
+    const traces = [];
+
+    if (M.ltifr) traces.push({
+        x: xs, y: d.map(r=>r.ltifr),
+        name:'LTIFR', type:'scatter', mode:'lines+markers',
+        line:{ color:'#e63946', width:2.5 }, marker:{ size:5, color:'#e63946' },
+        fill:'tozeroy', fillcolor:'rgba(230,57,70,.08)'
+    });
+    if (M.trifr) traces.push({
+        x: xs, y: d.map(r=>r.trifr),
+        name:'TRIFR', type:'scatter', mode:'lines+markers',
+        line:{ color:'#ffd100', width:2 }, marker:{ size:5, color:'#ffd100' },
+        fill:'tozeroy', fillcolor:'rgba(255,209,0,.05)'
+    });
+    if (M.aus) traces.push({
+        x: xs, y: d.map(r=>r.aus),
+        name:'Ausentismo %', type:'scatter', mode:'lines+markers',
+        line:{ color:'#2ec4b6', width:2, dash:'dot' }, marker:{ size:5 },
+        yaxis:'y2'
+    });
+
+    traces.push({
+        x:[xs[0], xs[xs.length-1]], y:[1.5,1.5],
+        name:'Benchmark ≤1.5', type:'scatter', mode:'lines',
+        line:{ color:'rgba(46,196,182,.5)', width:1.5, dash:'dash' },
+        showlegend:true
+    });
+
+    const layout = baseLayout({
+        margin:{ t:10, r:55, b:70, l:50 },
+        yaxis2:{ overlaying:'y', side:'right', color:'#8babc7',
+                 gridcolor:'transparent', tickformat:'.1f', ticksuffix:'%', range:[0,5] }
+    });
+
+    Plotly.react('trendChart', traces, layout, CFG);
+}
+
+// ─────────────────────────────────────────────────────────────
+// RENDER INCIDENTES STACKED
+// ─────────────────────────────────────────────────────────────
+function renderIncidentes() {
+    const d = getData();
+    const xs = d.map(r=>r.f);
+    Plotly.react('incidentesChart', [
+        { x:xs, y:d.map(r=>r.nm),       name:'Near Miss',    type:'bar', marker:{color:'#2ec4b6',opacity:.85} },
+        { x:xs, y:d.map(r=>r.reg-r.lti),name:'Registrables', type:'bar', marker:{color:'#f77f00',opacity:.85} },
+        { x:xs, y:d.map(r=>r.lti),      name:'LTI',          type:'bar', marker:{color:'#e63946',opacity:.9}  }
+    ], baseLayout({ barmode:'stack', margin:{t:10,r:10,b:70,l:40} }), CFG);
+}
+
+// ─────────────────────────────────────────────────────────────
+// RENDER DIAS PERDIDOS
+// ─────────────────────────────────────────────────────────────
+function renderDias() {
+    const d = getData();
+    Plotly.react('diasChart', [{
+        x: d.map(r=>r.f),
+        y: d.map(r=>r.dp),
+        type:'bar', name:'Días perdidos',
+        marker:{ color: d.map(r=>r.dp), colorscale:[[0,'#1a3a6e'],[0.5,'#f77f00'],[1,'#e63946']], showscale:false },
+        text: d.map(r=>r.dp>0?r.dp:''), textposition:'outside', textfont:{size:9,color:'#8babc7'}
+    }], baseLayout({ margin:{t:10,r:10,b:70,l:50} }), CFG);
+}
+
+// ─────────────────────────────────────────────────────────────
+// RENDER RATIO NM/LTI
+// ─────────────────────────────────────────────────────────────
+function renderRatio() {
+    const d = getData();
+    const xs = d.map(r=>r.f);
+    const ratioVals = d.map(r=>r.ratio);
+    Plotly.react('ratioChart', [
+        {
+            x:xs, y:ratioVals, type:'scatter', mode:'lines+markers',
+            name:'NM/LTI Ratio', fill:'tozeroy',
+            line:{color:'#8b5cf6',width:2}, marker:{size:5,color:'#8b5cf6'},
+            fillcolor:'rgba(139,92,246,.1)'
+        },
+        {
+            x:[xs[0],xs[xs.length-1]], y:[10,10],
+            name:'Benchmark 10:1', type:'scatter', mode:'lines',
+            line:{color:'rgba(46,196,182,.5)',width:1.5,dash:'dash'}
+        }
+    ], baseLayout({ margin:{t:10,r:14,b:70,l:50} }), CFG);
+}
+
+// ─────────────────────────────────────────────────────────────
+// RENDER STATIC CHARTS (no cambian con filtro de año)
+// ─────────────────────────────────────────────────────────────
+function renderPyramid() {
+    Plotly.newPlot('pyramidChart',
+        PYRAMID.labels.map((lbl,i) => ({
+            x:[PYRAMID.values[i]], y:[lbl], type:'bar', orientation:'h',
+            name:lbl, marker:{color:PYRAMID.colors[i], opacity:.88},
+            text:[PYRAMID.values[i]], textposition:'inside', insidetextanchor:'middle',
+            textfont:{color:'#fff', size:11, weight:'bold'}, showlegend:false
+        })),
+        baseLayout({ margin:{t:10,r:30,b:30,l:155}, showlegend:false,
+            xaxis:{...baseLayout().xaxis, title:''}, yaxis:{...baseLayout().yaxis, autorange:'reversed'} }),
+        CFG
+    );
+}
+
+function renderRiskDonut() {
+    Plotly.newPlot('riskDonut', [{
+        labels: RIESGO.labels, values: RIESGO.values, type:'pie', hole:.55,
+        marker:{colors:RIESGO.colors},
+        textinfo:'label+percent', textfont:{color:'#e8f4fd',size:11},
+        hoverinfo:'label+value+percent', insidetextorientation:'radial'
+    }], Object.assign(baseLayout({ margin:{t:20,r:20,b:50,l:20}, showlegend:false }),{
+        annotations:[{text:'<b>850</b><br>empleados',x:.5,y:.5,font:{size:13,color:'#e8f4fd'},showarrow:false}]
+    }), CFG);
+}
+
+function renderDept() {
+    Plotly.newPlot('deptChart', [{
+        x: DEPT.valores, y: DEPT.labels, type:'bar', orientation:'h',
+        marker:{ color:DEPT.valores, colorscale:[[0,'#1a3a6e'],[.5,'#0066cc'],[1,'#e63946']], showscale:false },
+        text:DEPT.valores.map(v=>v+''), textposition:'outside', textfont:{color:'#8babc7',size:10}
+    }], baseLayout({ margin:{t:10,r:50,b:30,l:120}, showlegend:false,
+        yaxis:{...baseLayout().yaxis, autorange:'reversed'} }), CFG);
+}
+
+function renderCausas() {
+    Plotly.newPlot('causasChart', [{
+        x: CAUSAS.valores, y: CAUSAS.labels, type:'bar', orientation:'h',
+        marker:{color:'#0066cc', opacity:.82},
+        text:CAUSAS.valores, textposition:'outside', textfont:{color:'#8babc7',size:10}
+    }], baseLayout({ margin:{t:10,r:50,b:30,l:185}, showlegend:false,
+        yaxis:{...baseLayout().yaxis, autorange:'reversed'} }), CFG);
+}
+
+function renderAusentismo() {
+    Plotly.newPlot('ausentismoChart', [{
+        labels:AUSENTISMO.labels, values:AUSENTISMO.valores, type:'pie', hole:.45,
+        marker:{colors:['#0066cc','#2ec4b6','#e63946','#f77f00','#8b5cf6','#475569']},
+        textinfo:'label+percent', textfont:{color:'#e8f4fd',size:10}, insidetextorientation:'radial'
+    }], Object.assign(baseLayout({ margin:{t:10,r:10,b:50,l:10}, showlegend:false }),{
+        annotations:[{text:'<b>12,439</b><br>días',x:.5,y:.5,font:{size:12,color:'#e8f4fd'},showarrow:false}]
+    }), CFG);
+}
+
+function renderTurno() {
+    Plotly.newPlot('turnoChart', [
+        { x:TURNO.labels, y:TURNO.alto,  name:'Alto',  type:'bar', marker:{color:'#e63946',opacity:.88} },
+        { x:TURNO.labels, y:TURNO.medio, name:'Medio', type:'bar', marker:{color:'#f77f00',opacity:.88} },
+        { x:TURNO.labels, y:TURNO.bajo,  name:'Bajo',  type:'bar', marker:{color:'#2ec4b6',opacity:.88} }
+    ], baseLayout({ barmode:'stack', margin:{t:10,r:10,b:60,l:40},
+        yaxis:{...baseLayout().yaxis, ticksuffix:'%', title:''} }), CFG);
+}
+
+// ─────────────────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    renderKPIs();
+    renderTrend();
+    renderIncidentes();
+    renderDias();
+    renderRatio();
+    renderPyramid();
+    renderRiskDonut();
+    renderDept();
+    renderCausas();
+    renderAusentismo();
+    renderTurno();
+});
+</script>
+</body>
+</html>

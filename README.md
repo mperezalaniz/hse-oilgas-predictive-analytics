@@ -5,10 +5,26 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-GBM_Classifier-F7931E?logo=scikitlearn)](https://scikit-learn.org)
-[![Plotly](https://img.shields.io/badge/Plotly-Dashboard_Corporativo-3F4F75?logo=plotly)](https://plotly.com)
+[![Plotly](https://img.shields.io/badge/Plotly-Dashboard_Interactivo-3F4F75?logo=plotly)](https://plotly.com)
 [![Power BI](https://img.shields.io/badge/Power_BI-Ready-F2C811?logo=powerbi&logoColor=black)](.)
 [![Industry](https://img.shields.io/badge/Industry-Oil_%26_Gas_%7C_HSE-8B0000)](.)
 [![Status](https://img.shields.io/badge/Status-Complete-success)](.)
+
+---
+
+## 🚀 Demo interactivo — sin instalar nada
+
+**Cloná el repo y abrí este archivo en tu navegador:**
+
+```
+outputs/dashboard/HSE_Dashboard_Interactivo.html
+```
+
+El dashboard carga directo en el browser (sin servidor, sin Python). Incluye:
+- **Filtros por año** (2022 / 2023 / 2024 / todos) con KPIs que se recalculan en tiempo real
+- **10 gráficos Plotly** interactivos: LTIFR/TRIFR, pirámide de Bird, incidentes apilados, riesgo por turno, causas raíz, ausentismo y más
+- **Variación % anual** automática en cada KPI al cambiar el filtro de período
+- **Datos reales** del CSV embebidos — funciona 100% offline
 
 ---
 
@@ -91,7 +107,8 @@ Dashboard HTML con 9 paneles ejecutivos: KPIs de frecuencia (LTIFR/TRIFR), pirá
 | `modelo_riesgo.png` | Matriz de confusión, importancia de variables, distribución de riesgo por depto |
 | `analisis_incidentes.png` | Incidentes por hora, causa raíz, heatmap área × turno, tendencia NM vs LTI |
 | `prediccion_ausentismo.png` | Serie real vs predicción + comparativa por departamento y año |
-| `dashboard_hse_corporativo.html` | **Dashboard interactivo completo** — abrir en navegador |
+| `dashboard_hse_corporativo.html` | Dashboard original — 9 paneles Plotly |
+| `HSE_Dashboard_Interactivo.html` | **⭐ Dashboard v2 — filtros por año, 10 gráficos, KPIs dinámicos** |
 
 ---
 
@@ -126,7 +143,8 @@ hse-oilgas-predictive-analytics/
 ├── outputs/
 │   ├── figures/                   # 5 figuras PNG corporativas
 │   ├── dashboard/
-│   │   └── dashboard_hse_corporativo.html  # ★ Dashboard interactivo
+│   │   ├── dashboard_hse_corporativo.html  # Dashboard original
+│   │   └── HSE_Dashboard_Interactivo.html  # ★ Dashboard v2 con filtros
 │   └── powerbi/
 │       └── HSE_PowerBI_Ready.xlsx          # 4 hojas listas para Power BI
 ├── README.md
@@ -145,7 +163,7 @@ pip install -r requirements.txt
 python src/run_analysis.py
 ```
 
-Abrir el dashboard: `outputs/dashboard/dashboard_hse_corporativo.html`
+Abrir el dashboard interactivo: `outputs/dashboard/HSE_Dashboard_Interactivo.html`
 
 ---
 
